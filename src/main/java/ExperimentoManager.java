@@ -70,4 +70,16 @@ public class ExperimentoManager {
         }
         experimento.mostrarCultivosDeBacterias();
     }
+
+    public static void main(String[] args) {
+        ExperimentoManager experimentoManager = new ExperimentoManager();
+        Experimento experimento = experimentoManager.crearNuevoExperimento();
+        CultivoDeBacterias cultivoDeBacterias1 = new CultivoDeBacterias("Bacteria 1", 100);
+        CultivoDeBacterias cultivoDeBacterias2 = new CultivoDeBacterias("Bacteria 2", 200);
+        CultivoDeBacterias cultivoDeBacterias3 = new CultivoDeBacterias("Bacteria 3", 300);
+        experimentoManager.agregarCultivoDeBacterias(experimento, cultivoDeBacterias1);
+        experimentoManager.agregarCultivoDeBacterias(experimento, cultivoDeBacterias2);
+        experimentoManager.agregarCultivoDeBacterias(experimento, cultivoDeBacterias3);
+        experimentoManager.mostrarCultivosDeBacterias(experimento);
+    }
 }
