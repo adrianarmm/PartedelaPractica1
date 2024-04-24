@@ -3,18 +3,16 @@ import java.util.Optional;
 
 public class ExperimentoManager {
 
-    public Experimento abrirExperimento(String fileName) {
-        Experimento experimento = null;
+    public Experimento abrirExperimento(String fileName) throws IOException, ClassNotFoundException {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) {
-            experimento = (Experimento) ois.readObject();
+            return (Experimento) ois.readObject();
         } catch (FileNotFoundException e) {
             System.out.println("Archivo no encontrado: " + e.getMessage());
-        } catch (IOException e) {
-            System.out.println("Error al leer el archivo: " + e.getMessage());
-        } catch (ClassNotFoundException e) {
-            System.out.println("Clase no encontrada al deserializar: " + e.getMessage());
+            throw e;
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Error al cargar el experimento: " + e.getMessage());
+            throw e;
         }
-        return experimento;
     }
 
     public Experimento crearNuevoExperimento() {
@@ -22,60 +20,55 @@ public class ExperimentoManager {
     }
 
     public void agregarCultivoDeBacterias(Experimento experimento, CultivoDeBacterias bacteriaCulture) {
-        if (experimento != null && bacteriaCulture != null) {
-            experimento.agregarCultivoDeBacterias(bacteriaCulture);
-        } else {
-            System.out.println("Experimento o CultivoDeBacterias no pueden ser nulos.");
+        if (experimento == null || bacteriaCulture == null) {
+            throw new IllegalArgumentException("Experimento y CultivoDeBacterias no pueden ser nulos.");
         }
+        experimento.agregarCultivoDeBacterias(bacteriaCulture);
     }
 
     public void verNombresDeCultivosDeBacterias(Experimento experimento) {
-        if (experimento != null) {
-            experimento.getCultivoDeBacteriasList().forEach(cultivo -> System.out.println(cultivo.getNombre()));
-        } else {
-            System.out.println("Experimento no puede ser nulo.");
+        if (experimento == null) {
+            throw new IllegalArgumentException("Experimento no puede ser nulo.");
         }
+        experimento.getCultivoDeBacteriasList().forEach(cultivo -> System.out.println(cultivo.getNombre()));
     }
 
     public void eliminarCultivoDeBacterias(Experimento experimento, CultivoDeBacterias bacteriaCulture) {
-        if (experimento != null && bacteriaCulture != null) {
-            boolean removed = experimento.getCultivoDeBacteriasList().remove(bacteriaCulture);
-            if (!removed) {
-                System.out.println("El cultivo no se encontró en el experimento.");
-            }
-        } else {
-            System.out.println("Experimento o CultivoDeBacterias no pueden ser nulos.");
+        if (experimento == null || bacteriaCulture == null) {
+            throw new IllegalArgumentException("Experimento y CultivoDeBacterias no pueden ser nulos.");
+        }
+        if (!experimento.getCultivoDeBacteriasList().remove(bacteriaCulture)) {
+            System.out.println("El cultivo no se encontró en el experimento.");
         }
     }
 
     public void verInformacionDetalladaDeCultivoDeBacterias(Experimento experimento, String nombreCultivo) {
-        if (experimento != null) {
-            Optional<CultivoDeBacterias> cultivoDeBacterias = experimento.getCultivoDeBacteriasList().stream()
-                    .filter(cultivo -> cultivo.getNombre().equals(nombreCultivo))
-                    .findFirst();
-            cultivoDeBacterias.ifPresentOrElse(System.out::println, () -> System.out.println("Cultivo no encontrado."));
-        } else {
-            System.out.println("Experimento no puede ser nulo.");
+        if (experimento == null) {
+            throw new IllegalArgumentException("Experimento no puede ser nulo.");
         }
-
+        Optional<CultivoDeBacterias> cultivoDeBacterias = experimento.getCultivoDeBacteriasList().stream()
+                .filter(cultivo -> cultivo.getNombre().equals(nombreCultivo))
+                .findFirst();
+        cultivoDeBacterias.ifPresentOrElse(System.out::println, () -> System.out.println("Cultivo no encontrado."));
     }
 
-    public void guardarExperimento(Experimento experimento, String fileName) {
+    public void guardarExperimento(Experimento experimento, String fileName) throws IOException {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName))) {
             oos.writeObject(experimento);
         } catch (FileNotFoundException e) {
             System.out.println("Archivo no encontrado: " + e.getMessage());
+            throw e;
         } catch (IOException e) {
-            System.out.println("Error al escribir el archivo: " + e.getMessage());
+            System.out.println("Error al guardar el experimento: " + e.getMessage());
+            throw e;
         }
     }
 
     public void mostrarCultivosDeBacterias(Experimento experimento) {
-        if (experimento != null) {
-            experimento.mostrarCultivosDeBacterias();
-        } else {
-            System.out.println("Experimento no puede ser nulo.");
+        if (experimento == null) {
+            throw new IllegalArgumentException("Experimento no puede ser nulo.");
         }
+        experimento.mostrarCultivosDeBacterias();
     }
 
     public static void main(String[] args) {
@@ -88,8 +81,5 @@ public class ExperimentoManager {
         experimentoManager.agregarCultivoDeBacterias(experimento, cultivoDeBacterias2);
         experimentoManager.agregarCultivoDeBacterias(experimento, cultivoDeBacterias3);
         experimentoManager.mostrarCultivosDeBacterias(experimento);
-        experimentoManager.guardarExperimento(experimento, "experimento.ser");
-        Experimento experimentoCargado = experimentoManager.abrirExperimento("experimento.ser");
-        experimentoManager.mostrarCultivosDeBacterias(experimentoCargado);
     }
 }
