@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -43,5 +44,9 @@ public class Experimento {
 
         experimento.mostrarCultivosDeBacterias();
         System.out.println("Nombres de todos los cultivos: " + experimento.obtenerNombresDeCultivos());
+    }
+
+    public Iterable<Object> getCultivoDeBacteriasList() {
+        return Collections.singleton(cultivoDeBacteriasList);
     }
 }

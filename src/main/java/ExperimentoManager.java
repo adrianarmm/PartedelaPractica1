@@ -39,7 +39,7 @@ public class ExperimentoManager {
 
     public void eliminarCultivoDeBacterias(Experimento experimento, CultivoDeBacterias bacteriaCulture) {
         if (experimento != null && bacteriaCulture != null) {
-            experimento.getCultivoDeBacteriasList().remove(bacteriaCulture);
+            experimento.getCultivoDeBacteriasList().clone(bacteriaCulture);
         } else {
             System.out.println("Experimento o CultivoDeBacterias no pueden ser nulos");
         }
