@@ -1,52 +1,37 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Experimento {
-    private List<CultivoDeBacterias> cultivoDeBacteriasList;
+    private List<CultivoDeBacterias> cultivoDeBacteriasList; // Asegúrate de que la lista sea de tipo CultivoDeBacterias
 
-    // Constructor que inicializa la lista de cultivos
     public Experimento() {
         this.cultivoDeBacteriasList = new ArrayList<>();
     }
 
-    // Método para agregar un cultivo de bacterias al experimento
     public void agregarCultivoDeBacterias(CultivoDeBacterias cultivoDeBacterias) {
-        if (cultivoDeBacterias != null) {
-            cultivoDeBacteriasList.add(cultivoDeBacterias);
-        } else {
-            System.out.println("No se puede agregar un cultivo nulo.");
-        }
+        cultivoDeBacteriasList.add(cultivoDeBacterias);
     }
 
-    // Método para mostrar todos los cultivos de bacterias
+    public List<CultivoDeBacterias> getCultivoDeBacteriasList() {
+        return cultivoDeBacteriasList;
+    }
+
+    public void setCultivoDeBacteriasList(List<CultivoDeBacterias> cultivoDeBacteriasList) {
+        this.cultivoDeBacteriasList = cultivoDeBacteriasList;
+    }
+
     public void mostrarCultivosDeBacterias() {
-        if (cultivoDeBacteriasList.isEmpty()) {
-            System.out.println("No hay cultivos de bacterias para mostrar.");
-        } else {
-            cultivoDeBacteriasList.forEach(System.out::println);
-        }
-    }
-
-    // Método para obtener los nombres de todos los cultivos de bacterias
-    public List<String> obtenerNombresDeCultivos() {
-        return cultivoDeBacteriasList.stream()
-                .map(CultivoDeBacterias::getNombre)
-                .collect(Collectors.toList());
+        cultivoDeBacteriasList.forEach(System.out::println);
     }
 
     public static void main(String[] args) {
         Experimento experimento = new Experimento();
-        experimento.agregarCultivoDeBacterias(new CultivoDeBacterias("Bacteria 1", 50));
-        experimento.agregarCultivoDeBacterias(new CultivoDeBacterias("Bacteria 2", 20));
-        experimento.agregarCultivoDeBacterias(new CultivoDeBacterias("Bacteria 3", 70));
-
+        CultivoDeBacterias cultivoDeBacterias1 = new CultivoDeBacterias("Bacteria 1", 100);
+        CultivoDeBacterias cultivoDeBacterias2 = new CultivoDeBacterias("Bacteria 2", 200);
+        CultivoDeBacterias cultivoDeBacterias3 = new CultivoDeBacterias("Bacteria 3", 300);
+        experimento.agregarCultivoDeBacterias(cultivoDeBacterias1);
+        experimento.agregarCultivoDeBacterias(cultivoDeBacterias2);
+        experimento.agregarCultivoDeBacterias(cultivoDeBacterias3);
         experimento.mostrarCultivosDeBacterias();
-        System.out.println("Nombres de todos los cultivos: " + experimento.obtenerNombresDeCultivos());
-    }
-
-    public Iterable<Object> getCultivoDeBacteriasList() {
-        return Collections.singleton(cultivoDeBacteriasList);
     }
 }
