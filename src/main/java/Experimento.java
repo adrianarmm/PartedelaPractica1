@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Experimento {
-    private List<CultivoDeBacterias> cultivoDeBacteriasList;
+    private List<CultivoDeBacterias> cultivoDeBacteriasList; // Asegúrate de que la lista sea de tipo CultivoDeBacterias
 
     public Experimento() {
         this.cultivoDeBacteriasList = new ArrayList<>();
@@ -12,15 +12,26 @@ public class Experimento {
         cultivoDeBacteriasList.add(cultivoDeBacterias);
     }
 
+    public List<CultivoDeBacterias> getCultivoDeBacteriasList() {
+        return cultivoDeBacteriasList;
+    }
+
+    public void setCultivoDeBacteriasList(List<CultivoDeBacterias> cultivoDeBacteriasList) {
+        this.cultivoDeBacteriasList = cultivoDeBacteriasList;
+    }
+
     public void mostrarCultivosDeBacterias() {
         cultivoDeBacteriasList.forEach(System.out::println);
     }
 
     public static void main(String[] args) {
         Experimento experimento = new Experimento();
-        experimento.agregarCultivoDeBacterias(new CultivoDeBacterias("Bacteria 1", 50));
-        experimento.agregarCultivoDeBacterias(new CultivoDeBacterias("Bacteria 2", 20));
-        experimento.agregarCultivoDeBacterias(new CultivoDeBacterias("Bacteria 3", 70));
+        CultivoDeBacterias cultivoDeBacterias1 = new CultivoDeBacterias("Bacteria 1", 100);
+        CultivoDeBacterias cultivoDeBacterias2 = new CultivoDeBacterias("Bacteria 2", 200);
+        CultivoDeBacterias cultivoDeBacterias3 = new CultivoDeBacterias("Bacteria 3", 300);
+        experimento.agregarCultivoDeBacterias(cultivoDeBacterias1);
+        experimento.agregarCultivoDeBacterias(cultivoDeBacterias2);
+        experimento.agregarCultivoDeBacterias(cultivoDeBacterias3);
         experimento.mostrarCultivosDeBacterias();
     }
 }

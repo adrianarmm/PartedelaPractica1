@@ -7,6 +7,10 @@ public class CultivoDeBacterias {
         this.cantidad = cantidad;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
     @Override
     public String toString() {
         return "CultivoDeBacterias{" +
