@@ -25,7 +25,7 @@ public class ExperimentoManager {
         if (experimento != null && bacteriaCulture != null) {
             experimento.agregarCultivoDeBacterias(bacteriaCulture);
         } else {
-            System.out.println("Experimento o CultivoDeBacterias no pueden ser nulos");
+            System.out.println("Experimento o CultivoDeBacterias no pueden ser nulos.");
         }
     }
 
@@ -33,28 +33,31 @@ public class ExperimentoManager {
         if (experimento != null) {
             experimento.getCultivoDeBacteriasList().forEach(cultivo -> System.out.println(cultivo.getNombre()));
         } else {
-            System.out.println("Experimento no puede ser nulo");
+            System.out.println("Experimento no puede ser nulo.");
         }
     }
 
     public void eliminarCultivoDeBacterias(Experimento experimento, CultivoDeBacterias bacteriaCulture) {
         if (experimento != null && bacteriaCulture != null) {
-            experimento.getCultivoDeBacteriasList().clone(bacteriaCulture);
+            boolean removed = experimento.getCultivoDeBacteriasList().remove(bacteriaCulture);
+            if (!removed) {
+                System.out.println("El cultivo no se encontró en el experimento.");
+            }
         } else {
-            System.out.println("Experimento o CultivoDeBacterias no pueden ser nulos");
+            System.out.println("Experimento o CultivoDeBacterias no pueden ser nulos.");
         }
     }
 
     public void verInformacionDetalladaDeCultivoDeBacterias(Experimento experimento, String nombreCultivo) {
         if (experimento != null) {
-            Optional<CultivoDeBacterias> cultivo = experimento.getCultivoDeBacteriasList()
-                    .stream()
-                    .filter(c -> c.getNombre().equals(nombreCultivo))
+            Optional<CultivoDeBacterias> cultivoDeBacterias = experimento.getCultivoDeBacteriasList().stream()
+                    .filter(cultivo -> cultivo.getNombre().equals(nombreCultivo))
                     .findFirst();
-            cultivo.ifPresent(System.out::println);
+            cultivoDeBacterias.ifPresentOrElse(System.out::println, () -> System.out.println("Cultivo no encontrado."));
         } else {
-            System.out.println("Experimento no puede ser nulo");
+            System.out.println("Experimento no puede ser nulo.");
         }
+
     }
 
     public void guardarExperimento(Experimento experimento, String fileName) {
@@ -63,7 +66,30 @@ public class ExperimentoManager {
         } catch (FileNotFoundException e) {
             System.out.println("Archivo no encontrado: " + e.getMessage());
         } catch (IOException e) {
-            System.out.println("Error al escribir en el archivo: " + e.getMessage());
+            System.out.println("Error al escribir el archivo: " + e.getMessage());
         }
+    }
+
+    public void mostrarCultivosDeBacterias(Experimento experimento) {
+        if (experimento != null) {
+            experimento.mostrarCultivosDeBacterias();
+        } else {
+            System.out.println("Experimento no puede ser nulo.");
+        }
+    }
+
+    public static void main(String[] args) {
+        ExperimentoManager experimentoManager = new ExperimentoManager();
+        Experimento experimento = experimentoManager.crearNuevoExperimento();
+        CultivoDeBacterias cultivoDeBacterias1 = new CultivoDeBacterias("Bacteria 1", 100);
+        CultivoDeBacterias cultivoDeBacterias2 = new CultivoDeBacterias("Bacteria 2", 200);
+        CultivoDeBacterias cultivoDeBacterias3 = new CultivoDeBacterias("Bacteria 3", 300);
+        experimentoManager.agregarCultivoDeBacterias(experimento, cultivoDeBacterias1);
+        experimentoManager.agregarCultivoDeBacterias(experimento, cultivoDeBacterias2);
+        experimentoManager.agregarCultivoDeBacterias(experimento, cultivoDeBacterias3);
+        experimentoManager.mostrarCultivosDeBacterias(experimento);
+        experimentoManager.guardarExperimento(experimento, "experimento.ser");
+        Experimento experimentoCargado = experimentoManager.abrirExperimento("experimento.ser");
+        experimentoManager.mostrarCultivosDeBacterias(experimentoCargado);
     }
 }
