@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="22">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ExperimentoBacterias.java" afterDir="false" />
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="28">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PoblacionBacterias.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PoblacionBacterias.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,7 @@
     "Application.Experimento.executor": "Run",
     "Application.ExperimentoManager.executor": "Run",
     "Application.HorarioAlimentacion.executor": "Run",
+    "Application.PoblacionBacterias.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -55,6 +57,21 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="PoblacionBacterias" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PoblacionBacterias" />
+      <module name="PartedelaPractica1" />
+      <option name="UNNAMED_CLASS_CONFIGURATION" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PoblacionBacterias" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713887180017</updated>
       <workItem from="1713887181142" duration="2654000" />
-      <workItem from="1714053396788" duration="1014000" />
+      <workItem from="1714053396788" duration="1359000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <option name="closed" value="true" />
@@ -250,18 +267,61 @@
       <option name="project" value="LOCAL" />
       <updated>1714054206907</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="23">
+      <option name="closed" value="true" />
+      <created>1714054425561</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1714054425561</updated>
+    </task>
+    <task id="LOCAL-00025" summary="24">
+      <option name="closed" value="true" />
+      <created>1714054451623</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1714054451623</updated>
+    </task>
+    <task id="LOCAL-00026" summary="25">
+      <option name="closed" value="true" />
+      <created>1714054480189</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1714054480189</updated>
+    </task>
+    <task id="LOCAL-00027" summary="26">
+      <option name="closed" value="true" />
+      <created>1714054497570</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1714054497570</updated>
+    </task>
+    <task id="LOCAL-00028" summary="27">
+      <option name="closed" value="true" />
+      <created>1714054513928</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1714054513928</updated>
+    </task>
+    <task id="LOCAL-00029" summary="28">
+      <option name="closed" value="true" />
+      <created>1714054533195</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1714054533195</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1" />
-    <MESSAGE value="2" />
-    <MESSAGE value="3" />
-    <MESSAGE value="4" />
-    <MESSAGE value="5" />
     <MESSAGE value="6" />
     <MESSAGE value="7" />
     <MESSAGE value="8" />
@@ -281,6 +341,12 @@
     <MESSAGE value="20" />
     <MESSAGE value="21" />
     <MESSAGE value="22" />
-    <option name="LAST_COMMIT_MESSAGE" value="22" />
+    <MESSAGE value="23" />
+    <MESSAGE value="24" />
+    <MESSAGE value="25" />
+    <MESSAGE value="26" />
+    <MESSAGE value="27" />
+    <MESSAGE value="28" />
+    <option name="LAST_COMMIT_MESSAGE" value="28" />
   </component>
 </project>

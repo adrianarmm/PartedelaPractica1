@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class PoblacionBacterias {
+static class PoblacionBacterias {
     private String nombre;
     private String fechaInicio;
     private String fechaFin;
@@ -33,7 +33,7 @@ class PoblacionBacterias {
     }
 }
 
-class Experimentos {
+static class Experimentos {
     private List<PoblacionBacterias> poblacionesBacterias;
 
     public Experimentos() {
@@ -53,23 +53,14 @@ class Experimentos {
     }
 }
 
-class Main {
-    public static void main(String[] args) {
-        // Crear una población de bacterias
-        PoblacionBacterias poblacion1 = new PoblacionBacterias("Poblacion1", "2024-04-01", "2024-04-10", 100,
-                "25°C", "Alta", new int[]{10, 15, 20, 30});
+public static void main ( String[] args ) {
+    Experimentos experimentos = new Experimentos();
+    PoblacionBacterias poblacion1 = new PoblacionBacterias("Población 1", "01/01/2021", "01/02/2021", 1000, "25°C", "Alta", new int[]{10, 20, 30});
+    PoblacionBacterias poblacion2 = new PoblacionBacterias("Población 2", "01/02/2021", "01/03/2021", 2000, "30°C", "Baja", new int[]{20, 30, 40});
+    PoblacionBacterias poblacion3 = new PoblacionBacterias("Población 3", "01/03/2021", "01/04/2021", 3000, "35°C", "Media", new int[]{30, 40, 50});
+    experimentos.agregarPoblacionBacterias(poblacion1);
+    experimentos.agregarPoblacionBacterias(poblacion2);
+    experimentos.agregarPoblacionBacterias(poblacion3);
+    experimentos.nombresPoblacionesBacterias().forEach(System.out::println);
 
-        Experimentos experimentos = new Experimentos();
-        experimentos.agregarPoblacionBacterias(poblacion1);
-
-        List<String> nombresPoblaciones = experimentos.nombresPoblacionesBacterias();
-        if (!nombresPoblaciones.isEmpty()) {
-            System.out.println("Nombres de las poblaciones de bacterias en el experimento actual:");
-            for (String nombre : nombresPoblaciones) {
-                System.out.println(nombre);
-            }
-        } else {
-            System.out.println("No hay poblaciones de bacterias en el experimento actual.");
-        }
-    }
 }
