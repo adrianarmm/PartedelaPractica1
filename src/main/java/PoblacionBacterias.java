@@ -52,3 +52,9 @@ class Experimento {
         return nombres;
     }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        // Crear una población de bacterias
+        PoblacionBacterias poblacion1 = new PoblacionBacterias("Poblacion1", "2024-04-01", "2024-04-10", 100,
+                "25°C", "Alta", new int[]{10, 15, 20, 30});
