@@ -12,6 +12,8 @@ public class Nameofpopulations {
     private String luminosidad;
     private int[] dosisComida;
 
-
+    public PoblacionBacterias(String nombre, String fechaInicio, String fechaFin, int numBacteriasIniciales,
+                              String temperatura, String luminosidad, int[] dosisComida) {
+        this.nombre = nombre;
 
 }
