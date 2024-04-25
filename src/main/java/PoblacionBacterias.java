@@ -39,3 +39,7 @@ class Experimento {
     public Experimento() {
         poblacionesBacterias = new ArrayList<>();
     }
+
+    public void agregarPoblacionBacterias(PoblacionBacterias poblacion) {
+        poblacionesBacterias.add(poblacion);
+    }
