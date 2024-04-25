@@ -68,3 +68,8 @@ public class Main {
             for (String nombre : nombresPoblaciones) {
                 System.out.println(nombre);
             }
+        } else {
+            System.out.println("No hay poblaciones de bacterias en el experimento actual.");
+        }
+    }
+}
