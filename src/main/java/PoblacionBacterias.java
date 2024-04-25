@@ -1,5 +1,7 @@
-public class Nameofpopulations {
+import java.util.ArrayList;
+import java.util.List;
 
+class PoblacionBacterias {
     private String nombre;
     private String fechaInicio;
     private String fechaFin;
@@ -8,10 +10,8 @@ public class Nameofpopulations {
     private String luminosidad;
     private int[] dosisComida;
 
-    public Nameofpopulations ( String nombre, String fechaInicio, String fechaFin, int numBacteriasIniciales,
-                               String temperatura, String luminosidad, int[] dosisComida) {
-        this.nombre = nombre;
-
+    public PoblacionBacterias(String nombre, String fechaInicio, String fechaFin, int numBacteriasIniciales,
+                              String temperatura, String luminosidad, int[] dosisComida) {
         this.nombre = nombre;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
@@ -19,8 +19,9 @@ public class Nameofpopulations {
         this.temperatura = temperatura;
         this.luminosidad = luminosidad;
         this.dosisComida = dosisComida;
+    }
 
-}
+    @Override
     public String toString() {
         return "Nombre: " + nombre + "\n" +
                 "Fecha de inicio: " + fechaInicio + "\n" +
@@ -31,3 +32,10 @@ public class Nameofpopulations {
                 "Dosis de comida: " + dosisComida;
     }
 }
+
+class Experimento {
+    private List<PoblacionBacterias> poblacionesBacterias;
+
+    public Experimento() {
+        poblacionesBacterias = new ArrayList<>();
+    }
