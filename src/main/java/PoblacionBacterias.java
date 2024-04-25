@@ -33,10 +33,10 @@ class PoblacionBacterias {
     }
 }
 
-class Experimento {
+class Experimentos {
     private List<PoblacionBacterias> poblacionesBacterias;
 
-    public Experimento() {
+    public Experimentos() {
         poblacionesBacterias = new ArrayList<>();
     }
 
@@ -53,16 +53,16 @@ class Experimento {
     }
 }
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         // Crear una población de bacterias
         PoblacionBacterias poblacion1 = new PoblacionBacterias("Poblacion1", "2024-04-01", "2024-04-10", 100,
                 "25°C", "Alta", new int[]{10, 15, 20, 30});
 
-        Experimento experimento = new Experimento();
-        experimento.agregarPoblacionBacterias(poblacion1);
+        Experimentos experimentos = new Experimentos();
+        experimentos.agregarPoblacionBacterias(poblacion1);
 
-        List<String> nombresPoblaciones = experimento.nombresPoblacionesBacterias();
+        List<String> nombresPoblaciones = experimentos.nombresPoblacionesBacterias();
         if (!nombresPoblaciones.isEmpty()) {
             System.out.println("Nombres de las poblaciones de bacterias en el experimento actual:");
             for (String nombre : nombresPoblaciones) {
