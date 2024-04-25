@@ -13,3 +13,8 @@ public class ExperimentoBacterias {
         int eliminadas = (int) (poblacion * porcentajeEliminacion);
         return poblacion - eliminadas;
     }
+
+    public static void main(String[] args) {
+        int poblacionInicial = 1000; // Población inicial de bacterias
+        double tasaCrecimiento = 0.05; // Tasa de crecimiento (5%)
+        double porcentajeEliminacion = 0.7; // Porcentaje de bacterias a eliminar (70%)
