@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="trabajando el dios del trap">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Nameofpopulations.java" afterDir="false" />
-    </list>
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="16" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713887180017</updated>
       <workItem from="1713887181142" duration="2654000" />
-      <workItem from="1714053396788" duration="318000" />
+      <workItem from="1714053396788" duration="629000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <option name="closed" value="true" />
@@ -154,7 +152,55 @@
       <option name="project" value="LOCAL" />
       <updated>1714053714896</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="parte de imprimir el nombre de las poblaciones">
+      <option name="closed" value="true" />
+      <created>1714053791580</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1714053791580</updated>
+    </task>
+    <task id="LOCAL-00013" summary="12">
+      <option name="closed" value="true" />
+      <created>1714053812401</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1714053812401</updated>
+    </task>
+    <task id="LOCAL-00014" summary="13">
+      <option name="closed" value="true" />
+      <created>1714053845315</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714053845315</updated>
+    </task>
+    <task id="LOCAL-00015" summary="14">
+      <option name="closed" value="true" />
+      <created>1714053893105</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714053893105</updated>
+    </task>
+    <task id="LOCAL-00016" summary="15">
+      <option name="closed" value="true" />
+      <created>1714054009811</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1714054009811</updated>
+    </task>
+    <task id="LOCAL-00017" summary="16">
+      <option name="closed" value="true" />
+      <created>1714054027803</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714054027803</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +219,12 @@
     <MESSAGE value="10" />
     <MESSAGE value="11" />
     <MESSAGE value="trabajando el dios del trap" />
-    <option name="LAST_COMMIT_MESSAGE" value="trabajando el dios del trap" />
+    <MESSAGE value="parte de imprimir el nombre de las poblaciones" />
+    <MESSAGE value="12" />
+    <MESSAGE value="13" />
+    <MESSAGE value="14" />
+    <MESSAGE value="15" />
+    <MESSAGE value="16" />
+    <option name="LAST_COMMIT_MESSAGE" value="16" />
   </component>
 </project>

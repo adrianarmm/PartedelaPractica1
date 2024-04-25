@@ -43,3 +43,12 @@ class Experimento {
     public void agregarPoblacionBacterias(PoblacionBacterias poblacion) {
         poblacionesBacterias.add(poblacion);
     }
+
+    public List<String> nombresPoblacionesBacterias() {
+        List<String> nombres = new ArrayList<>();
+        for (PoblacionBacterias poblacion : poblacionesBacterias) {
+            nombres.add(poblacion.toString());
+        }
+        return nombres;
+    }
+}
