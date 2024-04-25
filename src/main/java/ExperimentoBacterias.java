@@ -18,3 +18,6 @@ public class ExperimentoBacterias {
         int poblacionInicial = 1000; // Población inicial de bacterias
         double tasaCrecimiento = 0.05; // Tasa de crecimiento (5%)
         double porcentajeEliminacion = 0.7; // Porcentaje de bacterias a eliminar (70%)
+
+        int poblacionDespuesCrecimiento = crecimientoBacterias(poblacionInicial, tasaCrecimiento);
+        System.out.println("Población después del crecimiento: " + poblacionDespuesCrecimiento);
