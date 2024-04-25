@@ -61,3 +61,10 @@ public class Main {
 
         Experimento experimento = new Experimento();
         experimento.agregarPoblacionBacterias(poblacion1);
+
+        List<String> nombresPoblaciones = experimento.nombresPoblacionesBacterias();
+        if (!nombresPoblaciones.isEmpty()) {
+            System.out.println("Nombres de las poblaciones de bacterias en el experimento actual:");
+            for (String nombre : nombresPoblaciones) {
+                System.out.println(nombre);
+            }
