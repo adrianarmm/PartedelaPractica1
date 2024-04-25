@@ -23,3 +23,11 @@ public class DetallesPoblacionBacterias {
         double porcentajeCambio = ((double) diferenciaCrecimiento / poblacion) * 100;
         System.out.println("Porcentaje de cambio: " + porcentajeCambio + "%");
     }
+    public static void main(String[] args) {
+        int poblacionInicial = 1000; // Población inicial de bacterias
+        double tasaCrecimiento = 0.05; // Tasa de crecimiento (5%)
+
+        // Imprimir información detallada de la población de bacterias
+        imprimirDetalles(poblacionInicial, tasaCrecimiento);
+    }
+}
