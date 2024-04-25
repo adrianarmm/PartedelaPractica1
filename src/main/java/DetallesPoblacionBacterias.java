@@ -9,3 +9,7 @@ public class DetallesPoblacionBacterias {
         nuevaPoblacion += (nuevaPoblacion * variacion) / 100;
         return nuevaPoblacion;
 }
+    public static void imprimirDetalles(int poblacion, double tasaCrecimiento) {
+        System.out.println("Información detallada de la población de bacterias:");
+        System.out.println("Población inicial: " + poblacion);
+        System.out.println("Tasa de crecimiento: " + (tasaCrecimiento * 100) + "%");
