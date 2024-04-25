@@ -58,3 +58,6 @@ public class Main {
         // Crear una población de bacterias
         PoblacionBacterias poblacion1 = new PoblacionBacterias("Poblacion1", "2024-04-01", "2024-04-10", 100,
                 "25°C", "Alta", new int[]{10, 15, 20, 30});
+
+        Experimento experimento = new Experimento();
+        experimento.agregarPoblacionBacterias(poblacion1);
