@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="28">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PoblacionBacterias.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PoblacionBacterias.java" afterDir="false" />
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="33 lA TREINTRA Y TRES HOY SE GANA ALONSO">
+      <change beforePath="$PROJECT_DIR$/src/main/java/DetallesPoblacionBacterias.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DetallesPoblacionBacterias.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713887180017</updated>
       <workItem from="1713887181142" duration="2654000" />
-      <workItem from="1714053396788" duration="1359000" />
+      <workItem from="1714053396788" duration="1677000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <option name="closed" value="true" />
@@ -315,18 +314,53 @@
       <option name="project" value="LOCAL" />
       <updated>1714054533195</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="29">
+      <option name="closed" value="true" />
+      <created>1714054835514</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1714054835514</updated>
+    </task>
+    <task id="LOCAL-00031" summary="30">
+      <option name="closed" value="true" />
+      <created>1714054991729</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1714054991729</updated>
+    </task>
+    <task id="LOCAL-00032" summary="31">
+      <option name="closed" value="true" />
+      <created>1714055007377</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1714055007377</updated>
+    </task>
+    <task id="LOCAL-00033" summary="32">
+      <option name="closed" value="true" />
+      <created>1714055020732</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1714055020732</updated>
+    </task>
+    <task id="LOCAL-00034" summary="33 lA TREINTRA Y TRES HOY SE GANA ALONSO">
+      <option name="closed" value="true" />
+      <created>1714055079621</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1714055079621</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="6" />
-    <MESSAGE value="7" />
-    <MESSAGE value="8" />
-    <MESSAGE value="9" />
-    <MESSAGE value="10" />
     <MESSAGE value="11" />
     <MESSAGE value="trabajando el dios del trap" />
     <MESSAGE value="parte de imprimir el nombre de las poblaciones" />
@@ -347,6 +381,11 @@
     <MESSAGE value="26" />
     <MESSAGE value="27" />
     <MESSAGE value="28" />
-    <option name="LAST_COMMIT_MESSAGE" value="28" />
+    <MESSAGE value="29" />
+    <MESSAGE value="30" />
+    <MESSAGE value="31" />
+    <MESSAGE value="32" />
+    <MESSAGE value="33 lA TREINTRA Y TRES HOY SE GANA ALONSO" />
+    <option name="LAST_COMMIT_MESSAGE" value="33 lA TREINTRA Y TRES HOY SE GANA ALONSO" />
   </component>
 </project>

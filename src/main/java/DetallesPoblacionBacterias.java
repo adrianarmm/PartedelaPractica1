@@ -19,3 +19,7 @@ public class DetallesPoblacionBacterias {
         System.out.println("Población después del crecimiento: " + nuevaPoblacion);
         int diferenciaCrecimiento = nuevaPoblacion - poblacion;
         System.out.println("Aumento de la población: " + diferenciaCrecimiento);
+
+        double porcentajeCambio = ((double) diferenciaCrecimiento / poblacion) * 100;
+        System.out.println("Porcentaje de cambio: " + porcentajeCambio + "%");
+    }
