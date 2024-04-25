@@ -13,3 +13,9 @@ public class DetallesPoblacionBacterias {
         System.out.println("Información detallada de la población de bacterias:");
         System.out.println("Población inicial: " + poblacion);
         System.out.println("Tasa de crecimiento: " + (tasaCrecimiento * 100) + "%");
+
+        System.out.println("---- Simulación de crecimiento ----");
+        int nuevaPoblacion = crecimientoBacterias(poblacion, tasaCrecimiento);
+        System.out.println("Población después del crecimiento: " + nuevaPoblacion);
+        int diferenciaCrecimiento = nuevaPoblacion - poblacion;
+        System.out.println("Aumento de la población: " + diferenciaCrecimiento);
