@@ -1,14 +1,12 @@
 package EXPERIMENTO;
 
-import EXPERIMENTO.CultivoDeBacterias;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class Experimentos {
+public class experimentos {
     private List<CultivoDeBacterias> cultivoDeBacteriasList; // Asegúrate de que la lista sea de tipo CultivoDeBacterias
 
-    public Experimentos() {
+    public experimentos() {
         this.cultivoDeBacteriasList = new ArrayList<>();
     }
 
@@ -29,7 +27,7 @@ public class Experimentos {
     }
 
     public static void main(String[] args) {
-        Experimento experimento = new Experimento();
+        experimentos experimento = new experimentos();
         CultivoDeBacterias cultivoDeBacterias1 = new CultivoDeBacterias("Bacteria 1", 100);
         CultivoDeBacterias cultivoDeBacterias2 = new CultivoDeBacterias("Bacteria 2", 200);
         CultivoDeBacterias cultivoDeBacterias3 = new CultivoDeBacterias("Bacteria 3", 300);
@@ -37,5 +35,13 @@ public class Experimentos {
         experimento.agregarCultivoDeBacterias(cultivoDeBacterias2);
         experimento.agregarCultivoDeBacterias(cultivoDeBacterias3);
         experimento.mostrarCultivosDeBacterias();
+    }
+
+    public void agregarPoblacionBacterias(PoblacionBacterias poblacion1) {
+
+    }
+
+    public Iterable<Object> nombresPoblacionesBacterias() {
+        return null;
     }
 }

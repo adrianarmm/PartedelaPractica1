@@ -56,7 +56,7 @@ public class Experimentos {
     }
 
     public static void main(String[] args) {
-        Experimentos experimentos = new Experimentos();
+        experimentos experimentos = new experimentos();
         PoblacionBacterias poblacion1 = new PoblacionBacterias("Población 1", "01/01/2021", "01/02/2021", 1000, "25°C", "Alta", new int[]{10, 20, 30});
         PoblacionBacterias poblacion2 = new PoblacionBacterias("Población 2", "01/02/2021", "01/03/2021", 2000, "30°C", "Baja", new int[]{20, 30, 40});
         PoblacionBacterias poblacion3 = new PoblacionBacterias("Población 3", "01/03/2021", "01/04/2021", 3000, "35°C", "Media", new int[]{30, 40, 50});
