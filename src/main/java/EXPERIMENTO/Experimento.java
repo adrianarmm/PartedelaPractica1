@@ -1,3 +1,7 @@
+package EXPERIMENTO;
+
+import EXPERIMENTO.CultivoDeBacterias;
+
 import java.util.ArrayList;
 import java.util.List;
 

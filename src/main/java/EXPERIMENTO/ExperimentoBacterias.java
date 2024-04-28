@@ -1,3 +1,4 @@
+package EXPERIMENTO;
 
 import java.util.Random;
 public class ExperimentoBacterias {

@@ -1,3 +1,4 @@
+package EXPERIMENTO;
 public class CultivoDeBacterias {
     private String nombre;
     private int cantidad;
@@ -18,4 +19,24 @@ public class CultivoDeBacterias {
                 ", cantidad=" + cantidad +
                 '}';
     }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public static void main(String[] args) {
+        CultivoDeBacterias cultivoDeBacterias = new CultivoDeBacterias("Bacteria 1", 100);
+        System.out.println(cultivoDeBacterias);
+    }
+
 }
+
+
