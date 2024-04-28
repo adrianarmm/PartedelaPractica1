@@ -5,10 +5,10 @@ import EXPERIMENTO.CultivoDeBacterias;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Experimento {
+public class Experimentos {
     private List<CultivoDeBacterias> cultivoDeBacteriasList; // Asegúrate de que la lista sea de tipo CultivoDeBacterias
 
-    public Experimento() {
+    public Experimentos() {
         this.cultivoDeBacteriasList = new ArrayList<>();
     }
 
