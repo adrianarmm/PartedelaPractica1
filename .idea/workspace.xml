@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="41">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_4_24__11_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_4_24__11_21__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_4_24__11_21__Changes_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_4_24__11_21__Changes_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_4_24__11_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_4_24__11_22__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_4_24__11_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_4_24__11_29__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_4_24__11_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_4_24__11_30__Changes_.xml" afterDir="false" />
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="53">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Guardar/FuncionGuardar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Guardar/FuncionGuardar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713887180017</updated>
       <workItem from="1713887181142" duration="3917000" />
-      <workItem from="1714578936755" duration="337000" />
+      <workItem from="1714578936755" duration="777000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <option name="closed" value="true" />
@@ -260,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714297339184</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="53">
+      <option name="closed" value="true" />
+      <created>1714579482157</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1714579482157</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +293,7 @@
     <MESSAGE value="39" />
     <MESSAGE value="40" />
     <MESSAGE value="41" />
-    <option name="LAST_COMMIT_MESSAGE" value="41" />
+    <MESSAGE value="53" />
+    <option name="LAST_COMMIT_MESSAGE" value="53" />
   </component>
 </project>
