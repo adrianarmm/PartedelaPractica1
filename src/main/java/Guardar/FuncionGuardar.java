@@ -50,6 +50,13 @@ public class GuardarArchivos extends JFrame {
             writeFile(currentFile);
         }
     }
+    private void writeFile(File file) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            writer.write(textArea.getText());
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 }
 
 
