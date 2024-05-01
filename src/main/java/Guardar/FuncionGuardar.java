@@ -43,6 +43,13 @@ public class GuardarArchivos extends JFrame {
             saveFileAs();
         }
     }
+    private void saveFileAs() {
+        int returnValue = fileChooser.showSaveDialog(this);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            currentFile = fileChooser.getSelectedFile();
+            writeFile(currentFile);
+        }
+    }
 }
 
 
