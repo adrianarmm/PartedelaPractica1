@@ -1,0 +1,184 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"c976f18b-89ac-4b43-8fc8-42e3147c8413\" name=\"Changes\" comment=\"11\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectColorInfo\"><![CDATA[{\n  \"associatedIndex\": 1\n}]]></component>\n  <component name=\"ProjectId\" id=\"2fVXNMh3YWyvBceWxrYSRJGQSr4\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Application.CultivoDeBacterias.executor\": \"Run\",\n    \"Application.Experimento.executor\": \"Run\",\n    \"Application.ExperimentoManager.executor\": \"Run\",\n    \"Application.HorarioAlimentacion.executor\": \"Run\",\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"git-widget-placeholder\": \"adriana\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"c976f18b-89ac-4b43-8fc8-42e3147c8413\" name=\"Changes\" comment=\"\" />\n      <created>1713887180017</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1713887180017</updated>\n      <workItem from=\"1713887181142\" duration=\"2654000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"2\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1713966197134</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1713966197134</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"3\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1713966379851</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1713966379851</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"4\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1713966584622</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1713966584622</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"5\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1713966622709</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1713966622709</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"6\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1713967193756</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1713967193756</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"7\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1713967213504</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1713967213504</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"8\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1713967238604</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1713967238604</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"9\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1713967300981</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1713967300981</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"10\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1713967394809</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1713967394809</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"11\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1713967529708</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1713967529708</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"11\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"1\" />\n    <MESSAGE value=\"2\" />\n    <MESSAGE value=\"3\" />\n    <MESSAGE value=\"4\" />\n    <MESSAGE value=\"5\" />\n    <MESSAGE value=\"6\" />\n    <MESSAGE value=\"7\" />\n    <MESSAGE value=\"8\" />\n    <MESSAGE value=\"9\" />\n    <MESSAGE value=\"10\" />\n    <MESSAGE value=\"11\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"11\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision af6c119d3ae4067fd10cffd1bb6118378c52a0f4)
++++ b/.idea/workspace.xml	(date 1714673630999)
+@@ -4,7 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="11" />
++    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="41">
++      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/PoblacionBacterias.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/PoblacionBacterias.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -18,16 +20,34 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <favorite-branches>
++      <branch-storage>
++        <map>
++          <entry type="LOCAL">
++            <value>
++              <list>
++                <branch-info repo="$PROJECT_DIR$" source="adriana" />
++              </list>
++            </value>
++          </entry>
++        </map>
++      </branch-storage>
++    </favorite-branches>
++    <option name="PREVIOUS_COMMIT_AUTHORS">
++      <list>
++        <option value="vitaliy-pg &lt;aljndrvt@myuax.com&gt;" />
++      </list>
++    </option>
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="main" />
++        <entry key="$PROJECT_DIR$" value="sebas" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 1
+-}]]></component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 1
++}</component>
+   <component name="ProjectId" id="2fVXNMh3YWyvBceWxrYSRJGQSr4" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+@@ -39,11 +59,11 @@
+     "Application.CultivoDeBacterias.executor": "Run",
+     "Application.Experimento.executor": "Run",
+     "Application.ExperimentoManager.executor": "Run",
++    "Application.Experimentos.executor": "Run",
+     "Application.HorarioAlimentacion.executor": "Run",
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "git-widget-placeholder": "adriana",
++    "git-widget-placeholder": "main",
+     "kotlin-language-version-configured": "true",
+     "node.js.detected.package.eslint": "true",
+     "node.js.detected.package.tslint": "true",
+@@ -68,7 +88,7 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1713887180017</updated>
+-      <workItem from="1713887181142" duration="2654000" />
++      <workItem from="1713887181142" duration="3917000" />
+     </task>
+     <task id="LOCAL-00001" summary="2">
+       <option name="closed" value="true" />
+@@ -150,7 +170,79 @@
+       <option name="project" value="LOCAL" />
+       <updated>1713967529708</updated>
+     </task>
+-    <option name="localTasksCounter" value="11" />
++    <task id="LOCAL-00011" summary="12">
++      <option name="closed" value="true" />
++      <created>1713967551258</created>
++      <option name="number" value="00011" />
++      <option name="presentableId" value="LOCAL-00011" />
++      <option name="project" value="LOCAL" />
++      <updated>1713967551258</updated>
++    </task>
++    <task id="LOCAL-00012" summary="13">
++      <option name="closed" value="true" />
++      <created>1713968005107</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1713968005108</updated>
++    </task>
++    <task id="LOCAL-00013" summary="14">
++      <option name="closed" value="true" />
++      <created>1713968112729</created>
++      <option name="number" value="00013" />
++      <option name="presentableId" value="LOCAL-00013" />
++      <option name="project" value="LOCAL" />
++      <updated>1713968112729</updated>
++    </task>
++    <task id="LOCAL-00014" summary="36">
++      <option name="closed" value="true" />
++      <created>1714296789346</created>
++      <option name="number" value="00014" />
++      <option name="presentableId" value="LOCAL-00014" />
++      <option name="project" value="LOCAL" />
++      <updated>1714296789346</updated>
++    </task>
++    <task id="LOCAL-00015" summary="37">
++      <option name="closed" value="true" />
++      <created>1714296917927</created>
++      <option name="number" value="00015" />
++      <option name="presentableId" value="LOCAL-00015" />
++      <option name="project" value="LOCAL" />
++      <updated>1714296917927</updated>
++    </task>
++    <task id="LOCAL-00016" summary="38">
++      <option name="closed" value="true" />
++      <created>1714296941462</created>
++      <option name="number" value="00016" />
++      <option name="presentableId" value="LOCAL-00016" />
++      <option name="project" value="LOCAL" />
++      <updated>1714296941462</updated>
++    </task>
++    <task id="LOCAL-00017" summary="39">
++      <option name="closed" value="true" />
++      <created>1714297109123</created>
++      <option name="number" value="00017" />
++      <option name="presentableId" value="LOCAL-00017" />
++      <option name="project" value="LOCAL" />
++      <updated>1714297109123</updated>
++    </task>
++    <task id="LOCAL-00018" summary="40">
++      <option name="closed" value="true" />
++      <created>1714297239649</created>
++      <option name="number" value="00018" />
++      <option name="presentableId" value="LOCAL-00018" />
++      <option name="project" value="LOCAL" />
++      <updated>1714297239649</updated>
++    </task>
++    <task id="LOCAL-00019" summary="41">
++      <option name="closed" value="true" />
++      <created>1714297339184</created>
++      <option name="number" value="00019" />
++      <option name="presentableId" value="LOCAL-00019" />
++      <option name="project" value="LOCAL" />
++      <updated>1714297339184</updated>
++    </task>
++    <option name="localTasksCounter" value="20" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -168,6 +260,17 @@
+     <MESSAGE value="9" />
+     <MESSAGE value="10" />
+     <MESSAGE value="11" />
+-    <option name="LAST_COMMIT_MESSAGE" value="11" />
++    <MESSAGE value="12" />
++    <MESSAGE value="13" />
++    <MESSAGE value="14" />
++    <MESSAGE value="35" />
++    <MESSAGE value="36" />
++    <MESSAGE value="37" />
++    <MESSAGE value="38" />
++    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
++    <MESSAGE value="39" />
++    <MESSAGE value="40" />
++    <MESSAGE value="41" />
++    <option name="LAST_COMMIT_MESSAGE" value="41" />
+   </component>
+ </project>
+\ No newline at end of file
