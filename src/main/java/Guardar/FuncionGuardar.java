@@ -36,6 +36,13 @@ public class GuardarArchivos extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
     }
+    private void saveFile() {
+        if (currentFile != null) {
+            writeFile(currentFile);
+        } else {
+            saveFileAs();
+        }
+    }
 }
 
 
