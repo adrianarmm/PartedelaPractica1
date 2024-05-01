@@ -57,6 +57,9 @@ public class GuardarArchivos extends JFrame {
             JOptionPane.showMessageDialog(this, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(GuardarArchivos::new);
+    }
 }
 
 
