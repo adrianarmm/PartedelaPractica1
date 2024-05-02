@@ -3,7 +3,7 @@ package EXPERIMENTO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.io.*;
+import java.io.IOException;
 
 public class GestorExperimentosGUI {
     private JFrame marco;
