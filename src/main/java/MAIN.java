@@ -31,6 +31,11 @@ public class MAIN {
         return nuevaPoblacion;
     }
 
+    public static int eliminarBacterias(int poblacion, double porcentajeEliminacion) {
+        int eliminadas = (int) (poblacion * porcentajeEliminacion);
+        return poblacion - eliminadas;
+    }
+
     public static void imprimirDetalles(JFrame frame, int poblacion, double tasaCrecimiento) {
         int nuevaPoblacion = crecimientoBacterias(poblacion, tasaCrecimiento);
         int diferenciaCrecimiento = nuevaPoblacion - poblacion;
