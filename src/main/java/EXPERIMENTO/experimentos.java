@@ -44,4 +44,8 @@ public class experimentos {
     public Iterable<Object> nombresPoblacionesBacterias() {
         return null;
     }
+
+    public void eliminarCultivoDeBacterias(CultivoDeBacterias cultivoDeBacterias) {
+
+    }
 }
