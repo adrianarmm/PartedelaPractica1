@@ -48,4 +48,8 @@ public class experimentos {
     public void eliminarCultivoDeBacterias(CultivoDeBacterias cultivoDeBacterias) {
 
     }
+
+    public Object obtenerDetallesCultivo(String nombre) {
+        return null;
+    }
 }
