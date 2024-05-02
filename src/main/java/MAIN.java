@@ -75,3 +75,7 @@ public class CultivoDeBacterias {
         frame.add(growthRateLabel);
         frame.add(growthRateField);
         frame.add(simulateButton);
+
+        frame.setVisible(true);
+    }
+}
