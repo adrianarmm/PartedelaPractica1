@@ -63,7 +63,9 @@ public class MAIN {
         JTextField quantityField = new JTextField(5);
         JLabel growthRateLabel = new JLabel("Tasa de crecimiento (%):");
         JTextField growthRateField = new JTextField(5);
-        JButton simulateButton = new JButton("Simular Crecimiento");
+        JLabel eliminationRateLabel = new JLabel("Porcentaje de eliminación (%):");
+        JTextField eliminationRateField = new JTextField(5);
+        JButton simulateButton = new JButton("Simular Crecimiento y Eliminación");
 
 
         simulateButton.addActionListener(e -> {
