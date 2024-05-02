@@ -1,6 +1,5 @@
-package Guardar;
+package EXPERIMENTO;
 import javax.swing.*;
-import java.awt.event.*;
 import java.io.*;
 
 public class GuardarArchivos extends JFrame {

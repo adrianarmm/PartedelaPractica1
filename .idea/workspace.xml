@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="77" />
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="83">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/BacterialCultureExperimentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/BacterialCultureExperimentManager.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +75,7 @@
     "Application.Experimento.executor": "Run",
     "Application.ExperimentoManager.executor": "Run",
     "Application.Experimentos.executor": "Run",
+    "Application.GuardarArchivos.executor": "Run",
     "Application.HorarioAlimentacion.executor": "Run",
     "Application.MAIN.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -86,7 +90,20 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.GuardarArchivos">
+    <configuration name="GuardarArchivos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="EXPERIMENTO.GuardarArchivos" />
+      <module name="PartedelaPractica1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="EXPERIMENTO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PoblacionBacterias" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PoblacionBacterias" />
       <module name="PartedelaPractica1" />
@@ -97,6 +114,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GuardarArchivos" />
         <item itemvalue="Application.PoblacionBacterias" />
       </list>
     </recent_temporary>
@@ -352,18 +370,61 @@
       <option name="project" value="LOCAL" />
       <updated>1714675680688</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="78">
+      <option name="closed" value="true" />
+      <created>1714676028513</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1714676028513</updated>
+    </task>
+    <task id="LOCAL-00031" summary="79">
+      <option name="closed" value="true" />
+      <created>1714676060474</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1714676060474</updated>
+    </task>
+    <task id="LOCAL-00032" summary="80">
+      <option name="closed" value="true" />
+      <created>1714676074225</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1714676074225</updated>
+    </task>
+    <task id="LOCAL-00033" summary="81">
+      <option name="closed" value="true" />
+      <created>1714676089209</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1714676089209</updated>
+    </task>
+    <task id="LOCAL-00034" summary="81">
+      <option name="closed" value="true" />
+      <created>1714676129096</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1714676129096</updated>
+    </task>
+    <task id="LOCAL-00035" summary="83">
+      <option name="closed" value="true" />
+      <created>1714676142197</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1714676142197</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="9" />
-    <MESSAGE value="10" />
-    <MESSAGE value="11" />
-    <MESSAGE value="12" />
-    <MESSAGE value="13" />
     <MESSAGE value="14" />
     <MESSAGE value="35" />
     <MESSAGE value="36" />
@@ -384,7 +445,12 @@
     <MESSAGE value="75" />
     <MESSAGE value="76" />
     <MESSAGE value="77" />
-    <option name="LAST_COMMIT_MESSAGE" value="77" />
+    <MESSAGE value="78" />
+    <MESSAGE value="79" />
+    <MESSAGE value="80" />
+    <MESSAGE value="81" />
+    <MESSAGE value="83" />
+    <option name="LAST_COMMIT_MESSAGE" value="83" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
