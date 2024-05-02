@@ -12,11 +12,11 @@ public class GestorExperimentosGUI {
     private JButton botonAgregar, botonEliminar, botonMostrarInfo, botonGuardar, botonCargar;
     private JList<String> listaCultivos;
     private DefaultListModel<String> modeloLista;
-    private ManejadorExperimentos manejadorExperimentos;
-    private Experimentos experimentoActual;
+    private ExperimentoManageer manejadorExperimentos;
+    private experimentos experimentoActual;
 
     public GestorExperimentosGUI() throws IOException {
-        manejadorExperimentos = new ManejadorExperimentos();
+        manejadorExperimentos = new ExperimentoManageer();
         experimentoActual = manejadorExperimentos.crearNuevoExperimento();
         crearGUI();
     }
