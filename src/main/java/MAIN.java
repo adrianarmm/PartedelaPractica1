@@ -72,8 +72,16 @@ public class MAIN {
             String nombre = nameField.getText();
             int cantidad = Integer.parseInt(quantityField.getText());
             double tasaCrecimiento = Double.parseDouble(growthRateField.getText()) / 100;
-            CultivoDeBacterias cultivo = new CultivoDeBacterias(nombre, cantidad);
-            imprimirDetalles(frame, cantidad, tasaCrecimiento);
+            double porcentajeEliminacion = Double.parseDouble(eliminationRateField.getText()) / 100;
+
+            int poblacionDespuesCrecimiento = crecimientoBacterias(cantidad, tasaCrecimiento);
+            int poblacionDespuesEliminacion = eliminarBacterias(poblacionDespuesCrecimiento, porcentajeEliminacion);
+
+            JOptionPane.showMessageDialog(frame,
+                    "<html>Resultado del experimento con " + nombre + ":<br>" +
+                            "Población inicial: " + cantidad + "<br>" +
+                            "Población después del crecimiento: " + poblacionDespuesCrecimiento + "<br>" +
+                            "Población después de la eliminación: " + poblacionDespuesEliminacion + "</html>");
         });
 
         frame.add(nameLabel);
@@ -82,6 +90,8 @@ public class MAIN {
         frame.add(quantityField);
         frame.add(growthRateLabel);
         frame.add(growthRateField);
+        frame.add(eliminationRateLabel);
+        frame.add(eliminationRateField);
         frame.add(simulateButton);
 
         frame.setVisible(true);
