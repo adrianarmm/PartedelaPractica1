@@ -1,53 +1,9 @@
 package EXPERIMENTO;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
-class experimentos implements Serializable {
-    private List<CultivoDeBacterias> listaCultivos;
-
-    public experimentos() {
-        this.listaCultivos = new ArrayList<>();
-    }
-
-    public void agregarCultivoDeBacterias(CultivoDeBacterias cultivo) {
-        listaCultivos.add(cultivo);
-    }
-
-    public List<CultivoDeBacterias> getCultivoDeBacteriasList() {
-        return listaCultivos;
-    }
-
-    public void mostrarCultivosDeBacterias() {
-        listaCultivos.forEach(System.out::println);
-    }
-}
-
-class MAIN implements Serializable {
-    private String nombre;
-    private int cantidad;
-
-    public MAIN(String nombre, int cantidad) {
-        this.nombre = nombre;
-        this.cantidad = cantidad;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    @Override
-    public String toString() {
-        return "CultivoDeBacterias{" +
-                "nombre='" + nombre + '\'' +
-                ", cantidad=" + cantidad +
-                '}';
-    }
-}
-
-public class ExperimentoManager {
+public class ExperimentoManageer {
 
     public experimentos abrirExperimento(String fileName) throws IOException, ClassNotFoundException {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) {
@@ -118,14 +74,15 @@ public class ExperimentoManager {
     }
 
     public static void main(String[] args) {
-        ExperimentoManager experimentoManager = new ExperimentoManager();
+        ExperimentoManageer experimentoManager = new ExperimentoManageer();
         experimentos experimento = experimentoManager.crearNuevoExperimento();
         CultivoDeBacterias cultivoDeBacterias1 = new CultivoDeBacterias("Bacteria 1", 100);
         CultivoDeBacterias cultivoDeBacterias2 = new CultivoDeBacterias("Bacteria 2", 200);
         CultivoDeBacterias cultivoDeBacterias3 = new CultivoDeBacterias("Bacteria 3", 300);
-        experimentoManager.agregarCultivoDeBacterias(experimento);
-        experimentoManager.agregarCultivoDeBacterias(experimento);
-        experimentoManager.agregarCultivoDeBacterias(experimento);
+        CultivoDeBacterias bacteriaCulture = null;
+        experimentoManager.agregarCultivoDeBacterias(experimento, bacteriaCulture);
+        experimentoManager.agregarCultivoDeBacterias(experimento, bacteriaCulture);
+        experimentoManager.agregarCultivoDeBacterias(experimento, bacteriaCulture);
         experimentoManager.mostrarCultivosDeBacterias(experimento);
     }
 }
