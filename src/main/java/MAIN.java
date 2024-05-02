@@ -29,3 +29,18 @@ public class CultivoDeBacterias {
         nuevaPoblacion += (nuevaPoblacion * variacion) / 100;
         return nuevaPoblacion;
     }
+
+    public static void imprimirDetalles(JFrame frame, int poblacion, double tasaCrecimiento) {
+        int nuevaPoblacion = crecimientoBacterias(poblacion, tasaCrecimiento);
+        int diferenciaCrecimiento = nuevaPoblacion - poblacion;
+        double porcentajeCambio = ((double) diferenciaCrecimiento / poblacion) * 100;
+
+        JOptionPane.showMessageDialog(frame,
+                "<html>Información detallada de la población de bacterias:<br>" +
+                        "Población inicial: " + poblacion + "<br>" +
+                        "Tasa de crecimiento: " + (tasaCrecimiento * 100) + "%" + "<br>" +
+                        "---- Simulación de crecimiento ----<br>" +
+                        "Población después del crecimiento: " + nuevaPoblacion + "<br>" +
+                        "Aumento de la población: " + diferenciaCrecimiento + "<br>" +
+                        "Porcentaje de cambio: " + String.format("%.2f", porcentajeCambio) + "%" + "</html>");
+    }
