@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="53">
-      <changelist_data name="Gmongtor" email="146821781+gmongtor@users.noreply.github.com" />
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="72">
+      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +35,7 @@
     </favorite-branches>
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Gmongtor &lt;146821781+gmongtor@users.noreply.github.com&gt;" />
         <option value="vitaliy-pg &lt;aljndrvt@myuax.com&gt;" />
       </list>
     </option>
@@ -66,25 +67,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CultivoDeBacterias.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Experimento.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ExperimentoManager.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Experimentos.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HorarioAlimentacion.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CultivoDeBacterias.executor": "Run",
+    "Application.Experimento.executor": "Run",
+    "Application.ExperimentoManager.executor": "Run",
+    "Application.Experimentos.executor": "Run",
+    "Application.HorarioAlimentacion.executor": "Run",
+    "Application.MAIN.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="PoblacionBacterias" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PoblacionBacterias" />
@@ -279,16 +281,45 @@
       <option name="project" value="LOCAL" />
       <updated>1714579482157</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="69">
+      <option name="closed" value="true" />
+      <created>1714674613331</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1714674613331</updated>
+    </task>
+    <task id="LOCAL-00022" summary="70">
+      <option name="closed" value="true" />
+      <created>1714674648181</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1714674648181</updated>
+    </task>
+    <task id="LOCAL-00023" summary="71">
+      <option name="closed" value="true" />
+      <created>1714674666364</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1714674666364</updated>
+    </task>
+    <task id="LOCAL-00024" summary="72">
+      <option name="closed" value="true" />
+      <created>1714674681552</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1714674681552</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1" />
-    <MESSAGE value="2" />
-    <MESSAGE value="3" />
     <MESSAGE value="4" />
     <MESSAGE value="5" />
     <MESSAGE value="6" />
@@ -310,7 +341,11 @@
     <MESSAGE value="41" />
     <MESSAGE value="53" />
     <MESSAGE value="Merge pull request #4 from adrianarmm/sebas&#10;&#10;Sebas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge pull request #4 from adrianarmm/sebas&#10;&#10;Sebas" />
+    <MESSAGE value="69" />
+    <MESSAGE value="70" />
+    <MESSAGE value="71" />
+    <MESSAGE value="72" />
+    <option name="LAST_COMMIT_MESSAGE" value="72" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
