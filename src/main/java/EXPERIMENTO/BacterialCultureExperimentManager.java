@@ -41,35 +41,24 @@ public class BacterialCultureExperimentManager {
         frame.setSize(600, 400);
         frame.setLayout(new BorderLayout());
 
-        JPanel topPanel = new JPanel();
-        topPanel.setLayout(new GridLayout(3, 2));
+        JPanel topPanel = new JPanel(new GridLayout(3, 2));
 
         JLabel nameLabel = new JLabel("Name:");
         nameField = new JTextField(20);
-        topPanel.add(nameLabel);
-        topPanel.add(nameField);
-
         JLabel initialQuantityLabel = new JLabel("Initial Quantity:");
         initialQuantityField = new JTextField(20);
+        addButton = new JButton("Add");
+        removeButton = new JButton("Remove");
+
+        topPanel.add(nameLabel);
+        topPanel.add(nameField);
         topPanel.add(initialQuantityLabel);
         topPanel.add(initialQuantityField);
-
-        addButton = new JButton("Add");
-        addButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                addCulture();
-            }
-        });
-        removeButton = new JButton("Remove");
-        removeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                removeCulture();
-            }
-        });
         topPanel.add(addButton);
         topPanel.add(removeButton);
+
+        addButton.addActionListener(this::addCulture);
+        removeButton.addActionListener(this::removeCulture);
 
         frame.add(topPanel, BorderLayout.NORTH);
 
@@ -79,26 +68,12 @@ public class BacterialCultureExperimentManager {
         frame.add(scrollPane, BorderLayout.CENTER);
 
         displayInfoButton = new JButton("Display Info");
-        displayInfoButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                displayInfo();
-            }
-        });
         saveButton = new JButton("Save");
-        saveButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                saveExperiment();
-            }
-        });
         loadButton = new JButton("Load");
-        loadButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                loadExperiment();
-            }
-        });
+
+        displayInfoButton.addActionListener(this::displayInfo);
+        saveButton.addActionListener(this::saveExperiment);
+        loadButton.addActionListener(this::loadExperiment);
 
         JPanel bottomPanel = new JPanel();
         bottomPanel.add(displayInfoButton);
