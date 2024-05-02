@@ -58,3 +58,20 @@ public class CultivoDeBacterias {
         JLabel growthRateLabel = new JLabel("Tasa de crecimiento (%):");
         JTextField growthRateField = new JTextField(5);
         JButton simulateButton = new JButton("Simular Crecimiento");
+
+
+        simulateButton.addActionListener(e -> {
+            String nombre = nameField.getText();
+            int cantidad = Integer.parseInt(quantityField.getText());
+            double tasaCrecimiento = Double.parseDouble(growthRateField.getText()) / 100;
+            CultivoDeBacterias cultivo = new CultivoDeBacterias(nombre, cantidad);
+            imprimirDetalles(frame, cantidad, tasaCrecimiento);
+        });
+
+        frame.add(nameLabel);
+        frame.add(nameField);
+        frame.add(quantityLabel);
+        frame.add(quantityField);
+        frame.add(growthRateLabel);
+        frame.add(growthRateField);
+        frame.add(simulateButton);
