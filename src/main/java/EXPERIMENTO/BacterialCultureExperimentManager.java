@@ -30,7 +30,8 @@ public class BacterialCultureExperimentManager {
     }
 
     public BacterialCultureExperimentManager() throws IOException {
-        experimentManager = new ExperimentoManageer();
+        experimentManager = new ExperimentoManager();
+        currentExperiment = experimentManager.crearNuevoExperimento();  // Usar un solo experimento en la GUI
         createGUI();
     }
 
