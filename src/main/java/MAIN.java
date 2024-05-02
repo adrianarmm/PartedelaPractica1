@@ -44,3 +44,17 @@ public class CultivoDeBacterias {
                         "Aumento de la población: " + diferenciaCrecimiento + "<br>" +
                         "Porcentaje de cambio: " + String.format("%.2f", porcentajeCambio) + "%" + "</html>");
     }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Cultivo de Bacterias y Simulación de Crecimiento");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+        frame.setLayout(new FlowLayout());
+
+        JLabel nameLabel = new JLabel("Nombre del cultivo:");
+        JTextField nameField = new JTextField(15);
+        JLabel quantityLabel = new JLabel("Población inicial:");
+        JTextField quantityField = new JTextField(5);
+        JLabel growthRateLabel = new JLabel("Tasa de crecimiento (%):");
+        JTextField growthRateField = new JTextField(5);
+        JButton simulateButton = new JButton("Simular Crecimiento");
