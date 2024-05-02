@@ -99,20 +99,20 @@ public class BacterialCultureExperimentManager {
     }
 
 
-    private void removeCulture() {
+    private void removeCulture(ActionEvent e) {
         int index = cultureList.getSelectedIndex();
         if (index != -1) {
             String name = listModel.get(index);
-            experimentManager.eliminarCultivoDeBacterias(experimentManager.crearNuevoExperimento(), new CultivoDeBacterias(name, 0));
+            experimentManager.eliminarCultivoDeBacterias(currentExperiment, new CultivoDeBacterias(name, 0));
             listModel.remove(index);
         }
     }
 
-    private void displayInfo() {
+    private void displayInfo(ActionEvent e) {
         int index = cultureList.getSelectedIndex();
         if (index != -1) {
             String name = listModel.get(index);
-            experimentManager.verInformacionDetalladaDeCultivoDeBacterias(experimentManager.crearNuevoExperimento(), name);
+            experimentManager.verInformacionDetalladaDeCultivoDeBacterias(currentExperiment, name);
         }
     }
 
