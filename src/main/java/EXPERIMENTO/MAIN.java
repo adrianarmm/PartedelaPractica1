@@ -3,12 +3,11 @@ package EXPERIMENTO;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-class experimentos implements Serializable {
+class MAIN implements Serializable {
     private List<CultivoDeBacterias> listaCultivos;
 
-    public experimentos() {
+    public MAIN() {
         this.listaCultivos = new ArrayList<>();
     }
 
@@ -65,7 +64,7 @@ public class ExperimentoManager {
         return new experimentos();
     }
 
-    public void agregarCultivoDeBacterias(experimentos experimento, CultivoDeBacterias bacteriaCulture) {
+    public void agregarCultivoDeBacterias(experimentos experimento) {
         if (experimento == null || bacteriaCulture == null) {
             throw new IllegalArgumentException("Experimento y CultivoDeBacterias no pueden ser nulos.");
         }
@@ -99,9 +98,9 @@ public class ExperimentoManager {
         CultivoDeBacterias cultivoDeBacterias1 = new CultivoDeBacterias("Bacteria 1", 100);
         CultivoDeBacterias cultivoDeBacterias2 = new CultivoDeBacterias("Bacteria 2", 200);
         CultivoDeBacterias cultivoDeBacterias3 = new CultivoDeBacterias("Bacteria 3", 300);
-        experimentoManager.agregarCultivoDeBacterias(experimento, cultivoDeBacterias1);
-        experimentoManager.agregarCultivoDeBacterias(experimento, cultivoDeBacterias2);
-        experimentoManager.agregarCultivoDeBacterias(experimento, cultivoDeBacterias3);
-        experimentoManager.mostrarCultivosDeBacterias(experimento);
+        experimentoManager.agregarCultivoDeBacterias(experimento);
+        experimentoManager.agregarCultivoDeBacterias(experimento);
+        experimentoManager.agregarCultivoDeBacterias(experimento);
+        experimentoManager.agregarCultivoDeBacterias(experimento);
     }
 }

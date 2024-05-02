@@ -79,9 +79,9 @@ public class ExperimentoManager {
         CultivoDeBacterias cultivoDeBacterias1 = new CultivoDeBacterias("Bacteria 1", 100);
         CultivoDeBacterias cultivoDeBacterias2 = new CultivoDeBacterias("Bacteria 2", 200);
         CultivoDeBacterias cultivoDeBacterias3 = new CultivoDeBacterias("Bacteria 3", 300);
-        experimentoManager.agregarCultivoDeBacterias(experimento, cultivoDeBacterias1);
-        experimentoManager.agregarCultivoDeBacterias(experimento, cultivoDeBacterias2);
-        experimentoManager.agregarCultivoDeBacterias(experimento, cultivoDeBacterias3);
+        experimentoManager.agregarCultivoDeBacterias(experimento);
+        experimentoManager.agregarCultivoDeBacterias(experimento);
+        experimentoManager.agregarCultivoDeBacterias(experimento);
         experimentoManager.mostrarCultivosDeBacterias(experimento);
     }
 }
