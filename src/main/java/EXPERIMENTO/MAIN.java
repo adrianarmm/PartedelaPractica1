@@ -1,40 +1,17 @@
 package EXPERIMENTO;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.util.Random;
 
-class MAIN implements Serializable {
-    private List<CultivoDeBacterias> listaCultivos;
-
-    public MAIN() {
-        this.listaCultivos = new ArrayList<>();
-    }
-
-    public void agregarCultivoDeBacterias(CultivoDeBacterias cultivo) {
-        listaCultivos.add(cultivo);
-    }
-
-    public List<CultivoDeBacterias> getCultivoDeBacteriasList() {
-        return listaCultivos;
-    }
-
-    public void mostrarCultivosDeBacterias() {
-        listaCultivos.forEach(System.out::println);
-    }
-}
-
-class CultivoDeBacterias implements Serializable {
+public class MAIN {
     private String nombre;
     private int cantidad;
 
-    public CultivoDeBacterias(String nombre, int cantidad) {
+    public MAIN(String nombre, int cantidad) {
         this.nombre = nombre;
         this.cantidad = cantidad;
-    }
-
-    public String getNombre() {
-        return nombre;
     }
 
     @Override
@@ -44,63 +21,62 @@ class CultivoDeBacterias implements Serializable {
                 ", cantidad=" + cantidad +
                 '}';
     }
-}
 
-public class ExperimentoManager {
-
-    public experimentos abrirExperimento(String fileName) throws IOException, ClassNotFoundException {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) {
-            return (experimentos) ois.readObject();
-        } catch (FileNotFoundException e) {
-            System.out.println("Archivo no encontrado: " + e.getMessage());
-            throw e;
-        } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Error al cargar el experimento: " + e.getMessage());
-            throw e;
-        }
+    public static int crecimientoBacterias(int poblacionInicial, double tasaCrecimiento) {
+        Random rand = new Random();
+        int nuevaPoblacion = (int) (poblacionInicial * (1 + tasaCrecimiento));
+        int variacion = rand.nextInt(11) - 5; // Variación aleatoria de +/- 5%
+        nuevaPoblacion += (nuevaPoblacion * variacion) / 100;
+        return nuevaPoblacion;
     }
 
-    public experimentos crearNuevoExperimento() {
-        return new experimentos();
-    }
-
-    public void agregarCultivoDeBacterias(experimentos experimento) {
-        if (experimento == null || bacteriaCulture == null) {
-            throw new IllegalArgumentException("Experimento y CultivoDeBacterias no pueden ser nulos.");
-        }
-        experimento.agregarCultivoDeBacterias(bacteriaCulture);
-    }
-
-    public void eliminarCultivoDeBacterias(experimentos experimento, CultivoDeBacterias bacteriaCulture) {
-        if (experimento == null || bacteriaCulture == null) {
-            throw new IllegalArgumentException("Experimento y CultivoDeBacterias no pueden ser nulos.");
-        }
-        if (!experimento.getCultivoDeBacteriasList().remove(bacteriaCulture)) {
-            System.out.println("El cultivo no se encontró en el experimento.");
-        }
-    }
-
-    public void guardarExperimento(experimentos experimento, String fileName) throws IOException {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName))) {
-            oos.writeObject(experimento);
-        } catch (FileNotFoundException e) {
-            System.out.println("Archivo no encontrado: " + e.getMessage());
-            throw e;
-        } catch (IOException e) {
-            System.out.println("Error al guardar el experimento: " + e.getMessage());
-            throw e;
-        }
+    public static int eliminarBacterias(int poblacion, double porcentajeEliminacion) {
+        int eliminadas = (int) (poblacion * porcentajeEliminacion);
+        return poblacion - eliminadas;
     }
 
     public static void main(String[] args) {
-        ExperimentoManager experimentoManager = new ExperimentoManager();
-        experimentos experimento = experimentoManager.crearNuevoExperimento();
-        CultivoDeBacterias cultivoDeBacterias1 = new CultivoDeBacterias("Bacteria 1", 100);
-        CultivoDeBacterias cultivoDeBacterias2 = new CultivoDeBacterias("Bacteria 2", 200);
-        CultivoDeBacterias cultivoDeBacterias3 = new CultivoDeBacterias("Bacteria 3", 300);
-        experimentoManager.agregarCultivoDeBacterias(experimento);
-        experimentoManager.agregarCultivoDeBacterias(experimento);
-        experimentoManager.agregarCultivoDeBacterias(experimento);
-        experimentoManager.agregarCultivoDeBacterias(experimento);
+        JFrame frame = new JFrame("Cultivo y Experimento de Bacterias");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+        frame.setLayout(new FlowLayout());
+
+        JLabel nameLabel = new JLabel("Nombre del cultivo:");
+        JTextField nameField = new JTextField(15);
+        JLabel quantityLabel = new JLabel("Población inicial:");
+        JTextField quantityField = new JTextField(5);
+        JLabel growthRateLabel = new JLabel("Tasa de crecimiento (%):");
+        JTextField growthRateField = new JTextField(5);
+        JLabel eliminationRateLabel = new JLabel("Porcentaje de eliminación (%):");
+        JTextField eliminationRateField = new JTextField(5);
+        JButton simulateButton = new JButton("Simular Crecimiento y Eliminación");
+
+        simulateButton.addActionListener(e -> {
+            String nombre = nameField.getText();
+            int cantidad = Integer.parseInt(quantityField.getText());
+            double tasaCrecimiento = Double.parseDouble(growthRateField.getText()) / 100;
+            double porcentajeEliminacion = Double.parseDouble(eliminationRateField.getText()) / 100;
+
+            int poblacionDespuesCrecimiento = crecimientoBacterias(cantidad, tasaCrecimiento);
+            int poblacionDespuesEliminacion = eliminarBacterias(poblacionDespuesCrecimiento, porcentajeEliminacion);
+
+            JOptionPane.showMessageDialog(frame,
+                    "<html>Resultado del experimento con " + nombre + ":<br>" +
+                            "Población inicial: " + cantidad + "<br>" +
+                            "Población después del crecimiento: " + poblacionDespuesCrecimiento + "<br>" +
+                            "Población después de la eliminación: " + poblacionDespuesEliminacion + "</html>");
+        });
+
+        frame.add(nameLabel);
+        frame.add(nameField);
+        frame.add(quantityLabel);
+        frame.add(quantityField);
+        frame.add(growthRateLabel);
+        frame.add(growthRateField);
+        frame.add(eliminationRateLabel);
+        frame.add(eliminationRateField);
+        frame.add(simulateButton);
+
+        frame.setVisible(true);
     }
 }
