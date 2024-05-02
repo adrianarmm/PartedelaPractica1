@@ -116,15 +116,14 @@ public class BacterialCultureExperimentManager {
         }
     }
 
-    private void saveExperiment() {
+    private void saveExperiment(ActionEvent e) {
         JFileChooser fileChooser = new JFileChooser();
-        int result = fileChooser.showSaveDialog(frame);
-        if (result == JFileChooser.APPROVE_OPTION) {
+        if (fileChooser.showSaveDialog(frame) == JFileChooser.APPROVE_OPTION) {
             String fileName = fileChooser.getSelectedFile().getAbsolutePath();
             try {
-                experimentManager.guardarExperimento(experimentManager.crearNuevoExperimento(), fileName);
-            } catch (IOException e) {
-                JOptionPane.showMessageDialog(frame, "Error saving the experiment: " + e.getMessage());
+                experimentManager.guardarExperimento(currentExperiment, fileName);
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(frame, "Error saving the experiment: " + ex.getMessage());
             }
         }
     }
