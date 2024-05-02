@@ -84,19 +84,20 @@ public class BacterialCultureExperimentManager {
         frame.setVisible(true);
     }
 
-    private void addCulture() {
+    private void addCulture(ActionEvent e) {
         String name = nameField.getText();
         int initialQuantity;
         try {
             initialQuantity = Integer.parseInt(initialQuantityField.getText());
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(frame, "Invalid initial quantity.");
             return;
         }
         CultivoDeBacterias culture = new CultivoDeBacterias(name, initialQuantity);
-        experimentManager.agregarCultivoDeBacterias(experimentManager.crearNuevoExperimento(), culture);
+        experimentManager.agregarCultivoDeBacterias(currentExperiment, culture);
         listModel.addElement(name);
     }
+
 
     private void removeCulture() {
         int index = cultureList.getSelectedIndex();
