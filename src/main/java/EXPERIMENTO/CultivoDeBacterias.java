@@ -19,7 +19,8 @@ public class CultivoDeBacterias {
     private int cantidad;
 
     public CultivoDeBacterias(String s, int i) {
-
+        this.nombre = s;
+        this.cantidad = i;
     }
 
     public static void main(String[] args) {
@@ -59,54 +60,52 @@ public class CultivoDeBacterias {
         JScrollPane scrollPane = new JScrollPane(detallesArea);
         contentPane.add(scrollPane);
 
-        CultivoDeBacterias cultivo = new CultivoDeBacterias("Cultivo 1", 1000);
-        nombreField.setText(cultivo.getNombre());
-        cantidadField.setText(String.valueOf(cultivo.getCantidad()));
+        nombreField.setText(nombre);
+        cantidadField.setText(String.valueOf(cantidad));
 
         incrementarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int cantidad;
+                int newCantidad;
                 try {
-                    cantidad = Integer.parseInt(cantidadField.getText());
+                    newCantidad = Integer.parseInt(cantidadField.getText());
                 } catch (NumberFormatException ex) {
                     JOptionPane.showMessageDialog(frame, "Cantidad inválida");
                     return;
                 }
-                cultivo.incrementarCantidad(cantidad);
-                cantidadField.setText(String.valueOf(cultivo.getCantidad()));
+                incrementarCantidad(newCantidad);
+                cantidadField.setText(String.valueOf(cantidad));
             }
         });
 
         decrementarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int cantidad;
+                int newCantidad;
                 try {
-                    cantidad = Integer.parseInt(cantidadField.getText());
+                    newCantidad = Integer.parseInt(cantidadField.getText());
                 } catch (NumberFormatException ex) {
                     JOptionPane.showMessageDialog(frame, "Cantidad inválida");
                     return;
                 }
-                cultivo.decrementarCantidad(cantidad);
-                cantidadField.setText(String.valueOf(cultivo.getCantidad()));
+                decrementarCantidad(newCantidad);
+                cantidadField.setText(String.valueOf(cantidad));
             }
         });
 
         imprimirButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                cultivo.imprimirDetalles();
-                detallesArea.setText(cultivo.getNombre() + "\n" + cultivo.getCantidad());
-            }
-        });
+                imprimirDetalles();
+                detallesArea.setText(cantidad + "\n" + cantidadField.getText() + "\n" + nombre + "\n" + nombreField.getText();
+            }});
 
         frame.setVisible(true);
     }
 
     private void decrementarCantidad(int cantidad) {
         if (cantidad > 0) {
-            // Decrementar la cantidad
+            this.cantidad -= cantidad;
         } else {
             JOptionPane.showMessageDialog(frame, "La cantidad debe ser mayor que cero.");
         }
@@ -114,14 +113,18 @@ public class CultivoDeBacterias {
 
     private void incrementarCantidad(int cantidad) {
         if (cantidad > 0) {
-            // Incrementar la cantidad
+            this.cantidad += cantidad;
         } else {
             JOptionPane.showMessageDialog(frame, "La cantidad debe ser mayor que cero.");
         }
     }
 
-    private boolean getCantidad() {
-            return false;
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
     private void imprimirDetalles() {
