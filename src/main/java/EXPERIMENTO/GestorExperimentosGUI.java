@@ -8,7 +8,6 @@ import java.io.*;
 public class GestorExperimentosGUI {
     private JFrame marco;
     private JTextField campoNombre, campoCantidadInicial, campoTasaCrecimiento;
-    private JButton botonEliminar;
     private JButton botonMostrarInfo;
     private JButton botonGuardar;
     private JButton botonCargar;
@@ -39,7 +38,7 @@ public class GestorExperimentosGUI {
         campoTasaCrecimiento = new JTextField(20);
 
         JButton botonAgregar = new JButton("Agregar Cultivo");
-        botonEliminar = new JButton("Eliminar Cultivo");
+        JButton botonEliminar = new JButton("Eliminar Cultivo");
         botonSimularCrecimiento = new JButton("Simular Crecimiento");
 
         panelSuperior.add(etiquetaNombre);
@@ -156,5 +155,7 @@ public class GestorExperimentosGUI {
                 e.printStackTrace();
             }
         });
+
+
     }
 }
