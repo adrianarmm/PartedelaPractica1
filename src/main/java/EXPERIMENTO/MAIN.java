@@ -180,10 +180,9 @@ public class MAIN extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        JFrame frame = new ExperimentosGUI();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-    }
+          MAIN main = new MAIN();
+            main.setVisible(true);
+        }
 }
 
 class Bacterias {
