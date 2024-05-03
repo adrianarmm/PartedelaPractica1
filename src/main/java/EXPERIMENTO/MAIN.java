@@ -22,6 +22,7 @@ public class MAIN {
     private JButton abrirButton;
     private JTextArea detallesArea;
     private experimentos experimento;
+    private ExperimentoManageer ExperimentoManageer;
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
@@ -108,11 +109,7 @@ public class MAIN {
             @Override
             public void actionPerformed(ActionEvent e) {
                 File file = new File("experimento.dat");
-                try {
-                    guardarExperimento(experimento, file);
-                } catch (IOException ex) {
-                    JOptionPane.showMessageDialog(frame, "Error al guardar el experimento: " + ex.getMessage());
-                }
+                guardarExperimento(experimento, file);
             }
         });
 
@@ -122,8 +119,10 @@ public class MAIN {
                 File file = new File("experimento.dat");
                 try {
                     abrirExperimento(file);
-                } catch (IOException | ClassNotFoundException ex) {
-                    JOptionPane.showMessageDialog(frame, "Error al abrir el experimento: " + ex.getMessage());
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                } catch (ClassNotFoundException ex) {
+                    throw new RuntimeException(ex);
                 }
             }
         });
@@ -131,13 +130,23 @@ public class MAIN {
         frame.setVisible(true);
     }
 
-    private void abrirExperimento(File file) {
-        experimento = ExperimentoManageer.abrirExperimento(file);
+    private void abrirExperimento(File file) throws IOException, ClassNotFoundException {
+        try {
+            ExperimentoManageer.abrirExperimento(file);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         detallesArea.append("Abierto experimento desde: " + file.getAbsolutePath() + "\n");
     }
 
     private void guardarExperimento(experimentos experimento, File file) {
-        ExperimentoManageer.guardarExperimento(experimento, file);
+        try {
+            ExperimentoManageer.guardarExperimento(experimento, file);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         detallesArea.append("Guardado experimento en: " + file.getAbsolutePath() + "\n");
     }
 
@@ -152,15 +161,15 @@ public class MAIN {
     }
 
     private void verNombresDeCultivosDeBacterias() {
-        experimentoManageer.verNombresDeCultivosDeBacterias(experimento);
+        ExperimentoManageer.verNombresDeCultivosDeBacterias(experimento);
     }
 
     private void verInformacionDetalladaDeCultivoDeBacterias(String nombre) {
-        experimentoManageer.verInformacionDetalladaDeCultivoDeBacterias(experimento, nombre);
+        ExperimentoManageer.verInformacionDetalladaDeCultivoDeBacterias(experimento, nombre);
     }
 
     public void setExperimentoManageer(ExperimentoManageer experimentoManageer) {
-        this.experimentoManageer = experimentoManageer;
+        this.ExperimentoManageer = experimentoManageer;
     }
 
     public void setExperimento(experimentos experimento) {
