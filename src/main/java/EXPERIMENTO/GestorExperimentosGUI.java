@@ -47,7 +47,7 @@ public class GestorExperimentosGUI {
         panelSuperior.add(botonAgregar);
         panelSuperior.add(botonEliminar);
 
-        int cantidad;
+        int cantidad = 0;
         botonAgregar.addActionListener(actionEvent -> agregarCultivo(actionEvent, cantidad));
         botonEliminar.addActionListener(this::eliminarCultivo);
         botonSimularCrecimiento.addActionListener(this::simularCrecimiento);
@@ -73,6 +73,15 @@ public class GestorExperimentosGUI {
         marco.add(panelInferior, BorderLayout.SOUTH);
 
         marco.setVisible(true);
+    }
+
+    private void eliminarCultivo(ActionEvent actionEvent) {
+        int indice = listaCultivos.getSelectedIndex();
+        if (indice != -1) {
+            modeloLista.remove(indice);
+        } else {
+            JOptionPane.showMessageDialog(marco, "Seleccione un cultivo para eliminar.");
+        }
     }
 
     private void agregarCultivo(ActionEvent actionEvent, int cantidad) {
