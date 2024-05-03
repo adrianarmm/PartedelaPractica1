@@ -75,6 +75,30 @@ public class GestorExperimentosGUI {
         marco.setVisible(true);
     }
 
+    private void guardarExperimento(ActionEvent actionEvent) {
+        JFileChooser fileChooser = new JFileChooser();
+        int seleccion = fileChooser.showSaveDialog(marco);
+        if (seleccion == JFileChooser.APPROVE_OPTION) {
+            File archivo = fileChooser.getSelectedFile();
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(archivo))) {
+                oos.writeObject(experimentoActual);
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(marco, "Error al guardar el experimento: " + e.getMessage());
+            }
+        }
+    }
+
+    private void mostrarInformacion(ActionEvent actionEvent) {
+        int indice = listaCultivos.getSelectedIndex();
+        if (indice != -1) {
+            String nombre = modeloLista.get(indice).split(" - ")[0];
+            int cantidad = Integer.parseInt(modeloLista.get(indice).split(" - ")[1]);
+            JOptionPane.showMessageDialog(marco, "Nombre: " + nombre + "\nCantidad: " + cantidad);
+        } else {
+            JOptionPane.showMessageDialog(marco, "Seleccione un cultivo para mostrar información.");
+        }
+    }
+
     private void eliminarCultivo(ActionEvent actionEvent) {
         int indice = listaCultivos.getSelectedIndex();
         if (indice != -1) {

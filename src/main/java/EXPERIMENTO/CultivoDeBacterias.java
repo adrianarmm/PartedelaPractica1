@@ -37,6 +37,9 @@ public class CultivoDeBacterias {
         System.out.println(cultivoDeBacterias);
     }
 
+    public String getCantidadInicial() {
+        return null;
+    }
 }
 
 
