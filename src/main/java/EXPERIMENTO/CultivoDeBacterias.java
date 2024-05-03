@@ -41,11 +41,13 @@ public class CultivoDeBacterias {
         nombreLabel = new JLabel("Nombre:");
         contentPane.add(nombreLabel);
         nombreField = new JTextField(10);
+        nombreField.setText(nombre);
         contentPane.add(nombreField);
 
         cantidadLabel = new JLabel("Cantidad:");
         contentPane.add(cantidadLabel);
         cantidadField = new JTextField(10);
+        cantidadField.setText(String.valueOf(cantidad));
         contentPane.add(cantidadField);
 
         incrementarButton = new JButton("Incrementar cantidad");
@@ -59,9 +61,6 @@ public class CultivoDeBacterias {
         detallesArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(detallesArea);
         contentPane.add(scrollPane);
-
-        nombreField.setText(nombre);
-        cantidadField.setText(String.valueOf(cantidad));
 
         incrementarButton.addActionListener(new ActionListener() {
             @Override
@@ -97,8 +96,12 @@ public class CultivoDeBacterias {
             @Override
             public void actionPerformed(ActionEvent e) {
                 imprimirDetalles();
-                detallesArea.setText(cantidad + "\n" + cantidadField.getText() + "\n" + nombre + "\n" + nombreField.getText();
-            }});
+                detallesArea.setText("Cantidad: " + cantidad + "\n" +
+                        "Cantidad Field: " +cantidadField.getText() + "\n" +
+                        "Nombre: " + nombre + "\n" +
+                        "Nombre Field: " + nombreField.getText());
+            }
+        });
 
         frame.setVisible(true);
     }
