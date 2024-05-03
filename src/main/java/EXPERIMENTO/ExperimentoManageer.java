@@ -50,7 +50,7 @@ public class ExperimentoManageer {
             System.err.println("Intento de eliminar un cultivo nulo del experimento.");
             return;
         }
-        experimento.eliminarCultivo(bacteriaCulture);
+        experimento.eliminarCultivo(String.valueOf(bacteriaCulture));
     }
 
 
@@ -62,7 +62,7 @@ public class ExperimentoManageer {
             System.err.println("Nombre de cultivo de bacterias no válido.");
             return;
         }
-        Optional<CultivoDeBacterias> cultivoDeBacterias = experimento.obtenerDetallesCultivo(nombreCultivo);
+        Optional<CultivoDeBacterias> cultivoDeBacterias = experimento.agregarCultivo  (nombreCultivo);
         cultivoDeBacterias.ifPresent(cultivo -> System.out.println(cultivo));
     }
 

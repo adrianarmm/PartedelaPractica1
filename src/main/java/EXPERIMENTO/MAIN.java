@@ -164,7 +164,7 @@ public class MAIN extends JFrame implements ActionListener {
         if (getExperimento().getCultivo(nombre) != null) {
             detallesArea.append("Ya existe un cultivo de bacterias con ese nombre: " + nombre + "\n");
         } else {
-            getExperimento().agregarCultivo(new Cultivo(nombre, cantidad, new Bacterias("O1", "P1", new ArrayList<>())));
+            getExperimento().agregarCultivo(String.valueOf(new Cultivo(nombre, cantidad, new Bacterias("O1", "P1", new ArrayList<>()))));
             detallesArea.append("Cultivo de bacterias agregado: " + nombre + "\n");
         }
     }
@@ -289,8 +289,9 @@ class experimentoss {
         return false;
     }
 
-    public void agregarCultivo(Cultivo cultivo) {
-        cultivos.add(cultivo);
+    public void agregarCultivo(String cultivo) {
+        cultivos.add(new Cultivo(cultivo, 0, new Bacterias("O1", "P1", new ArrayList<>())));
+
     }
 
     public void guardarExperimento(File file) throws IOException {
