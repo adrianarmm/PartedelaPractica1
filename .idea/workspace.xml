@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="89">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="95" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,6 +72,7 @@
     "Application.Experimento.executor": "Run",
     "Application.ExperimentoManager.executor": "Run",
     "Application.Experimentos.executor": "Run",
+    "Application.GEGUI.executor": "Run",
     "Application.GuardarArchivos.executor": "Run",
     "Application.HorarioAlimentacion.executor": "Run",
     "Application.MAIN.executor": "Run",
@@ -478,19 +477,61 @@
       <option name="project" value="LOCAL" />
       <updated>1714677361772</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="90">
+      <option name="closed" value="true" />
+      <created>1714726111111</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1714726111111</updated>
+    </task>
+    <task id="LOCAL-00043" summary="91">
+      <option name="closed" value="true" />
+      <created>1714726312638</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1714726312638</updated>
+    </task>
+    <task id="LOCAL-00044" summary="92">
+      <option name="closed" value="true" />
+      <created>1714726414337</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1714726414337</updated>
+    </task>
+    <task id="LOCAL-00045" summary="93">
+      <option name="closed" value="true" />
+      <created>1714726442460</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1714726442460</updated>
+    </task>
+    <task id="LOCAL-00046" summary="94">
+      <option name="closed" value="true" />
+      <created>1714726462389</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1714726462389</updated>
+    </task>
+    <task id="LOCAL-00047" summary="95">
+      <option name="closed" value="true" />
+      <created>1714726495210</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1714726495210</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="39" />
-    <MESSAGE value="40" />
-    <MESSAGE value="41" />
-    <MESSAGE value="53" />
-    <MESSAGE value="Merge pull request #4 from adrianarmm/sebas&#10;&#10;Sebas" />
-    <MESSAGE value="69" />
     <MESSAGE value="70" />
     <MESSAGE value="71" />
     <MESSAGE value="72" />
@@ -510,7 +551,13 @@
     <MESSAGE value="87" />
     <MESSAGE value="88" />
     <MESSAGE value="89" />
-    <option name="LAST_COMMIT_MESSAGE" value="89" />
+    <MESSAGE value="90" />
+    <MESSAGE value="91" />
+    <MESSAGE value="92" />
+    <MESSAGE value="93" />
+    <MESSAGE value="94" />
+    <MESSAGE value="95" />
+    <option name="LAST_COMMIT_MESSAGE" value="95" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

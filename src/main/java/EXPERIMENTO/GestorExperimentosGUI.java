@@ -8,7 +8,11 @@ import java.io.*;
 public class GestorExperimentosGUI {
     private JFrame marco;
     private JTextField campoNombre, campoCantidadInicial, campoTasaCrecimiento;
-    private JButton botonAgregar, botonEliminar, botonMostrarInfo, botonGuardar, botonCargar, botonSimularCrecimiento;
+    private JButton botonEliminar;
+    private JButton botonMostrarInfo;
+    private JButton botonGuardar;
+    private JButton botonCargar;
+    private JButton botonSimularCrecimiento;
     private JList<String> listaCultivos;
     private DefaultListModel<String> modeloLista;
     private ExperimentoManageer manejadorExperimentos;
@@ -34,7 +38,7 @@ public class GestorExperimentosGUI {
         JLabel etiquetaTasaCrecimiento = new JLabel("Tasa de Crecimiento (%):");
         campoTasaCrecimiento = new JTextField(20);
 
-        botonAgregar = new JButton("Agregar Cultivo");
+        JButton botonAgregar = new JButton("Agregar Cultivo");
         botonEliminar = new JButton("Eliminar Cultivo");
         botonSimularCrecimiento = new JButton("Simular Crecimiento");
 
@@ -143,7 +147,6 @@ public class GestorExperimentosGUI {
         }
     }
 
-    // Métodos existentes agregarCultivo, eliminarCultivo, mostrarInformacion, guardarExperimento, cargarExperimento...
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
