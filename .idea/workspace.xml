@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="127" />
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="128" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +72,7 @@
     "Application.DetallesPoblacionBacterias.executor": "Run",
     "Application.EXMA.executor": "Run",
     "Application.Experimento.executor": "Run",
+    "Application.ExperimentoManageer.executor": "Run",
     "Application.ExperimentoManager.executor": "Run",
     "Application.Experimentos.executor": "Run",
     "Application.GEGUI.executor": "Run",
@@ -116,14 +117,6 @@
       <updated>1713887180017</updated>
       <workItem from="1713887181142" duration="3917000" />
       <workItem from="1714578936755" duration="777000" />
-    </task>
-    <task id="LOCAL-00031" summary="79">
-      <option name="closed" value="true" />
-      <created>1714676060474</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1714676060474</updated>
     </task>
     <task id="LOCAL-00032" summary="80">
       <option name="closed" value="true" />
@@ -509,14 +502,21 @@
       <option name="project" value="LOCAL" />
       <updated>1714737952073</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="128">
+      <option name="closed" value="true" />
+      <created>1714737965665</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1714737965665</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="102" />
     <MESSAGE value="103" />
     <MESSAGE value="105" />
     <MESSAGE value="106" />
@@ -541,7 +541,8 @@
     <MESSAGE value="125" />
     <MESSAGE value="126" />
     <MESSAGE value="127" />
-    <option name="LAST_COMMIT_MESSAGE" value="127" />
+    <MESSAGE value="128" />
+    <option name="LAST_COMMIT_MESSAGE" value="128" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -13,19 +13,19 @@ import java.util.Optional;
 
 public class MAIN extends JFrame implements ActionListener {
 
-    private JTextField nombreField;
-    private JTextField cantidadField;
-    private JTextArea detallesArea;
-    private JButton agregarCultivoButton;
-    private JButton eliminarCultivoButton;
-    private JButton verNombresButton;
-    private JButton verDetallesButton;
-    private JButton guardarButton;
-    private JButton abrirButton;
-    private JLabel nombreLabel;
-    private JLabel cantidadLabel;
-    private experimentoss experimento;
-    private EXPERIMENTO.ExperimentoManageer ExperimentoManageer = new EXPERIMENTO.ExperimentoManageer();
+    public JTextField nombreField;
+    public JTextField cantidadField;
+    public JTextArea detallesArea;
+    public JButton agregarCultivoButton;
+    public JButton eliminarCultivoButton;
+    public JButton verNombresButton;
+    public JButton verDetallesButton;
+    public JButton guardarButton;
+    public JButton abrirButton;
+    public JLabel nombreLabel;
+    public JLabel cantidadLabel;
+    public experimentoss experimento;
+    public EXPERIMENTO.ExperimentoManageer ExperimentoManageer = new EXPERIMENTO.ExperimentoManageer();
 
     public MAIN() {
         setTitle("Experimento con bacterias");
