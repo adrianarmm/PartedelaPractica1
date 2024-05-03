@@ -1,7 +1,5 @@
 package EXPERIMENTO;
 
-import EXPERIMENTO.ExperimentoManageer;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -25,7 +23,7 @@ public class MAIN extends JFrame implements ActionListener {
     private JButton abrirButton;
     private JLabel nombreLabel;
     private JLabel cantidadLabel;
-    private experimentos experimento;
+    private experimentoss experimento;
     private EXPERIMENTO.ExperimentoManageer ExperimentoManageer = new EXPERIMENTO.ExperimentoManageer();
 
     public MAIN() {
@@ -171,11 +169,11 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    private void setExperimento(experimentos experimento) {
+    private void setExperimento(experimentoss experimento) {
         this.experimento = experimento;
     }
 
-    private experimentos getExperimento() {
+    private experimentoss getExperimento() {
         return this.experimento;
     }
 
@@ -257,10 +255,10 @@ class Cultivo {
     }
 }
 
-class experimentos {
+class experimentoss {
     private ArrayList<Cultivo> cultivos;
 
-    public experimentos() {
+    public experimentoss() {
         this.cultivos = new ArrayList<>();
     }
 
@@ -299,5 +297,10 @@ class experimentos {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
             oos.writeObject(this);
         }
+    }
+
+    public void eliminarCultivoDeBacterias(CultivoDeBacterias cultivoDeBacterias) {
+        cultivos.remove(cultivoDeBacterias);
+
     }
 }
