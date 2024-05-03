@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="106">
-      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/ExperimentoManageer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/ExperimentoManageer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/GestorExperimentosGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/GestorExperimentosGUI.java" afterDir="false" />
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="110">
+      <change afterPath="$PROJECT_DIR$/src/main/java/MAIN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/CultivoDeBacterias.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/CultivoDeBacterias.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/GestorExperimentosGUI.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,66 +93,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.EXMA">
-    <configuration name="EXMA" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="EXPERIMENTO.ExperimentoManageer" />
-      <module name="PartedelaPractica1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GEGUI" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="EXPERIMENTO.GestorExperimentosGUI" />
-      <module name="PartedelaPractica1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GuardarArchivos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="EXPERIMENTO.GuardarArchivos" />
-      <module name="PartedelaPractica1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="EXPERIMENTO.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PoblacionBacterias" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PoblacionBacterias" />
-      <module name="PartedelaPractica1" />
-      <option name="UNNAMED_CLASS_CONFIGURATION" value="true" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="exp" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="EXPERIMENTO.experimentos" />
-      <module name="PartedelaPractica1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.GEGUI" />
-      <item itemvalue="Application.EXMA" />
-      <item itemvalue="Application.exp" />
-      <item itemvalue="Application.GuardarArchivos" />
-      <item itemvalue="Application.PoblacionBacterias" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.PoblacionBacterias" />
-        <item itemvalue="Application.GuardarArchivos" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -169,38 +115,6 @@
       <updated>1713887180017</updated>
       <workItem from="1713887181142" duration="3917000" />
       <workItem from="1714578936755" duration="777000" />
-    </task>
-    <task id="LOCAL-00010" summary="11">
-      <option name="closed" value="true" />
-      <created>1713967529708</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1713967529708</updated>
-    </task>
-    <task id="LOCAL-00011" summary="12">
-      <option name="closed" value="true" />
-      <created>1713967551258</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1713967551258</updated>
-    </task>
-    <task id="LOCAL-00012" summary="13">
-      <option name="closed" value="true" />
-      <created>1713968005107</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1713968005108</updated>
-    </task>
-    <task id="LOCAL-00013" summary="14">
-      <option name="closed" value="true" />
-      <created>1713968112729</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1713968112729</updated>
     </task>
     <task id="LOCAL-00014" summary="36">
       <option name="closed" value="true" />
@@ -562,17 +476,45 @@
       <option name="project" value="LOCAL" />
       <updated>1714728373201</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="107">
+      <option name="closed" value="true" />
+      <created>1714728787768</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1714728787768</updated>
+    </task>
+    <task id="LOCAL-00060" summary="108">
+      <option name="closed" value="true" />
+      <created>1714728836262</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1714728836262</updated>
+    </task>
+    <task id="LOCAL-00061" summary="109">
+      <option name="closed" value="true" />
+      <created>1714728852790</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1714728852790</updated>
+    </task>
+    <task id="LOCAL-00062" summary="110">
+      <option name="closed" value="true" />
+      <created>1714729088588</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1714729088588</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="80" />
-    <MESSAGE value="81" />
-    <MESSAGE value="83" />
-    <MESSAGE value="84" />
     <MESSAGE value="85" />
     <MESSAGE value="86" />
     <MESSAGE value="87" />
@@ -594,7 +536,11 @@
     <MESSAGE value="103" />
     <MESSAGE value="105" />
     <MESSAGE value="106" />
-    <option name="LAST_COMMIT_MESSAGE" value="106" />
+    <MESSAGE value="107" />
+    <MESSAGE value="108" />
+    <MESSAGE value="109" />
+    <MESSAGE value="110" />
+    <option name="LAST_COMMIT_MESSAGE" value="110" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
