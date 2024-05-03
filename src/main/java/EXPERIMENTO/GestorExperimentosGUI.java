@@ -4,14 +4,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.*;
+import java.util.Random;
 
 public class GestorExperimentosGUI {
     private JFrame marco;
     private JTextField campoNombre, campoCantidadInicial, campoTasaCrecimiento;
-    private JButton botonMostrarInfo;
-    private JButton botonGuardar;
-    private JButton botonCargar;
-    private JButton botonSimularCrecimiento;
+    private JButton botonAgregar, botonEliminar, botonMostrarInfo, botonGuardar, botonCargar, botonSimularCrecimiento, botonSimularEliminacion;
     private JList<String> listaCultivos;
     private DefaultListModel<String> modeloLista;
     private ExperimentoManageer manejadorExperimentos;
@@ -26,34 +24,33 @@ public class GestorExperimentosGUI {
     private void crearGUI() {
         marco = new JFrame("Gestor de Experimentos de Cultivos Bacterianos");
         marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        marco.setSize(700, 500); // Ajustado para dar espacio a nuevos controles
+        marco.setSize(700, 500);
         marco.setLayout(new BorderLayout());
 
-        JPanel panelSuperior = new JPanel(new GridLayout(4, 2)); // Aumentado para incluir tasa de crecimiento
-        JLabel etiquetaNombre = new JLabel("Nombre del Cultivo:");
+        JPanel panelSuperior = new JPanel(new GridLayout(4, 2));
         campoNombre = new JTextField(20);
-        JLabel etiquetaCantidadInicial = new JLabel("Cantidad Inicial:");
         campoCantidadInicial = new JTextField(20);
-        JLabel etiquetaTasaCrecimiento = new JLabel("Tasa de Crecimiento (%):");
         campoTasaCrecimiento = new JTextField(20);
 
-        JButton botonAgregar = new JButton("Agregar Cultivo");
-        JButton botonEliminar = new JButton("Eliminar Cultivo");
-        botonSimularCrecimiento = new JButton("Simular Crecimiento");
-
-        panelSuperior.add(etiquetaNombre);
+        panelSuperior.add(new JLabel("Nombre del Cultivo:"));
         panelSuperior.add(campoNombre);
-        panelSuperior.add(etiquetaCantidadInicial);
+        panelSuperior.add(new JLabel("Cantidad Inicial:"));
         panelSuperior.add(campoCantidadInicial);
-        panelSuperior.add(etiquetaTasaCrecimiento);
+        panelSuperior.add(new JLabel("Tasa de Crecimiento (%):"));
         panelSuperior.add(campoTasaCrecimiento);
+
+        botonAgregar = new JButton("Agregar Cultivo");
+        botonEliminar = new JButton("Eliminar Cultivo");
+        botonSimularCrecimiento = new JButton("Simular Crecimiento");
+        botonSimularEliminacion = new JButton("Simular Eliminación");
+
         panelSuperior.add(botonAgregar);
         panelSuperior.add(botonEliminar);
 
-        int cantidad = 0;
-        botonAgregar.addActionListener(actionEvent -> agregarCultivo(actionEvent, cantidad));
+        botonAgregar.addActionListener(this::agregarCultivo);
         botonEliminar.addActionListener(this::eliminarCultivo);
         botonSimularCrecimiento.addActionListener(this::simularCrecimiento);
+        botonSimularEliminacion.addActionListener(this::simularEliminacion);
 
         modeloLista = new DefaultListModel<>();
         listaCultivos = new JList<>(modeloLista);
@@ -73,62 +70,26 @@ public class GestorExperimentosGUI {
         panelInferior.add(botonGuardar);
         panelInferior.add(botonCargar);
         panelInferior.add(botonSimularCrecimiento);
+        panelInferior.add(botonSimularEliminacion);
         marco.add(panelInferior, BorderLayout.SOUTH);
 
         marco.setVisible(true);
-    }
-
-    private void guardarExperimento(ActionEvent actionEvent) {
-        JFileChooser fileChooser = new JFileChooser();
-        int seleccion = fileChooser.showSaveDialog(marco);
-        if (seleccion == JFileChooser.APPROVE_OPTION) {
-            File archivo = fileChooser.getSelectedFile();
-            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(archivo))) {
-                oos.writeObject(experimentoActual);
-            } catch (IOException e) {
-                JOptionPane.showMessageDialog(marco, "Error al guardar el experimento: " + e.getMessage());
-            }
-        }
-    }
-
-    private void mostrarInformacion(ActionEvent actionEvent) {
-        int indice = listaCultivos.getSelectedIndex();
-        if (indice != -1) {
-            String nombre = modeloLista.get(indice).split(" - ")[0];
-            int cantidad = Integer.parseInt(modeloLista.get(indice).split(" - ")[1]);
-            JOptionPane.showMessageDialog(marco, "Nombre: " + nombre + "\nCantidad: " + cantidad);
-        } else {
-            JOptionPane.showMessageDialog(marco, "Seleccione un cultivo para mostrar información.");
-        }
     }
 
     private void eliminarCultivo(ActionEvent actionEvent) {
         int indice = listaCultivos.getSelectedIndex();
         if (indice != -1) {
             modeloLista.remove(indice);
-        } else {
-            JOptionPane.showMessageDialog(marco, "Seleccione un cultivo para eliminar.");
         }
     }
 
-    private void agregarCultivo(ActionEvent actionEvent, int cantidad) {
+    private void agregarCultivo(ActionEvent e) {
         String nombre = campoNombre.getText();
-        int cantidadInicial = Integer.parseInt(campoCantidadInicial.getText());
-        CultivoDeBacterias cultivo = new CultivoDeBacterias(nombre, cantidadInicial);
-    }
-
-    private void cargarExperimento(ActionEvent actionEvent) {
-        JFileChooser fileChooser = new JFileChooser();
-        int seleccion = fileChooser.showOpenDialog(marco);
-        if (seleccion == JFileChooser.APPROVE_OPTION) {
-            File archivo = fileChooser.getSelectedFile();
-            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivo))) {
-                experimentoActual = (experimentos) ois.readObject();
-                modeloLista.clear();
-                experimentoActual.getCultivoDeBacteriasList().forEach(cultivo -> modeloLista.addElement(cultivo.getNombre() + " - " + cultivo.getCantidadInicial()));
-            } catch (IOException | ClassNotFoundException e) {
-                JOptionPane.showMessageDialog(marco, "Error al cargar el experimento: " + e.getMessage());
-            }
+        try {
+            int cantidadInicial = Integer.parseInt(campoCantidadInicial.getText());
+            modeloLista.addElement(nombre + " - " + cantidadInicial);
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(marco, "Por favor ingrese un número válido para la cantidad inicial.");
         }
     }
 
@@ -136,16 +97,25 @@ public class GestorExperimentosGUI {
         int indice = listaCultivos.getSelectedIndex();
         if (indice != -1) {
             String nombre = modeloLista.get(indice).split(" - ")[0];
-            int poblacionInicial = Integer.parseInt(modeloLista.get(indice).split(" - ")[1]);
+            int cantidadInicial = Integer.parseInt(modeloLista.get(indice).split(" - ")[1]);
             double tasaCrecimiento = Double.parseDouble(campoTasaCrecimiento.getText()) / 100;
-            int nuevaPoblacion = DetallesPoblacionBacterias.crecimientoBacterias(poblacionInicial, tasaCrecimiento);
+            int nuevaPoblacion = ExperimentoBacterias.crecimientoBacterias(cantidadInicial, tasaCrecimiento);
             modeloLista.set(indice, nombre + " - " + nuevaPoblacion);
             JOptionPane.showMessageDialog(marco, "Población después del crecimiento: " + nuevaPoblacion);
-        } else {
-            JOptionPane.showMessageDialog(marco, "Seleccione un cultivo para simular el crecimiento.");
         }
     }
 
+    private void simularEliminacion(ActionEvent e) {
+        int indice = listaCultivos.getSelectedIndex();
+        if (indice != -1) {
+            String nombre = modeloLista.get(indice).split(" - ")[0];
+            int cantidadInicial = Integer.parseInt(modeloLista.get(indice).split(" - ")[1]);
+            double porcentajeEliminacion = Double.parseDouble(JOptionPane.showInputDialog(marco, "Ingrese el porcentaje de eliminación:")) / 100;
+            int poblacionPostEliminacion = ExperimentoBacterias.eliminarBacterias(cantidadInicial, porcentajeEliminacion);
+            modeloLista.set(indice, nombre + " - " + poblacionPostEliminacion);
+            JOptionPane.showMessageDialog(marco, "Población después de la eliminación: " + poblacionPostEliminacion);
+        }
+    }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
@@ -155,7 +125,6 @@ public class GestorExperimentosGUI {
                 e.printStackTrace();
             }
         });
-
-
     }
 }
+
