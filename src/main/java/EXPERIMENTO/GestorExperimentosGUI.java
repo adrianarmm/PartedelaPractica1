@@ -84,9 +84,9 @@ public class GestorExperimentosGUI {
             try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivo))) {
                 experimentoActual = (experimentos) ois.readObject();
                 modeloLista.clear();
-                // Asegúrate de que experimentoActual y su lista no sean nulos antes de intentar usarlos.
+                // Verifica que el objeto y la lista no sean nulos.
                 if (experimentoActual != null && experimentoActual.getCultivoDeBacteriasList() != null) {
-                    // Itera correctamente sobre la lista de cultivos.
+                    // Añade cada cultivo al modelo de la lista para visualización.
                     for (CultivoDeBacterias cultivo : experimentoActual.getCultivoDeBacteriasList()) {
                         modeloLista.addElement(cultivo.getNombre() + " - " + cultivo.getCantidad());
                     }
@@ -97,6 +97,7 @@ public class GestorExperimentosGUI {
             }
         }
     }
+
 
 
     private void guardarExperimento(ActionEvent actionEvent) {
