@@ -47,6 +47,7 @@ public class GestorExperimentosGUI {
         panelSuperior.add(botonAgregar);
         panelSuperior.add(botonEliminar);
 
+        int cantidad;
         botonAgregar.addActionListener(actionEvent -> agregarCultivo(actionEvent, cantidad));
         botonEliminar.addActionListener(this::eliminarCultivo);
         botonSimularCrecimiento.addActionListener(this::simularCrecimiento);
