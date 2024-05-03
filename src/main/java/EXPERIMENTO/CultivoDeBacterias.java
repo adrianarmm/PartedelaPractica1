@@ -1,3 +1,5 @@
+package EXPERIMENTO;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,10 +15,16 @@ public class CultivoDeBacterias {
     private JButton decrementarButton;
     private JButton imprimirButton;
     private JTextArea detallesArea;
+    private String nombre;
+    private int cantidad;
+
+    public CultivoDeBacterias(String s, int i) {
+
+    }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            CultivoDeBacterias gui = new CultivoDeBacterias();
+            CultivoDeBacterias gui = new CultivoDeBacterias("Cultivo 1", 1000);
             gui.createAndShowGUI();
         });
     }
@@ -94,5 +102,38 @@ public class CultivoDeBacterias {
         });
 
         frame.setVisible(true);
+    }
+
+    private void decrementarCantidad(int cantidad) {
+        if (cantidad > 0) {
+            // Decrementar la cantidad
+        } else {
+            JOptionPane.showMessageDialog(frame, "La cantidad debe ser mayor que cero.");
+        }
+    }
+
+    private void incrementarCantidad(int cantidad) {
+        if (cantidad > 0) {
+            // Incrementar la cantidad
+        } else {
+            JOptionPane.showMessageDialog(frame, "La cantidad debe ser mayor que cero.");
+        }
+    }
+
+    private boolean getCantidad() {
+            return false;
+    }
+
+    private void imprimirDetalles() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Cantidad: " + cantidad);
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }
