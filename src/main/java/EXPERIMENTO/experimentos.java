@@ -2,7 +2,6 @@ package EXPERIMENTO;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -42,7 +41,7 @@ public class experimentos extends JFrame {
         return Optional.ofNullable(cultivoDeBacteriasList);
     }
 
-    public Object obtenerDetallesCultivo(String nombre) {
+    public Optional<CultivoDeBacterias> obtenerDetallesCultivo(String nombre) {
         return cultivoDeBacteriasList.stream()
                 .filter(cultivo -> cultivo.getNombre().equals(nombre))
                 .findFirst();

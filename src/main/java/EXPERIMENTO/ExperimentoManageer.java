@@ -53,12 +53,14 @@ public class ExperimentoManageer {
 
     public void verInformacionDetalladaDeCultivoDeBacterias(experimentos experimento, String nombreCultivo) {
         if (experimento == null) {
-            throw new IllegalArgumentException("Experimento no puede ser nulo.");
+            throw new IllegalArgumentException("El experimento no puede ser nulo.");
         }
-        Optional<CultivoDeBacterias> cultivoDeBacterias = experimento.getCultivoDeBacteriasList().stream()
-                .filter(cultivo -> cultivo.getNombre().equals(nombreCultivo))
-                .findFirst();
-        cultivoDeBacterias.ifPresentOrElse(System.out::println, () -> System.out.println("Cultivo no encontrado."));
+        if (nombreCultivo == null || nombreCultivo.isEmpty()) {
+            System.err.println("Nombre de cultivo de bacterias no válido.");
+            return;
+        }
+        Optional<CultivoDeBacterias> cultivoDeBacterias = experimento.obtenerDetallesCultivo(nombreCultivo);
+        cultivoDeBacterias.ifPresent(cultivo -> System.out.println(cultivo));
     }
 
     public void guardarExperimento(experimentos experimento, String fileName) throws IOException {
