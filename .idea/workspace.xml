@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="103" />
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="106">
+      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/ExperimentoManageer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/ExperimentoManageer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/GestorExperimentosGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/GestorExperimentosGUI.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +72,7 @@
   "keyToString": {
     "Application.BacterialCultureExperimentManager.executor": "Run",
     "Application.CultivoDeBacterias.executor": "Run",
+    "Application.EXMA.executor": "Run",
     "Application.Experimento.executor": "Run",
     "Application.ExperimentoManager.executor": "Run",
     "Application.Experimentos.executor": "Run",
@@ -90,7 +94,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.GEGUI">
+  <component name="RunManager" selected="Application.EXMA">
+    <configuration name="EXMA" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="EXPERIMENTO.ExperimentoManageer" />
+      <module name="PartedelaPractica1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GEGUI" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="EXPERIMENTO.GestorExperimentosGUI" />
       <module name="PartedelaPractica1" />
@@ -128,6 +139,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.GEGUI" />
+      <item itemvalue="Application.EXMA" />
       <item itemvalue="Application.exp" />
       <item itemvalue="Application.GuardarArchivos" />
       <item itemvalue="Application.PoblacionBacterias" />
@@ -157,22 +169,6 @@
       <updated>1713887180017</updated>
       <workItem from="1713887181142" duration="3917000" />
       <workItem from="1714578936755" duration="777000" />
-    </task>
-    <task id="LOCAL-00008" summary="9">
-      <option name="closed" value="true" />
-      <created>1713967300981</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1713967300981</updated>
-    </task>
-    <task id="LOCAL-00009" summary="10">
-      <option name="closed" value="true" />
-      <created>1713967394809</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1713967394809</updated>
     </task>
     <task id="LOCAL-00010" summary="11">
       <option name="closed" value="true" />
@@ -550,15 +546,29 @@
       <option name="project" value="LOCAL" />
       <updated>1714728215018</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="105">
+      <option name="closed" value="true" />
+      <created>1714728337811</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1714728337811</updated>
+    </task>
+    <task id="LOCAL-00058" summary="106">
+      <option name="closed" value="true" />
+      <created>1714728373201</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1714728373201</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="78" />
-    <MESSAGE value="79" />
     <MESSAGE value="80" />
     <MESSAGE value="81" />
     <MESSAGE value="83" />
@@ -582,7 +592,9 @@
     <MESSAGE value="101" />
     <MESSAGE value="102" />
     <MESSAGE value="103" />
-    <option name="LAST_COMMIT_MESSAGE" value="103" />
+    <MESSAGE value="105" />
+    <MESSAGE value="106" />
+    <option name="LAST_COMMIT_MESSAGE" value="106" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
