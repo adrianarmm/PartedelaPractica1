@@ -1,3 +1,5 @@
+package EXPERIMENTO;
+
 import EXPERIMENTO.ExperimentoManageer;
 
 import javax.swing.*;
