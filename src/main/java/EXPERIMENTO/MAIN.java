@@ -4,18 +4,24 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Random;
+import java.io.File;
+import java.io.IOException;
+import java.util.Optional;
 
-public class MAIN extends JFrame {
+public class MAIN {
     private JFrame frame;
-    private JTextField poblacionInicialField;
-    private JTextField tasaCrecimientoField;
-    private JTextField porcentajeEliminacionField;
-    private JLabel poblacionInicialLabel;
-    private JLabel tasaCrecimientoLabel;
-    private JLabel porcentajeEliminacionLabel;
-    private JButton ejecutarButton;
+    private JTextField nombreField;
+    private JTextField cantidadField;
+    private JLabel nombreLabel;
+    private JLabel cantidadLabel;
+    private JButton agregarButton;
+    private JButton eliminarButton;
+    private JButton verNombresButton;
+    private JButton verDetallesButton;
+    private JButton guardarButton;
+    private JButton abrirButton;
     private JTextArea detallesArea;
+    private experimentos experimento;
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
@@ -25,88 +31,139 @@ public class MAIN extends JFrame {
     }
 
     public void createAndShowGUI() {
-        frame = new JFrame("Experimento de Bacterias");
+        frame = new JFrame("Experimento Manageer");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 300);
+        frame.setSize(600, 400);
 
         Container contentPane = frame.getContentPane();
-        contentPane.setLayout(new GridLayout(7, 2));
+        contentPane.setLayout(new GridLayout(9, 2));
 
-        poblacionInicialLabel = new JLabel("Población inicial:");
-        contentPane.add(poblacionInicialLabel);
-        poblacionInicialField = new JTextField(10);
-        poblacionInicialField.setText("1000");
-        contentPane.add(poblacionInicialField);
+        nombreLabel = new JLabel("Nombre:");
+        contentPane.add(nombreLabel);
+        nombreField = new JTextField(10);
+        contentPane.add(nombreField);
 
-        tasaCrecimientoLabel = new JLabel("Tasa de crecimiento (%):");
-        contentPane.add(tasaCrecimientoLabel);
-        tasaCrecimientoField = new JTextField(10);
-        tasaCrecimientoField.setText("5");
-        contentPane.add(tasaCrecimientoField);
+        cantidadLabel = new JLabel("Cantidad:");
+        contentPane.add(cantidadLabel);
+        cantidadField = new JTextField(10);
+        contentPane.add(cantidadField);
 
-        porcentajeEliminacionLabel = new JLabel("Porcentaje de eliminación (%):");
-        contentPane.add(porcentajeEliminacionLabel);
-        porcentajeEliminacionField = new JTextField(10);
-        porcentajeEliminacionField.setText("70");
-        contentPane.add(porcentajeEliminacionField);
-
-        ejecutarButton = new JButton("Ejecutar experimento");
-        contentPane.add(ejecutarButton);
+        agregarButton = new JButton("Agregar cultivo");
+        contentPane.add(agregarButton);
+        eliminarButton = new JButton("Eliminar cultivo");
+        contentPane.add(eliminarButton);
+        verNombresButton = new JButton("Ver nombres de cultivos");
+        contentPane.add(verNombresButton);
+        verDetallesButton = new JButton("Ver detalles de cultivo");
+        contentPane.add(verDetallesButton);
+        guardarButton = new JButton("Guardar experimento");
+        contentPane.add(guardarButton);
+        abrirButton = new JButton("Abrir experimento");
+        contentPane.add(abrirButton);
 
         detallesArea = new JTextArea(10, 20);
         detallesArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(detallesArea);
         contentPane.add(scrollPane);
 
-        ejecutarButton.addActionListener(new ActionListener() {
+        agregarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int poblacionInicial;
+                String nombre = nombreField.getText();
+                int cantidad;
                 try {
-                    poblacionInicial = Integer.parseInt(poblacionInicialField.getText());
+                    cantidad = Integer.parseInt(cantidadField.getText());
                 } catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(frame, "Población inicial inválida");
+                    JOptionPane.showMessageDialog(frame, "Cantidad inválida");
                     return;
                 }
-                double tasaCrecimiento;
+                agregarCultivoDeBacterias(nombre, cantidad);
+            }
+        });
+
+        eliminarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String nombre = nombreField.getText();
+                eliminarCultivoDeBacterias(nombre);
+            }
+        });
+
+        verNombresButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                verNombresDeCultivosDeBacterias();
+            }
+        });
+
+        verDetallesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String nombre =nombreField.getText();
+                verInformacionDetalladaDeCultivoDeBacterias(nombre);
+            }
+        });
+
+        guardarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                File file = new File("experimento.dat");
                 try {
-                    tasaCrecimiento = Double.parseDouble(tasaCrecimientoField.getText());
-                } catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(frame, "Tasa de crecimiento inválida");
-                    return;
+                    guardarExperimento(experimento, file);
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(frame, "Error al guardar el experimento: " + ex.getMessage());
                 }
-                double porcentajeEliminacion;
+            }
+        });
+
+        abrirButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                File file = new File("experimento.dat");
                 try {
-                    porcentajeEliminacion = Double.parseDouble(porcentajeEliminacionField.getText());
-                } catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(frame, "Porcentaje de eliminación inválido");
-                    return;
+                    abrirExperimento(file);
+                } catch (IOException | ClassNotFoundException ex) {
+                    JOptionPane.showMessageDialog(frame, "Error al abrir el experimento: " + ex.getMessage());
                 }
-                ejecutarExperimento(poblacionInicial, tasaCrecimiento, porcentajeEliminacion);
             }
         });
 
         frame.setVisible(true);
     }
 
-    private void ejecutarExperimento(int poblacionInicial, double tasaCrecimiento, double porcentajeEliminacion) {
-        int poblacionDespuesCrecimiento = crecimientoBacterias(poblacionInicial, tasaCrecimiento);
-        detallesArea.append("Población después del crecimiento: " + poblacionDespuesCrecimiento + "\n");
-
-        int poblacionDespuesEliminacion = eliminarBacterias(poblacionDespuesCrecimiento, porcentajeEliminacion);
-        detallesArea.append("Población después de la eliminación: " + poblacionDespuesEliminacion + "\n");
+    private void abrirExperimento(File file) {
+        experimento = ExperimentoManageer.abrirExperimento(file);
+        detallesArea.append("Abierto experimento desde: " + file.getAbsolutePath() + "\n");
     }
 
-    public static int crecimientoBacterias(int poblacionInicial, double tasaCrecimiento) {
-        Random rand = new Random();
-        int nuevaPoblacion = (int) (poblacionInicial * (1 + tasaCrecimiento));
-        int variacion = rand.nextInt(11) - 5; // Variación aleatoria de +/- 5%
-        nuevaPoblacion += (nuevaPoblacion * variacion) / 100;
-        return nuevaPoblacion;
+    private void guardarExperimento(experimentos experimento, File file) {
+        ExperimentoManageer.guardarExperimento(experimento, file);
+        detallesArea.append("Guardado experimento en: " + file.getAbsolutePath() + "\n");
     }
 
-    public static int eliminarBacterias(int poblacion, double porcentajeEliminacion) {
-        int eliminadas = (int) (poblacion * porcentajeEliminacion);
-        return poblacion - eliminadas;
+    private void agregarCultivoDeBacterias(String nombre, int cantidad) {
+        ExperimentoManageer.agregarCultivoDeBacterias(experimento, new CultivoDeBacterias(nombre, cantidad));
+        detallesArea.append("Agregado cultivo: " + nombre + ", cantidad: " + cantidad + "\n");
+    }
+
+    private void eliminarCultivoDeBacterias(String nombre) {
+        ExperimentoManageer.eliminarCultivoDeBacterias(experimento, new CultivoDeBacterias(nombre, 0));
+        detallesArea.append("Eliminado cultivo: " + nombre + "\n");
+    }
+
+    private void verNombresDeCultivosDeBacterias() {
+        experimentoManageer.verNombresDeCultivosDeBacterias(experimento);
+    }
+
+    private void verInformacionDetalladaDeCultivoDeBacterias(String nombre) {
+        experimentoManageer.verInformacionDetalladaDeCultivoDeBacterias(experimento, nombre);
+    }
+
+    public void setExperimentoManageer(ExperimentoManageer experimentoManageer) {
+        this.experimentoManageer = experimentoManageer;
+    }
+
+    public void setExperimento(experimentos experimento) {
+        this.experimento = experimento;
     }
 }
