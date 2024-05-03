@@ -1,8 +1,11 @@
+import EXPERIMENTO.ExperimentoManageer;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
@@ -21,7 +24,7 @@ public class MAIN extends JFrame implements ActionListener {
     private JLabel nombreLabel;
     private JLabel cantidadLabel;
     private experimentos experimento;
-    private ExperimentoManageer ExperimentoManageer;
+    private EXPERIMENTO.ExperimentoManageer ExperimentoManageer = new EXPERIMENTO.ExperimentoManageer();
 
     public MAIN() {
         setTitle("Experimento con bacterias");
@@ -100,8 +103,8 @@ public class MAIN extends JFrame implements ActionListener {
         int returnValue = fileChooser.showOpenDialog(this);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File file = fileChooser.getSelectedFile();
-            setExperimento((experimentos) ExperimentoManageer.cargarExperimento(file));
-            detallesArea.append("Experimento abierto desde: " + file.getAbsolutePath() + "\n");
+            setExperimento(ExperimentoManageer.abrirExperimento(file.getAbsolutePath()));
+            detallesArea.append("Experimento cargado desde: " + file.getAbsolutePath() + "\n");
         }
     }
 

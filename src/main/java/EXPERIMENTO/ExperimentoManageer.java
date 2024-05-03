@@ -6,6 +6,8 @@ import java.util.Optional;
 
 public class ExperimentoManageer {
 
+    public Object ExperimentoManageer;
+
     public experimentos abrirExperimento(String fileName) throws IOException, ClassNotFoundException {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) {
             return (experimentos) ois.readObject();
