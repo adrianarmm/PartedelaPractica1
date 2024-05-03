@@ -1,60 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
-  <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="cambiando las clases a publico">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_5_24__17_00__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_5_24__17_00__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/Bacterias.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/Cultivo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/CultivoDeBacterias.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/ExperimentoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/ExperimentoManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/experimentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/experimentos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/experimentoss.java" beforeDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2fVXNMh3YWyvBceWxrYSRJGQSr4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent"><![CDATA[{
+    <component name="AutoImportSettings">
+        <option name="autoReloadType" value="SELECTIVE" />
+    </component>
+    <component name="ChangeListManager">
+        <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="cambiando las clases a publico">
+            <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" afterDir="false" />
+        </list>
+        <option name="SHOW_DIALOG" value="false" />
+        <option name="HIGHLIGHT_CONFLICTS" value="true" />
+        <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+        <option name="LAST_RESOLUTION" value="IGNORE" />
+    </component>
+    <component name="FileTemplateManagerImpl">
+        <option name="RECENT_TEMPLATES">
+            <list>
+                <option value="Class" />
+            </list>
+        </option>
+    </component>
+    <component name="Git.Settings">
+        <favorite-branches>
+            <branch-storage>
+                <map>
+                    <entry type="LOCAL">
+                        <value>
+                            <list>
+                                <branch-info repo="$PROJECT_DIR$" source="adriana" />
+                            </list>
+                        </value>
+                    </entry>
+                </map>
+            </branch-storage>
+        </favorite-branches>
+        <option name="PREVIOUS_COMMIT_AUTHORS">
+            <list>
+                <option value="Gmongtor &lt;146821781+gmongtor@users.noreply.github.com&gt;" />
+                <option value="vitaliy-pg &lt;aljndrvt@myuax.com&gt;" />
+            </list>
+        </option>
+        <option name="RECENT_BRANCH_BY_REPOSITORY">
+            <map>
+                <entry key="$PROJECT_DIR$" value="sebas" />
+            </map>
+        </option>
+        <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    </component>
+    <component name="GitHubPullRequestSearchHistory">{
+        "lastFilter": {
+        "state": "OPEN",
+        "assignee": "Gmongtor"
+        }
+        }</component>
+    <component name="GithubPullRequestsUISettings">{
+        "selectedUrlAndAccountId": {
+        "url": "https://github.com/adrianarmm/PartedelaPractica1.git",
+        "accountId": "e5404a22-18ea-46f9-bf81-f500d9a41b5e"
+        }
+        }</component>
+    <component name="ProjectColorInfo">{
+        "associatedIndex": 1
+        }</component>
+    <component name="ProjectId" id="2fVXNMh3YWyvBceWxrYSRJGQSr4" />
+    <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+    <component name="ProjectViewState">
+        <option name="hideEmptyMiddlePackages" value="true" />
+        <option name="showLibraryContents" value="true" />
+    </component>
+    <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BacterialCultureExperimentManager.executor": "Run",
     "Application.CultivoDeBacterias.executor": "Run",
+    "Application.DetallesPoblacionBacterias.executor": "Run",
+    "Application.EXMA.executor": "Run",
     "Application.Experimento.executor": "Run",
+    "Application.ExperimentoManageer.executor": "Run",
     "Application.ExperimentoManager.executor": "Run",
+    "Application.Experimentos.executor": "Run",
+    "Application.GEGUI.executor": "Run",
+    "Application.GuardarArchivos.executor": "Run",
     "Application.HorarioAlimentacion.executor": "Run",
-    "Application.MAIN.executor": "Debug",
+    "Application.MAIN.executor": "Run",
     "Application.PoblacionBacterias.executor": "Run",
+    "Application.exp.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -62,360 +92,101 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="EXPERIMENTO" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="PoblacionBacterias" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PoblacionBacterias" />
-      <module name="PartedelaPractica1" />
-      <option name="UNNAMED_CLASS_CONFIGURATION" value="true" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.PoblacionBacterias" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="" />
-      <created>1713887180017</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1713887180017</updated>
-      <workItem from="1713887181142" duration="2654000" />
-      <workItem from="1714053396788" duration="1677000" />
-    </task>
-    <task id="LOCAL-00001" summary="2">
-      <option name="closed" value="true" />
-      <created>1713966197134</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1713966197134</updated>
-    </task>
-    <task id="LOCAL-00002" summary="3">
-      <option name="closed" value="true" />
-      <created>1713966379851</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1713966379851</updated>
-    </task>
-    <task id="LOCAL-00003" summary="4">
-      <option name="closed" value="true" />
-      <created>1713966584622</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1713966584622</updated>
-    </task>
-    <task id="LOCAL-00004" summary="5">
-      <option name="closed" value="true" />
-      <created>1713966622709</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1713966622709</updated>
-    </task>
-    <task id="LOCAL-00005" summary="6">
-      <option name="closed" value="true" />
-      <created>1713967193756</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1713967193756</updated>
-    </task>
-    <task id="LOCAL-00006" summary="7">
-      <option name="closed" value="true" />
-      <created>1713967213504</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1713967213504</updated>
-    </task>
-    <task id="LOCAL-00007" summary="8">
-      <option name="closed" value="true" />
-      <created>1713967238604</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1713967238604</updated>
-    </task>
-    <task id="LOCAL-00008" summary="9">
-      <option name="closed" value="true" />
-      <created>1713967300981</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1713967300981</updated>
-    </task>
-    <task id="LOCAL-00009" summary="10">
-      <option name="closed" value="true" />
-      <created>1713967394809</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1713967394809</updated>
-    </task>
-    <task id="LOCAL-00010" summary="11">
-      <option name="closed" value="true" />
-      <created>1713967529708</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1713967529708</updated>
-    </task>
-    <task id="LOCAL-00011" summary="trabajando el dios del trap">
-      <option name="closed" value="true" />
-      <created>1714053714896</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1714053714896</updated>
-    </task>
-    <task id="LOCAL-00012" summary="parte de imprimir el nombre de las poblaciones">
-      <option name="closed" value="true" />
-      <created>1714053791580</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1714053791580</updated>
-    </task>
-    <task id="LOCAL-00013" summary="12">
-      <option name="closed" value="true" />
-      <created>1714053812401</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1714053812401</updated>
-    </task>
-    <task id="LOCAL-00014" summary="13">
-      <option name="closed" value="true" />
-      <created>1714053845315</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1714053845315</updated>
-    </task>
-    <task id="LOCAL-00015" summary="14">
-      <option name="closed" value="true" />
-      <created>1714053893105</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1714053893105</updated>
-    </task>
-    <task id="LOCAL-00016" summary="15">
-      <option name="closed" value="true" />
-      <created>1714054009811</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054009811</updated>
-    </task>
-    <task id="LOCAL-00017" summary="16">
-      <option name="closed" value="true" />
-      <created>1714054027803</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054027803</updated>
-    </task>
-    <task id="LOCAL-00018" summary="17">
-      <option name="closed" value="true" />
-      <created>1714054046725</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054046725</updated>
-    </task>
-    <task id="LOCAL-00019" summary="18">
-      <option name="closed" value="true" />
-      <created>1714054069932</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054069932</updated>
-    </task>
-    <task id="LOCAL-00020" summary="19">
-      <option name="closed" value="true" />
-      <created>1714054086788</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054086788</updated>
-    </task>
-    <task id="LOCAL-00021" summary="20">
-      <option name="closed" value="true" />
-      <created>1714054106546</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054106546</updated>
-    </task>
-    <task id="LOCAL-00022" summary="21">
-      <option name="closed" value="true" />
-      <created>1714054132458</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054132458</updated>
-    </task>
-    <task id="LOCAL-00023" summary="22">
-      <option name="closed" value="true" />
-      <created>1714054206907</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054206907</updated>
-    </task>
-    <task id="LOCAL-00024" summary="23">
-      <option name="closed" value="true" />
-      <created>1714054425561</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054425561</updated>
-    </task>
-    <task id="LOCAL-00025" summary="24">
-      <option name="closed" value="true" />
-      <created>1714054451623</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054451623</updated>
-    </task>
-    <task id="LOCAL-00026" summary="25">
-      <option name="closed" value="true" />
-      <created>1714054480189</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054480189</updated>
-    </task>
-    <task id="LOCAL-00027" summary="26">
-      <option name="closed" value="true" />
-      <created>1714054497570</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054497570</updated>
-    </task>
-    <task id="LOCAL-00028" summary="27">
-      <option name="closed" value="true" />
-      <created>1714054513928</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054513928</updated>
-    </task>
-    <task id="LOCAL-00029" summary="28">
-      <option name="closed" value="true" />
-      <created>1714054533195</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054533195</updated>
-    </task>
-    <task id="LOCAL-00030" summary="29">
-      <option name="closed" value="true" />
-      <created>1714054835514</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054835514</updated>
-    </task>
-    <task id="LOCAL-00031" summary="30">
-      <option name="closed" value="true" />
-      <created>1714054991729</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1714054991729</updated>
-    </task>
-    <task id="LOCAL-00032" summary="31">
-      <option name="closed" value="true" />
-      <created>1714055007377</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1714055007377</updated>
-    </task>
-    <task id="LOCAL-00033" summary="32">
-      <option name="closed" value="true" />
-      <created>1714055020732</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1714055020732</updated>
-    </task>
-    <task id="LOCAL-00034" summary="33 lA TREINTRA Y TRES HOY SE GANA ALONSO">
-      <option name="closed" value="true" />
-      <created>1714055079621</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1714055079621</updated>
-    </task>
-    <task id="LOCAL-00035" summary="fallos de adriana arreglados">
-      <option name="closed" value="true" />
-      <created>1714747909368</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1714747909368</updated>
-    </task>
-    <task id="LOCAL-00036" summary="cambiando las clases a publico">
-      <option name="closed" value="true" />
-      <created>1714748024776</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1714748024776</updated>
-    </task>
-    <option name="localTasksCounter" value="37" />
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="parte de imprimir el nombre de las poblaciones" />
-    <MESSAGE value="12" />
-    <MESSAGE value="13" />
-    <MESSAGE value="14" />
-    <MESSAGE value="15" />
-    <MESSAGE value="16" />
-    <MESSAGE value="17" />
-    <MESSAGE value="18" />
-    <MESSAGE value="19" />
-    <MESSAGE value="20" />
-    <MESSAGE value="21" />
-    <MESSAGE value="22" />
-    <MESSAGE value="23" />
-    <MESSAGE value="24" />
-    <MESSAGE value="25" />
-    <MESSAGE value="26" />
-    <MESSAGE value="27" />
-    <MESSAGE value="28" />
-    <MESSAGE value="29" />
-    <MESSAGE value="30" />
-    <MESSAGE value="31" />
-    <MESSAGE value="32" />
-    <MESSAGE value="33 lA TREINTRA Y TRES HOY SE GANA ALONSO" />
-    <MESSAGE value="fallos de adriana arreglados" />
-    <MESSAGE value="cambiando las clases a publico" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambiando las clases a publico" />
-  </component>
+    <component name="RecentsManager">
+        <key name="ExtractSuperBase.RECENT_KEYS">
+            <recent name="EXPERIMENTO" />
+        </key>
+    </component>
+    <component name="SharedIndexes">
+        <attachedChunks>
+            <set>
+                <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+                <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+            </set   >
+        </attachedChunks>
+    </component>
+    <component name="TaskManager">
+        <task active="true" id="TaskManager" summary="Task Manager" />
+    </component>
+    <component name="ToolWindowManager">
+        <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+        <editor active="true" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" />
+        <layout>
+            <window_info id="Project" active="true" anchor="bottom" file="file://$PROJECT_DIR$" side-tool="false" order="0" />
+            <window_info id="Run" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="1" />
+            <window_info id="Debug" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="2" />
+            <window_info id="Terminal" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="3" />
+            <window_info id="Version Control" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="4" />
+            <window_info id="Maven" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="5" />
+            <window_info id="Gradle" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="6" />
+            <window_info id="Ant" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="7" />
+            <window_info id="Maven Projects" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="8" />
+            <window_info id="Database" active="true" anchor="bottom" file="file://$PROJECT_DIR$/
+src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="9" />
+            <window_info id="Services" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="10" />
+            <window_info id="Event Log" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="11" />
+            <window_info id="Structure" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="12" />
+            <window_info id="Project" active="true" anchor="bottom" file="file://$PROJECT_DIR$" side-tool="false" order="13" />
+            <window_info id="Run" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="14" />
+            <window_info id="Debug" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="15" />
+            <window_info id="Terminal" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="16" />
+            <window_info id="Version Control" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="17" />
+            <window_info id="Maven" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="18" />
+            <window_info id="Gradle" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="19" />
+            <window_info id="Ant" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="20" />
+            <window_info id="Maven Projects" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="21" />
+            <window_info id="Database" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="22" />
+            <window_info id="Services" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="23" />
+            <window_info id="Event Log" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="24" />
+            <window_info id="Structure" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="25" />
+        </layout>
+    </component>
+    <component name="VcsManagerConfiguration">
+        <option name="ADD_LABEL_ON_CHECKIN" value="true" />
+        <option name="ADD_LABEL_ON_REVERT" value="true" />
+        <option name="ADD_LABEL_ON_SWITCH" value="true" />
+        <option name="ADD_LABEL_ON_UPDATE" value="true" />
+        <option name="LABEL_BEFORE_CHANGE" value="true" />
+        <option name="LABEL_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_NAME" value="before_change" />
+        <option name="LABEL_ON_PROJECT_RENAME" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_NAME" value="project_renamed" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_NAME" value="project_renamed_value" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_NAME" value="project_renamed_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME
+_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME   _VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+        >>>>>>>>> Temporary merge branch 2
+    </component>
 </project>
