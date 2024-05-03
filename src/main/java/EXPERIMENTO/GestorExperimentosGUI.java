@@ -84,9 +84,7 @@ public class GestorExperimentosGUI {
             try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivo))) {
                 experimentoActual = (experimentos) ois.readObject();
                 modeloLista.clear();
-                for (CultivoDeBacterias cultivo : experimentoActual.getCultivoDeBacteriasList()) {
-                    modeloLista.addElement(cultivo.getNombre() + " - " + cultivo.getCantidadInicial());
-                }
+                experimentoActual.getCultivoDeBacteriasList().forEach(cultivo -> modeloLista.addElement(cultivo.getNombre() + " - " + cultivo.getCantidad()));
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
@@ -110,15 +108,21 @@ public class GestorExperimentosGUI {
         int indice = listaCultivos.getSelectedIndex();
         if (indice != -1) {
             String nombre = modeloLista.get(indice).split(" - ")[0];
-            int cantidadInicial = Integer.parseInt(modeloLista.get(indice).split(" - ")[1]);
-            JOptionPane.showMessageDialog(marco, "Nombre: " + nombre + "\nCantidad Inicial: " + cantidadInicial);
+            JOptionPane.showMessageDialog(marco, experimentoActual.obtenerDetallesCultivo(nombre));
         }
     }
 
     private void eliminarCultivo(ActionEvent actionEvent) {
         int indice = listaCultivos.getSelectedIndex();
         if (indice != -1) {
-            modeloLista.remove(indice);
+            String nombre = modeloLista.get(indice).split(" - ")[0];
+            CultivoDeBacterias cultivoParaEliminar = experimentoActual.getCultivoDeBacteriasList().stream()
+                    .filter(c -> c.getNombre().equals(nombre))
+                    .findFirst().orElse(null);
+            if (cultivoParaEliminar != null) {
+                experimentoActual.eliminarCultivoDeBacterias(cultivoParaEliminar);
+                modeloLista.remove(indice);
+            }
         }
     }
 
@@ -126,6 +130,8 @@ public class GestorExperimentosGUI {
         String nombre = campoNombre.getText();
         try {
             int cantidadInicial = Integer.parseInt(campoCantidadInicial.getText());
+            CultivoDeBacterias nuevoCultivo = new CultivoDeBacterias(nombre, cantidadInicial);
+            experimentoActual.agregarCultivoDeBacterias(nuevoCultivo);
             modeloLista.addElement(nombre + " - " + cantidadInicial);
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(marco, "Por favor ingrese un número válido para la cantidad inicial.");
@@ -166,4 +172,3 @@ public class GestorExperimentosGUI {
         });
     }
 }
-

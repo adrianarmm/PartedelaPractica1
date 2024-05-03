@@ -92,4 +92,17 @@ public class experimentos extends JFrame {
             new experimentos().setVisible(true);
         });
     }
+
+    public Iterable<Object> getCultivoDeBacteriasList() {
+                return null;
+    }
+
+    public void eliminarCultivoDeBacterias(CultivoDeBacterias cultivoParaEliminar)
+    {
+
+    }
+
+    public void agregarCultivoDeBacterias(CultivoDeBacterias nuevoCultivo) {
+
+    }
 }
