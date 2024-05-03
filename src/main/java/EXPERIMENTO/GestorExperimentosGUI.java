@@ -76,6 +76,45 @@ public class GestorExperimentosGUI {
         marco.setVisible(true);
     }
 
+    private void cargarExperimento(ActionEvent actionEvent) {
+        JFileChooser fileChooser = new JFileChooser();
+        int seleccion = fileChooser.showOpenDialog(marco);
+        if (seleccion == JFileChooser.APPROVE_OPTION) {
+            File archivo = fileChooser.getSelectedFile();
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivo))) {
+                experimentoActual = (experimentos) ois.readObject();
+                modeloLista.clear();
+                for (CultivoDeBacterias cultivo : experimentoActual.getCultivoDeBacteriasList()) {
+                    modeloLista.addElement(cultivo.getNombre() + " - " + cultivo.getCantidadInicial());
+                }
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void guardarExperimento(ActionEvent actionEvent) {
+        JFileChooser fileChooser = new JFileChooser();
+        int seleccion = fileChooser.showSaveDialog(marco);
+        if (seleccion == JFileChooser.APPROVE_OPTION) {
+            File archivo = fileChooser.getSelectedFile();
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(archivo))) {
+                oos.writeObject(experimentoActual);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void mostrarInformacion(ActionEvent actionEvent) {
+        int indice = listaCultivos.getSelectedIndex();
+        if (indice != -1) {
+            String nombre = modeloLista.get(indice).split(" - ")[0];
+            int cantidadInicial = Integer.parseInt(modeloLista.get(indice).split(" - ")[1]);
+            JOptionPane.showMessageDialog(marco, "Nombre: " + nombre + "\nCantidad Inicial: " + cantidadInicial);
+        }
+    }
+
     private void eliminarCultivo(ActionEvent actionEvent) {
         int indice = listaCultivos.getSelectedIndex();
         if (indice != -1) {
