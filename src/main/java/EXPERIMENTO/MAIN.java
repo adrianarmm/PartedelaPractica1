@@ -21,7 +21,6 @@ public class MAIN extends JFrame implements ActionListener {
     public JButton abrirButton;
     public JLabel nombreLabel;
     public JLabel cantidadLabel;
-
     public experimentoss experimento;
 
     public MAIN() {
@@ -96,7 +95,7 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    public void abrirExperimento() throws IOException, ClassNotFoundException {
+  public void abrirExperimento() throws IOException, ClassNotFoundException {
         JFileChooser fileChooser = new JFileChooser();
         int returnValue = fileChooser.showOpenDialog(this);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
@@ -106,7 +105,7 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    public void guardarExperimento() throws IOException {
+    public  void guardarExperimento() throws IOException {
         JFileChooser fileChooser = new JFileChooser();
         int returnValue = fileChooser.showSaveDialog(this);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
@@ -123,7 +122,7 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    public void verInformacionDetalladaDeCultivoDeBacterias(String nombre) {
+   public void verInformacionDetalladaDeCultivoDeBacterias(String nombre) {
         Cultivo cultivo = getExperimento().getCultivo(nombre);
         if (cultivo != null) {
             detallesArea.append("Nombre: " + cultivo.getNombre() + "\n");
@@ -137,7 +136,7 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    public void verNombresDeCultivosDeBacterias() {
+    public  void verNombresDeCultivosDeBacterias() {
         ArrayList<String> nombres = getExperimento().getNombresDeCultivosDeBacterias();
         if (nombres.size() > 0) {
             detallesArea.append("Nombres de cultivos de bacterias:\n");
@@ -149,7 +148,7 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    public void eliminarCultivoDeBacterias(String nombre) {
+   public  void eliminarCultivoDeBacterias(String nombre) {
         boolean resultado = getExperimento().eliminarCultivo(nombre);
         if (resultado) {
             detallesArea.append("Cultivo de bacterias eliminado: " + nombre + "\n");
@@ -158,7 +157,7 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    public void agregarCultivoDeBacterias(String nombre, int cantidad) {
+  public void agregarCultivoDeBacterias(String nombre, int cantidad) {
         if (getExperimento().getCultivo(nombre) != null) {
             detallesArea.append("Ya existe un cultivo de bacterias con ese nombre: " + nombre + "\n");
         } else {
@@ -167,12 +166,12 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    public void setExperimento(experimentoss experimento) {
+   public void setExperimento(experimentoss experimento) {
         this.experimento = experimento;
     }
 
-    public experimentoss getExperimento() {
-        return this.experimento != null ? this.experimento : new experimentoss();
+    public  experimentoss getExperimento() {
+        return this.experimento;
     }
 
     public static void main(String[] args) {
@@ -181,3 +180,120 @@ public class MAIN extends JFrame implements ActionListener {
     }
 }
 
+class Bacterias {
+    private String colonia;
+    private String genotipo;
+    private ArrayList<String> plasmidos;
+
+    public Bacterias(String colonia, String genotipo, ArrayList<String> plasmidos) {
+        this.colonia = colonia;
+        this.genotipo = genotipo;
+        this.plasmidos = plasmidos;
+    }
+
+    public String getColonia() {
+        return colonia;
+    }
+
+    public void setColonia(String colonia) {
+        this.colonia = colonia;
+    }
+
+    public String getGenotipo() {
+        return genotipo;
+    }
+
+    public void setGenotipo(String genotipo) {
+        this.genotipo = genotipo;
+    }
+
+    public ArrayList<String> getPlasmidos() {
+        return plasmidos;
+    }
+
+    public void setPlasmidos(ArrayList<String> plasmidos) {
+        this.plasmidos = plasmidos;
+    }
+}
+
+class Cultivo {
+    private String nombre;
+    private int cantidad;
+    private Bacterias bacterias;
+
+    public Cultivo(String nombre, int cantidad, Bacterias bacterias) {
+        this.nombre = nombre;
+        this.cantidad = cantidad;
+        this.bacterias = bacterias;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public Bacterias getBacterias() {
+        return bacterias;
+    }
+
+    public void setBacterias(Bacterias bacterias) {
+        this.bacterias = bacterias;
+    }
+}
+
+class experimentoss {
+    private ArrayList<Cultivo> cultivos;
+
+    public experimentoss() {
+        this.cultivos = new ArrayList<>();
+    }
+
+    public ArrayList<String> getNombresDeCultivosDeBacterias() {
+        ArrayList<String> nombres = new ArrayList<>();
+        for (Cultivo cultivo : cultivos) {
+            nombres.add(cultivo.getNombre());
+        }
+        return nombres;
+    }
+
+    public Cultivo getCultivo(String nombre) {
+        for (Cultivo cultivo : cultivos) {
+            if (cultivo.getNombre().equals(nombre)) {
+                return cultivo;
+            }
+        }
+        return null;
+    }
+
+    public boolean eliminarCultivo(String nombre) {
+        for (int i = 0; i < cultivos.size(); i++) {
+            if (cultivos.get(i).getNombre().equals(nombre)) {
+                cultivos.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Optional<Cultivo> agregarCultivo(Cultivo cultivo) {
+        cultivos.add(cultivo);
+        return Optional.of(cultivo);
+    }
+
+    public void guardarExperimento(File file) throws IOException {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
+            oos.writeObject(this);
+        }
+    }
+}
