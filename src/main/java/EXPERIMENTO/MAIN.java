@@ -95,7 +95,7 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    private void abrirExperimento() throws IOException, ClassNotFoundException {
+  public void abrirExperimento() throws IOException, ClassNotFoundException {
         JFileChooser fileChooser = new JFileChooser();
         int returnValue = fileChooser.showOpenDialog(this);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
@@ -105,7 +105,7 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    private void guardarExperimento() throws IOException {
+    public  void guardarExperimento() throws IOException {
         JFileChooser fileChooser = new JFileChooser();
         int returnValue = fileChooser.showSaveDialog(this);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
@@ -122,7 +122,7 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    private void verInformacionDetalladaDeCultivoDeBacterias(String nombre) {
+   public void verInformacionDetalladaDeCultivoDeBacterias(String nombre) {
         Cultivo cultivo = getExperimento().getCultivo(nombre);
         if (cultivo != null) {
             detallesArea.append("Nombre: " + cultivo.getNombre() + "\n");
@@ -136,7 +136,7 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    private void verNombresDeCultivosDeBacterias() {
+    public  void verNombresDeCultivosDeBacterias() {
         ArrayList<String> nombres = getExperimento().getNombresDeCultivosDeBacterias();
         if (nombres.size() > 0) {
             detallesArea.append("Nombres de cultivos de bacterias:\n");
@@ -148,7 +148,7 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    private void eliminarCultivoDeBacterias(String nombre) {
+   public  void eliminarCultivoDeBacterias(String nombre) {
         boolean resultado = getExperimento().eliminarCultivo(nombre);
         if (resultado) {
             detallesArea.append("Cultivo de bacterias eliminado: " + nombre + "\n");
@@ -157,7 +157,7 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    private void agregarCultivoDeBacterias(String nombre, int cantidad) {
+  public void agregarCultivoDeBacterias(String nombre, int cantidad) {
         if (getExperimento().getCultivo(nombre) != null) {
             detallesArea.append("Ya existe un cultivo de bacterias con ese nombre: " + nombre + "\n");
         } else {
@@ -166,11 +166,11 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    private void setExperimento(experimentoss experimento) {
+   public void setExperimento(experimentoss experimento) {
         this.experimento = experimento;
     }
 
-    private experimentoss getExperimento() {
+    public  experimentoss getExperimento() {
         return this.experimento;
     }
 
