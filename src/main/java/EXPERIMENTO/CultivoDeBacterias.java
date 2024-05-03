@@ -1,4 +1,8 @@
 package EXPERIMENTO;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class CultivoDeBacterias {
     private String nombre;
     private int cantidad;
@@ -12,34 +16,8 @@ public class CultivoDeBacterias {
         return nombre;
     }
 
-    @Override
-    public String toString() {
-        return "CultivoDeBacterias{" +
-                "nombre='" + nombre + '\'' +
-                ", cantidad=" + cantidad +
-                '}';
-    }
-
     public int getCantidad() {
         return cantidad;
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
-    }
-
-    public static void main(String[] args) {
-        CultivoDeBacterias cultivoDeBacterias = new CultivoDeBacterias("Bacteria 1", 100);
-        System.out.println(cultivoDeBacterias);
-    }
-
-    public String getCantidadInicial() {
-        return null;
-    }
 }
-
 

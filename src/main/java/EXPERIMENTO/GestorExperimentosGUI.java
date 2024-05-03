@@ -84,7 +84,7 @@ public class GestorExperimentosGUI {
             try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivo))) {
                 experimentoActual = (experimentos) ois.readObject();
                 modeloLista.clear();
-                experimentoActual.getCultivoDeBacteriasList().forEach(cultivo -> modeloLista.addElement(cultivo.getNombre() + " - " + cultivo.getCantidad()));
+                experimentoActual.getCultivoDeBacteriasList().orElse(cultivo -> modeloLista.addElement(cultivo.getNombre() + " - " + cultivo.getCantidad()));
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
@@ -116,8 +116,9 @@ public class GestorExperimentosGUI {
         int indice = listaCultivos.getSelectedIndex();
         if (indice != -1) {
             String nombre = modeloLista.get(indice).split(" - ")[0];
-            CultivoDeBacterias cultivoParaEliminar = experimentoActual.getCultivoDeBacteriasList().stream()
-                    .filter(c -> c.getNombre().equals(nombre))
+            CultivoDeBacterias cultivoParaEliminar;
+            cultivoParaEliminar = (CultivoDeBacterias) experimentoActual.getCultivoDeBacteriasList().stream()
+                    .filter(c -> c.getClass().equals(nombre))
                     .findFirst().orElse(null);
             if (cultivoParaEliminar != null) {
                 experimentoActual.eliminarCultivoDeBacterias(cultivoParaEliminar);
