@@ -1,77 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
-  <component name="ChangeListManager">
-<<<<<<<<< Temporary merge branch 1
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="cambiando las clases a publico">
-      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" afterDir="false" />
-    </list>
-=========
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="128" />
->>>>>>>>> Temporary merge branch 2
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="adriana" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Gmongtor &lt;146821781+gmongtor@users.noreply.github.com&gt;" />
-        <option value="vitaliy-pg &lt;aljndrvt@myuax.com&gt;" />
-      </list>
-    </option>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="sebas" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Gmongtor&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/adrianarmm/PartedelaPractica1.git&quot;,
-    &quot;accountId&quot;: &quot;e5404a22-18ea-46f9-bf81-f500d9a41b5e&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2fVXNMh3YWyvBceWxrYSRJGQSr4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent"><![CDATA[{
+    <component name="AutoImportSettings">
+        <option name="autoReloadType" value="SELECTIVE" />
+    </component>
+    <component name="ChangeListManager">
+        <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="cambiando las clases a publico">
+            <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" afterDir="false" />
+        </list>
+        <option name="SHOW_DIALOG" value="false" />
+        <option name="HIGHLIGHT_CONFLICTS" value="true" />
+        <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+        <option name="LAST_RESOLUTION" value="IGNORE" />
+    </component>
+    <component name="FileTemplateManagerImpl">
+        <option name="RECENT_TEMPLATES">
+            <list>
+                <option value="Class" />
+            </list>
+        </option>
+    </component>
+    <component name="Git.Settings">
+        <favorite-branches>
+            <branch-storage>
+                <map>
+                    <entry type="LOCAL">
+                        <value>
+                            <list>
+                                <branch-info repo="$PROJECT_DIR$" source="adriana" />
+                            </list>
+                        </value>
+                    </entry>
+                </map>
+            </branch-storage>
+        </favorite-branches>
+        <option name="PREVIOUS_COMMIT_AUTHORS">
+            <list>
+                <option value="Gmongtor &lt;146821781+gmongtor@users.noreply.github.com&gt;" />
+                <option value="vitaliy-pg &lt;aljndrvt@myuax.com&gt;" />
+            </list>
+        </option>
+        <option name="RECENT_BRANCH_BY_REPOSITORY">
+            <map>
+                <entry key="$PROJECT_DIR$" value="sebas" />
+            </map>
+        </option>
+        <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    </component>
+    <component name="GitHubPullRequestSearchHistory">{
+        "lastFilter": {
+        "state": "OPEN",
+        "assignee": "Gmongtor"
+        }
+        }</component>
+    <component name="GithubPullRequestsUISettings">{
+        "selectedUrlAndAccountId": {
+        "url": "https://github.com/adrianarmm/PartedelaPractica1.git",
+        "accountId": "e5404a22-18ea-46f9-bf81-f500d9a41b5e"
+        }
+        }</component>
+    <component name="ProjectColorInfo">{
+        "associatedIndex": 1
+        }</component>
+    <component name="ProjectId" id="2fVXNMh3YWyvBceWxrYSRJGQSr4" />
+    <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+    <component name="ProjectViewState">
+        <option name="hideEmptyMiddlePackages" value="true" />
+        <option name="showLibraryContents" value="true" />
+    </component>
+    <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.BacterialCultureExperimentManager.executor": "Run",
     "Application.CultivoDeBacterias.executor": "Run",
@@ -100,514 +96,97 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="EXPERIMENTO" />
-    </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="" />
-      <created>1713887180017</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1713887180017</updated>
-      <workItem from="1713887181142" duration="3917000" />
-      <workItem from="1714578936755" duration="777000" />
-    </task>
-    <task id="LOCAL-00032" summary="80">
-      <option name="closed" value="true" />
-      <created>1714676074225</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1714676074225</updated>
-    </task>
-    <task id="LOCAL-00033" summary="81">
-      <option name="closed" value="true" />
-      <created>1714676089209</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1714676089209</updated>
-    </task>
-    <task id="LOCAL-00034" summary="81">
-      <option name="closed" value="true" />
-      <created>1714676129096</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1714676129096</updated>
-    </task>
-<<<<<<<<< Temporary merge branch 1
-    <task id="LOCAL-00035" summary="fallos de adriana arreglados">
-      <option name="closed" value="true" />
-      <created>1714747909368</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1714747909368</updated>
-    </task>
-    <task id="LOCAL-00036" summary="cambiando las clases a publico">
-      <option name="closed" value="true" />
-      <created>1714748024776</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1714748024776</updated>
-    </task>
-    <option name="localTasksCounter" value="37" />
-=========
-    <task id="LOCAL-00035" summary="83">
-      <option name="closed" value="true" />
-      <created>1714676142197</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1714676142197</updated>
-    </task>
-    <task id="LOCAL-00036" summary="84">
-      <option name="closed" value="true" />
-      <created>1714676894339</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1714676894339</updated>
-    </task>
-    <task id="LOCAL-00037" summary="85">
-      <option name="closed" value="true" />
-      <created>1714676950757</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1714676950757</updated>
-    </task>
-    <task id="LOCAL-00038" summary="86">
-      <option name="closed" value="true" />
-      <created>1714676968931</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1714676968931</updated>
-    </task>
-    <task id="LOCAL-00039" summary="87">
-      <option name="closed" value="true" />
-      <created>1714676988068</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1714676988068</updated>
-    </task>
-    <task id="LOCAL-00040" summary="88">
-      <option name="closed" value="true" />
-      <created>1714677005580</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1714677005580</updated>
-    </task>
-    <task id="LOCAL-00041" summary="89">
-      <option name="closed" value="true" />
-      <created>1714677361772</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1714677361772</updated>
-    </task>
-    <task id="LOCAL-00042" summary="90">
-      <option name="closed" value="true" />
-      <created>1714726111111</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1714726111111</updated>
-    </task>
-    <task id="LOCAL-00043" summary="91">
-      <option name="closed" value="true" />
-      <created>1714726312638</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1714726312638</updated>
-    </task>
-    <task id="LOCAL-00044" summary="92">
-      <option name="closed" value="true" />
-      <created>1714726414337</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1714726414337</updated>
-    </task>
-    <task id="LOCAL-00045" summary="93">
-      <option name="closed" value="true" />
-      <created>1714726442460</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1714726442460</updated>
-    </task>
-    <task id="LOCAL-00046" summary="94">
-      <option name="closed" value="true" />
-      <created>1714726462389</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1714726462389</updated>
-    </task>
-    <task id="LOCAL-00047" summary="95">
-      <option name="closed" value="true" />
-      <created>1714726495210</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1714726495210</updated>
-    </task>
-    <task id="LOCAL-00048" summary="96">
-      <option name="closed" value="true" />
-      <created>1714726804301</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1714726804301</updated>
-    </task>
-    <task id="LOCAL-00049" summary="97">
-      <option name="closed" value="true" />
-      <created>1714726849911</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1714726849911</updated>
-    </task>
-    <task id="LOCAL-00050" summary="98">
-      <option name="closed" value="true" />
-      <created>1714726967850</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1714726967850</updated>
-    </task>
-    <task id="LOCAL-00051" summary="99">
-      <option name="closed" value="true" />
-      <created>1714726993758</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1714726993758</updated>
-    </task>
-    <task id="LOCAL-00052" summary="100">
-      <option name="closed" value="true" />
-      <created>1714727171420</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1714727171420</updated>
-    </task>
-    <task id="LOCAL-00053" summary="101">
-      <option name="closed" value="true" />
-      <created>1714727381087</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1714727381087</updated>
-    </task>
-    <task id="LOCAL-00054" summary="102">
-      <option name="closed" value="true" />
-      <created>1714727743778</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1714727743778</updated>
-    </task>
-    <task id="LOCAL-00055" summary="103">
-      <option name="closed" value="true" />
-      <created>1714728108520</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1714728108520</updated>
-    </task>
-    <task id="LOCAL-00056" summary="103">
-      <option name="closed" value="true" />
-      <created>1714728215018</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1714728215018</updated>
-    </task>
-    <task id="LOCAL-00057" summary="105">
-      <option name="closed" value="true" />
-      <created>1714728337811</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1714728337811</updated>
-    </task>
-    <task id="LOCAL-00058" summary="106">
-      <option name="closed" value="true" />
-      <created>1714728373201</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1714728373201</updated>
-    </task>
-    <task id="LOCAL-00059" summary="107">
-      <option name="closed" value="true" />
-      <created>1714728787768</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1714728787768</updated>
-    </task>
-    <task id="LOCAL-00060" summary="108">
-      <option name="closed" value="true" />
-      <created>1714728836262</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1714728836262</updated>
-    </task>
-    <task id="LOCAL-00061" summary="109">
-      <option name="closed" value="true" />
-      <created>1714728852790</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1714728852790</updated>
-    </task>
-    <task id="LOCAL-00062" summary="110">
-      <option name="closed" value="true" />
-      <created>1714729088588</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1714729088588</updated>
-    </task>
-    <task id="LOCAL-00063" summary="111">
-      <option name="closed" value="true" />
-      <created>1714734705703</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1714734705703</updated>
-    </task>
-    <task id="LOCAL-00064" summary="112">
-      <option name="closed" value="true" />
-      <created>1714735002487</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1714735002487</updated>
-    </task>
-    <task id="LOCAL-00065" summary="113">
-      <option name="closed" value="true" />
-      <created>1714735219100</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1714735219100</updated>
-    </task>
-    <task id="LOCAL-00066" summary="114">
-      <option name="closed" value="true" />
-      <created>1714735342188</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1714735342188</updated>
-    </task>
-    <task id="LOCAL-00067" summary="115">
-      <option name="closed" value="true" />
-      <created>1714735478895</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1714735478895</updated>
-    </task>
-    <task id="LOCAL-00068" summary="116">
-      <option name="closed" value="true" />
-      <created>1714735617585</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1714735617585</updated>
-    </task>
-    <task id="LOCAL-00069" summary="117">
-      <option name="closed" value="true" />
-      <created>1714735934524</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1714735934524</updated>
-    </task>
-    <task id="LOCAL-00070" summary="118">
-      <option name="closed" value="true" />
-      <created>1714736127299</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1714736127299</updated>
-    </task>
-    <task id="LOCAL-00071" summary="119">
-      <option name="closed" value="true" />
-      <created>1714736198076</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1714736198077</updated>
-    </task>
-    <task id="LOCAL-00072" summary="120">
-      <option name="closed" value="true" />
-      <created>1714736969546</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1714736969546</updated>
-    </task>
-    <task id="LOCAL-00073" summary="121">
-      <option name="closed" value="true" />
-      <created>1714737087638</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1714737087638</updated>
-    </task>
-    <task id="LOCAL-00074" summary="122">
-      <option name="closed" value="true" />
-      <created>1714737097750</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1714737097750</updated>
-    </task>
-    <task id="LOCAL-00075" summary="123">
-      <option name="closed" value="true" />
-      <created>1714737145777</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1714737145777</updated>
-    </task>
-    <task id="LOCAL-00076" summary="124">
-      <option name="closed" value="true" />
-      <created>1714737455616</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1714737455616</updated>
-    </task>
-    <task id="LOCAL-00077" summary="125">
-      <option name="closed" value="true" />
-      <created>1714737648720</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1714737648720</updated>
-    </task>
-    <task id="LOCAL-00078" summary="126">
-      <option name="closed" value="true" />
-      <created>1714737673170</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1714737673170</updated>
-    </task>
-    <task id="LOCAL-00079" summary="127">
-      <option name="closed" value="true" />
-      <created>1714737952073</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1714737952073</updated>
-    </task>
-    <task id="LOCAL-00080" summary="128">
-      <option name="closed" value="true" />
-      <created>1714737965665</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1714737965665</updated>
-    </task>
-    <option name="localTasksCounter" value="81" />
->>>>>>>>> Temporary merge branch 2
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-<<<<<<<<< Temporary merge branch 1
-    <MESSAGE value="parte de imprimir el nombre de las poblaciones" />
-    <MESSAGE value="12" />
-    <MESSAGE value="13" />
-    <MESSAGE value="14" />
-    <MESSAGE value="15" />
-    <MESSAGE value="16" />
-    <MESSAGE value="17" />
-    <MESSAGE value="18" />
-    <MESSAGE value="19" />
-    <MESSAGE value="20" />
-    <MESSAGE value="21" />
-    <MESSAGE value="22" />
-    <MESSAGE value="23" />
-    <MESSAGE value="24" />
-    <MESSAGE value="25" />
-    <MESSAGE value="26" />
-    <MESSAGE value="27" />
-    <MESSAGE value="28" />
-    <MESSAGE value="29" />
-    <MESSAGE value="30" />
-    <MESSAGE value="31" />
-    <MESSAGE value="32" />
-    <MESSAGE value="33 lA TREINTRA Y TRES HOY SE GANA ALONSO" />
-    <MESSAGE value="fallos de adriana arreglados" />
-    <MESSAGE value="cambiando las clases a publico" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambiando las clases a publico" />
-=========
-    <MESSAGE value="103" />
-    <MESSAGE value="105" />
-    <MESSAGE value="106" />
-    <MESSAGE value="107" />
-    <MESSAGE value="108" />
-    <MESSAGE value="109" />
-    <MESSAGE value="110" />
-    <MESSAGE value="111" />
-    <MESSAGE value="112" />
-    <MESSAGE value="113" />
-    <MESSAGE value="114" />
-    <MESSAGE value="115" />
-    <MESSAGE value="116" />
-    <MESSAGE value="117" />
-    <MESSAGE value="118" />
-    <MESSAGE value="119" />
-    <MESSAGE value="120" />
-    <MESSAGE value="121" />
-    <MESSAGE value="122" />
-    <MESSAGE value="123" />
-    <MESSAGE value="124" />
-    <MESSAGE value="125" />
-    <MESSAGE value="126" />
-    <MESSAGE value="127" />
-    <MESSAGE value="128" />
-    <option name="LAST_COMMIT_MESSAGE" value="128" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/PoblacionBacterias.java</url>
-          <line>94</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
->>>>>>>>> Temporary merge branch 2
-  </component>
+    <component name="RecentsManager">
+        <key name="ExtractSuperBase.RECENT_KEYS">
+            <recent name="EXPERIMENTO" />
+        </key>
+    </component>
+    <component name="SharedIndexes">
+        <attachedChunks>
+            <set>
+                <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+                <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+            </set   >
+        </attachedChunks>
+    </component>
+    <component name="TaskManager">
+        <task active="true" id="TaskManager" summary="Task Manager" />
+    </component>
+    <component name="ToolWindowManager">
+        <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+        <editor active="true" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" />
+        <layout>
+            <window_info id="Project" active="true" anchor="bottom" file="file://$PROJECT_DIR$" side-tool="false" order="0" />
+            <window_info id="Run" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="1" />
+            <window_info id="Debug" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="2" />
+            <window_info id="Terminal" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="3" />
+            <window_info id="Version Control" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="4" />
+            <window_info id="Maven" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="5" />
+            <window_info id="Gradle" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="6" />
+            <window_info id="Ant" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="7" />
+            <window_info id="Maven Projects" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="8" />
+            <window_info id="Database" active="true" anchor="bottom" file="file://$PROJECT_DIR$/
+src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="9" />
+            <window_info id="Services" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="10" />
+            <window_info id="Event Log" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="11" />
+            <window_info id="Structure" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="12" />
+            <window_info id="Project" active="true" anchor="bottom" file="file://$PROJECT_DIR$" side-tool="false" order="13" />
+            <window_info id="Run" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="14" />
+            <window_info id="Debug" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="15" />
+            <window_info id="Terminal" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="16" />
+            <window_info id="Version Control" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="17" />
+            <window_info id="Maven" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="18" />
+            <window_info id="Gradle" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="19" />
+            <window_info id="Ant" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="20" />
+            <window_info id="Maven Projects" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="21" />
+            <window_info id="Database" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="22" />
+            <window_info id="Services" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="23" />
+            <window_info id="Event Log" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="24" />
+            <window_info id="Structure" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="25" />
+        </layout>
+    </component>
+    <component name="VcsManagerConfiguration">
+        <option name="ADD_LABEL_ON_CHECKIN" value="true" />
+        <option name="ADD_LABEL_ON_REVERT" value="true" />
+        <option name="ADD_LABEL_ON_SWITCH" value="true" />
+        <option name="ADD_LABEL_ON_UPDATE" value="true" />
+        <option name="LABEL_BEFORE_CHANGE" value="true" />
+        <option name="LABEL_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_NAME" value="before_change" />
+        <option name="LABEL_ON_PROJECT_RENAME" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_NAME" value="project_renamed" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_NAME" value="project_renamed_value" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_NAME" value="project_renamed_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME
+_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value_value" />
+        <option name="LABEL_ON_PROJECT_RENAME   _VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+        >>>>>>>>> Temporary merge branch 2
+    </component>
 </project>
