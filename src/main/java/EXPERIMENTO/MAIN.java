@@ -18,10 +18,11 @@ public class MAIN extends JFrame implements ActionListener {
     public JButton verNombresButton;
     public JButton verDetallesButton;
     public JButton guardarButton;
+    public JButton guardarComoButton;
     public JButton abrirButton;
     public JLabel nombreLabel;
     public JLabel cantidadLabel;
-    public experimentoss experimento;
+    public experimentos experimento;
 
     public MAIN() {
         setTitle("Experimento con bacterias");
@@ -59,12 +60,15 @@ public class MAIN extends JFrame implements ActionListener {
 
         // Panel de botones de archivo
         JPanel botonesArchivoPanel = new JPanel();
-        botonesArchivoPanel.setLayout(new GridLayout(1, 2));
+        botonesArchivoPanel.setLayout(new GridLayout(1, 3));
         guardarButton = new JButton("Guardar experimento");
         guardarButton.addActionListener(this);
+        guardarComoButton = new JButton("Guardar como");
+        guardarComoButton.addActionListener(this);
         abrirButton = new JButton("Abrir experimento");
         abrirButton.addActionListener(this);
         botonesArchivoPanel.add(guardarButton);
+        botonesArchivoPanel.add(guardarComoButton);
         botonesArchivoPanel.add(abrirButton);
 
         // Agregar todos los paneles al JFrame
@@ -77,7 +81,11 @@ public class MAIN extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try {
             if (e.getSource() == agregarCultivoButton) {
-                agregarCultivoDeBacterias(nombreField.getText(), Integer.parseInt(cantidadField.getText()));
+                if (!cantidadField.getText().isEmpty()) {
+                    agregarCultivoDeBacterias(nombreField.getText(), Integer.parseInt(cantidadField.getText()));
+                } else {
+                    detallesArea.append("Debe especificar una cantidad para agregar un cultivo de bacterias.\n");
+                }
             } else if (e.getSource() == eliminarCultivoButton) {
                 eliminarCultivoDeBacterias(nombreField.getText());
             } else if (e.getSource() == verNombresButton) {
@@ -86,6 +94,8 @@ public class MAIN extends JFrame implements ActionListener {
                 verInformacionDetalladaDeCultivoDeBacterias(nombreField.getText());
             } else if (e.getSource() == guardarButton) {
                 guardarExperimento();
+            } else if (e.getSource() == guardarComoButton) {
+                guardarExperimentoComo();
             } else if (e.getSource() == abrirButton) {
                 abrirExperimento();
             }
@@ -95,36 +105,46 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-  public void abrirExperimento() throws IOException, ClassNotFoundException {
+    public void abrirExperimento() throws IOException, ClassNotFoundException {
         JFileChooser fileChooser = new JFileChooser();
         int returnValue = fileChooser.showOpenDialog(this);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File file = fileChooser.getSelectedFile();
-            setExperimento(ExperimentoManager.abrirExperimento(file.getAbsolutePath()));
+            setExperimento(experimentos.abrirExperimento(file.getAbsolutePath()));
             detallesArea.append("Experimento cargado desde: " + file.getAbsolutePath() + "\n");
         }
     }
 
-    public  void guardarExperimento() throws IOException {
-        JFileChooser fileChooser = new JFileChooser();
-        int returnValue = fileChooser.showSaveDialog(this);
-        if (returnValue == JFileChooser.APPROVE_OPTION) {
-            File file = fileChooser.getSelectedFile();
-            if (!file.getAbsolutePath().endsWith(".ser")) {
-                file = new File(file.getAbsolutePath() + ".ser");
-            }
-            if (getExperimento() != null) {
-                getExperimento().guardarExperimento(file);
-                detallesArea.append("Experimento guardado en: " + file.getAbsolutePath() + "\n");
-            } else {
-                detallesArea.append("No hay ningún experimento para guardar\n");
-            }
+    public void guardarExperimento() throws IOException {
+        if (getExperimento() != null) {
+            getExperimento().guardarExperimento();
+            detallesArea.append("Experimento guardado\n");
+        } else {
+            detallesArea.append("No hay ningún experimento para guardar\n");
         }
     }
 
-   public void verInformacionDetalladaDeCultivoDeBacterias(String nombre) {
-        Cultivo cultivo = getExperimento().getCultivo(nombre);
-        if (cultivo != null) {
+    public void guardarExperimentoComo() throws IOException {
+        if (getExperimento() != null) {
+            JFileChooser fileChooser = new JFileChooser();
+            int returnValue = fileChooser.showSaveDialog(this);
+            if (returnValue == JFileChooser.APPROVE_OPTION) {
+                File file = fileChooser.getSelectedFile();
+                if (!file.getAbsolutePath().endsWith(".ser")) {
+                    file = new File(file.getAbsolutePath() + ".ser");
+                }
+                getExperimento().guardarExperimento();
+                detallesArea.append("Experimento guardado en: " + file.getAbsolutePath() + "\n");
+            }
+        } else {
+            detallesArea.append("No hay ningún experimento para guardar\n");
+        }
+    }
+
+    public void verInformacionDetalladaDeCultivoDeBacterias(String nombre) {
+        Optional<CultivoDeBacterias> cultivoOptional = getExperimento().obtenerDetallesCultivo(nombre);
+        if (cultivoOptional.isPresent()) {
+            CultivoDeBacterias cultivo = cultivoOptional.get();
             detallesArea.append("Nombre: " + cultivo.getNombre() + "\n");
             detallesArea.append("Cantidad: " + cultivo.getCantidad() + "\n");
             detallesArea.append("Características de bacterias:\n");
@@ -136,41 +156,35 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    public  void verNombresDeCultivosDeBacterias() {
-        ArrayList<String> nombres = getExperimento().getNombresDeCultivosDeBacterias();
-        if (nombres.size() > 0) {
-            detallesArea.append("Nombres de cultivos de bacterias:\n");
-            for (String nombre : nombres) {
-                detallesArea.append(" - " + nombre + "\n");
-            }
-        } else {
-            detallesArea.append("No hay cultivos de bacterias en el experimento\n");
-        }
+    public void verNombresDeCultivosDeBacterias() {
+        getExperimento().mostrarCultivosDeBacterias();
     }
 
-   public  void eliminarCultivoDeBacterias(String nombre) {
-        boolean resultado = getExperimento().eliminarCultivo(nombre);
-        if (resultado) {
+    public void eliminarCultivoDeBacterias(String nombre) {
+        Optional<CultivoDeBacterias> cultivoOptional = getExperimento().obtenerDetallesCultivo(nombre);
+        if (cultivoOptional.isPresent()) {
+            getExperimento().eliminarCultivoDeBacterias( String.valueOf ( cultivoOptional.get() ) );
             detallesArea.append("Cultivo de bacterias eliminado: " + nombre + "\n");
         } else {
             detallesArea.append("No se encontró el cultivo de bacterias: " + nombre + "\n");
         }
     }
 
-  public void agregarCultivoDeBacterias(String nombre, int cantidad) {
-        if (getExperimento().getCultivo(nombre) != null) {
-            detallesArea.append("Ya existe un cultivo de bacterias con ese nombre: " + nombre + "\n");
-        } else {
-            getExperimento().agregarCultivo(new Cultivo(nombre, cantidad, new Bacterias("O1", "P1", new ArrayList<>())));
-            detallesArea.append("Cultivo de bacterias agregado: " + nombre + "\n");
-        }
+    public void agregarCultivoDeBacterias(String nombre, int cantidad) {
+        Bacterias bacterias = new Bacterias("Colonia", "Genotipo", new ArrayList<>());
+        CultivoDeBacterias nuevoCultivo = new CultivoDeBacterias(nombre, cantidad, bacterias);
+        getExperimento().agregarCultivoDeBacterias(nuevoCultivo);
+        detallesArea.append("Cultivo de bacterias agregado: " + nombre + "\n");
     }
 
-   public void setExperimento(experimentoss experimento) {
+    public void setExperimento(experimentos experimento) {
         this.experimento = experimento;
     }
 
-    public  experimentoss getExperimento() {
+    public experimentos getExperimento() {
+        if (experimento == null) {
+            experimento = new experimentos();
+        }
         return this.experimento;
     }
 
@@ -180,7 +194,7 @@ public class MAIN extends JFrame implements ActionListener {
     }
 }
 
-class Bacterias {
+class Bacterias implements Serializable {
     private String colonia;
     private String genotipo;
     private ArrayList<String> plasmidos;
@@ -216,12 +230,12 @@ class Bacterias {
     }
 }
 
-class Cultivo {
+class CultivoDeBacterias implements Serializable {
     private String nombre;
     private int cantidad;
     private Bacterias bacterias;
 
-    public Cultivo(String nombre, int cantidad, Bacterias bacterias) {
+    public CultivoDeBacterias(String nombre, int cantidad, Bacterias bacterias) {
         this.nombre = nombre;
         this.cantidad = cantidad;
         this.bacterias = bacterias;
@@ -252,48 +266,46 @@ class Cultivo {
     }
 }
 
-class experimentoss {
-    private ArrayList<Cultivo> cultivos;
+class experimentos implements Serializable {
+    private ArrayList<CultivoDeBacterias> cultivoDeBacteriasList;
 
-    public experimentoss() {
-        this.cultivos = new ArrayList<>();
+    public experimentos() {
+        cultivoDeBacteriasList = new ArrayList<>();
     }
 
-    public ArrayList<String> getNombresDeCultivosDeBacterias() {
-        ArrayList<String> nombres = new ArrayList<>();
-        for (Cultivo cultivo : cultivos) {
-            nombres.add(cultivo.getNombre());
+    public void mostrarCultivosDeBacterias() {
+        for (CultivoDeBacterias cultivo : cultivoDeBacteriasList) {
+            System.out.println(cultivo.getNombre());
         }
-        return nombres;
     }
 
-    public Cultivo getCultivo(String nombre) {
-        for (Cultivo cultivo : cultivos) {
-            if (cultivo.getNombre().equals(nombre)) {
-                return cultivo;
-            }
-        }
-        return null;
+    public Optional<CultivoDeBacterias> obtenerDetallesCultivo(String nombre) {
+        return cultivoDeBacteriasList.stream()
+                .filter(cultivo -> cultivo.getNombre().equals(nombre))
+                .findFirst();
     }
 
-    public boolean eliminarCultivo(String nombre) {
-        for (int i = 0; i < cultivos.size(); i++) {
-            if (cultivos.get(i).getNombre().equals(nombre)) {
-                cultivos.remove(i);
-                return true;
-            }
-        }
-        return false;
+    public void eliminarCultivoDeBacterias( String cultivoParaEliminar) {
+        cultivoDeBacteriasList.remove(cultivoParaEliminar);
     }
 
-    public Optional<Cultivo> agregarCultivo(Cultivo cultivo) {
-        cultivos.add(cultivo);
-        return Optional.of(cultivo);
+    public void agregarCultivoDeBacterias(CultivoDeBacterias nuevoCultivo) {
+        cultivoDeBacteriasList.add(nuevoCultivo);
     }
 
-    public void guardarExperimento(File file) throws IOException {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
+    public void guardarExperimento() throws IOException {
+        String ruta = null;
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(ruta))) {
             oos.writeObject(this);
         }
+    }
+
+    public static experimentos abrirExperimento(String ruta) throws IOException, ClassNotFoundException {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ruta))) {
+            return (experimentos) ois.readObject();
+        }
+    }
+
+    public void verInformacionDetalladaDeCultivoDeBacterias ( String nombreCultivo ) {
     }
 }
