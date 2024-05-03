@@ -9,6 +9,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class MAIN extends JFrame implements ActionListener {
 
@@ -289,9 +290,10 @@ class experimentoss {
         return false;
     }
 
-    public void agregarCultivo(String cultivo) {
+    public Optional<CultivoDeBacterias> agregarCultivo(String cultivo) {
         cultivos.add(new Cultivo(cultivo, 0, new Bacterias("O1", "P1", new ArrayList<>())));
 
+        return null;
     }
 
     public void guardarExperimento(File file) throws IOException {

@@ -96,7 +96,7 @@ public class ExperimentoManageer {
             System.err.println("Nombre de cultivo de bacterias no válido.");
             return;
         }
-        Optional<CultivoDeBacterias> cultivoDeBacterias = experimento.obtenerDetallesCultivo(nombreCultivo);
+        Optional<CultivoDeBacterias> cultivoDeBacterias = experimento.agregarCultivo(nombreCultivo);
         cultivoDeBacterias.ifPresent(experimento::eliminarCultivoDeBacterias);
     }
 
