@@ -32,7 +32,7 @@ public class ExperimentoManageer {
             System.err.println("Intento de agregar un cultivo nulo al experimento.");
             return;
         }
-        experimento.agregarCultivo(bacteriaCulture);
+        experimento.agregarCultivo(String.valueOf(bacteriaCulture));
     }
 
     public void verNombresDeCultivosDeBacterias(experimentoss experimento) {
@@ -109,7 +109,7 @@ public class ExperimentoManageer {
             return;
         }
         CultivoDeBacterias cultivo = new CultivoDeBacterias(nombre, cantidad);
-        experimento.agregarCultivoDeBacterias(cultivo);
+        experimento.eliminarCultivoDeBacterias(cultivo);
     }
 
     public void verInformacionDetalladaDeCultivoDeBacterias(experimentoss experimento, CultivoDeBacterias cultivo) {
