@@ -89,7 +89,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.GEGUI">
+  <component name="RunManager" selected="Application.exp">
     <configuration name="GEGUI" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="EXPERIMENTO.GestorExperimentosGUI" />
       <module name="PartedelaPractica1" />
@@ -118,8 +118,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="exp" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="EXPERIMENTO.experimentos" />
+      <module name="PartedelaPractica1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.GEGUI" />
+      <item itemvalue="Application.exp" />
       <item itemvalue="Application.GuardarArchivos" />
       <item itemvalue="Application.PoblacionBacterias" />
     </list>
