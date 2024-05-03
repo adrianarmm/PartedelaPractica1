@@ -2,9 +2,10 @@ package EXPERIMENTO;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class experimentos {
-    private List<CultivoDeBacterias> cultivoDeBacteriasList; // Asegúrate de que la lista sea de tipo CultivoDeBacterias
+    private List<CultivoDeBacterias> cultivoDeBacteriasList;
 
     public experimentos() {
         this.cultivoDeBacteriasList = new ArrayList<>();
@@ -26,6 +27,20 @@ public class experimentos {
         cultivoDeBacteriasList.forEach(System.out::println);
     }
 
+    // Añadido para permitir la eliminación de cultivos por objeto directamente
+    public void eliminarCultivoDeBacterias(CultivoDeBacterias cultivo) {
+        cultivoDeBacteriasList.remove(cultivo);
+    }
+
+    // Añadido para obtener detalles de un cultivo específico por nombre
+    public String obtenerDetallesCultivo(String nombre) {
+        Optional<CultivoDeBacterias> cultivo = cultivoDeBacteriasList.stream()
+                .filter(c -> c.getNombre().equals(nombre))
+                .findFirst();
+        return cultivo.map(CultivoDeBacterias::toString)
+                .orElse("Cultivo no encontrado.");
+    }
+
     public static void main(String[] args) {
         experimentos experimento = new experimentos();
         CultivoDeBacterias cultivoDeBacterias1 = new CultivoDeBacterias("Bacteria 1", 100);
@@ -35,21 +50,10 @@ public class experimentos {
         experimento.agregarCultivoDeBacterias(cultivoDeBacterias2);
         experimento.agregarCultivoDeBacterias(cultivoDeBacterias3);
         experimento.mostrarCultivosDeBacterias();
-    }
-
-    public void agregarPoblacionBacterias(PoblacionBacterias poblacion1) {
-
-    }
-
-    public Iterable<Object> nombresPoblacionesBacterias() {
-        return null;
-    }
-
-    public void eliminarCultivoDeBacterias(CultivoDeBacterias cultivoDeBacterias) {
-
-    }
-
-    public Object obtenerDetallesCultivo(String nombre) {
-        return null;
+        experimento.eliminarCultivoDeBacterias(cultivoDeBacterias1); // Test eliminación
+        System.out.println("Después de eliminar:");
+        experimento.mostrarCultivosDeBacterias();
+        System.out.println("Detalles del cultivo:");
+        System.out.println(experimento.obtenerDetallesCultivo("Bacteria 2"));
     }
 }
