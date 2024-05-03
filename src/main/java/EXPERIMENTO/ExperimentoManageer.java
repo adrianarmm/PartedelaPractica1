@@ -36,17 +36,20 @@ public class ExperimentoManageer {
         if (experimento == null) {
             throw new IllegalArgumentException("Experimento no puede ser nulo.");
         }
-        experimento.getCultivoDeBacteriasList().forEach(cultivo -> System.out.println(cultivo.getNombre()));
+        experimento.mostrarCultivosDeBacterias();
     }
 
     public void eliminarCultivoDeBacterias(experimentos experimento, CultivoDeBacterias bacteriaCulture) {
-        if (experimento == null || bacteriaCulture == null) {
-            throw new IllegalArgumentException("Ni el experimento ni el cultivo de bacterias pueden ser nulos.");
+        if (experimento == null) {
+            throw new IllegalArgumentException("El experimento no puede ser nulo.");
         }
-        if (!experimento.getCultivoDeBacteriasList().remove(bacteriaCulture)) {
-            System.out.println("El cultivo no se encontró en el experimento o ya fue eliminado.");
+        if (bacteriaCulture == null) {
+            System.err.println("Intento de eliminar un cultivo nulo del experimento.");
+            return;
         }
+        experimento.eliminarCultivoDeBacterias(bacteriaCulture);
     }
+
 
     public void verInformacionDetalladaDeCultivoDeBacterias(experimentos experimento, String nombreCultivo) {
         if (experimento == null) {
