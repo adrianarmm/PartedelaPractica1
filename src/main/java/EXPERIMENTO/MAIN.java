@@ -4,10 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -25,7 +22,6 @@ public class MAIN extends JFrame implements ActionListener {
     public JLabel nombreLabel;
     public JLabel cantidadLabel;
     public experimentoss experimento;
-    public EXPERIMENTO.ExperimentoManageer ExperimentoManageer = new EXPERIMENTO.ExperimentoManageer();
 
     public MAIN() {
         setTitle("Experimento con bacterias");
@@ -95,7 +91,7 @@ public class MAIN extends JFrame implements ActionListener {
             }
         } catch (IOException | ClassNotFoundException ex) {
             // Handle the exception appropriately
-            System.out.println("An error occurred: " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
 
@@ -104,7 +100,7 @@ public class MAIN extends JFrame implements ActionListener {
         int returnValue = fileChooser.showOpenDialog(this);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File file = fileChooser.getSelectedFile();
-            setExperimento(ExperimentoManageer.abrirExperimento(file.getAbsolutePath()));
+            setExperimento(ExperimentoManager.abrirExperimento(file.getAbsolutePath()));
             detallesArea.append("Experimento cargado desde: " + file.getAbsolutePath() + "\n");
         }
     }
@@ -165,7 +161,7 @@ public class MAIN extends JFrame implements ActionListener {
         if (getExperimento().getCultivo(nombre) != null) {
             detallesArea.append("Ya existe un cultivo de bacterias con ese nombre: " + nombre + "\n");
         } else {
-            getExperimento().agregarCultivo(String.valueOf(new Cultivo(nombre, cantidad, new Bacterias("O1", "P1", new ArrayList<>()))));
+            getExperimento().agregarCultivo(new Cultivo(nombre, cantidad, new Bacterias("O1", "P1", new ArrayList<>())));
             detallesArea.append("Cultivo de bacterias agregado: " + nombre + "\n");
         }
     }
@@ -179,9 +175,9 @@ public class MAIN extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-          MAIN main = new MAIN();
-            main.setVisible(true);
-        }
+        MAIN main = new MAIN();
+        main.setVisible(true);
+    }
 }
 
 class Bacterias {
@@ -290,20 +286,14 @@ class experimentoss {
         return false;
     }
 
-    public Optional<CultivoDeBacterias> agregarCultivo(String cultivo) {
-        cultivos.add(new Cultivo(cultivo, 0, new Bacterias("O1", "P1", new ArrayList<>())));
-
-        return null;
+    public Optional<Cultivo> agregarCultivo(Cultivo cultivo) {
+        cultivos.add(cultivo);
+        return Optional.of(cultivo);
     }
 
     public void guardarExperimento(File file) throws IOException {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
             oos.writeObject(this);
         }
-    }
-
-    public void eliminarCultivoDeBacterias(CultivoDeBacterias cultivoDeBacterias) {
-        cultivos.remove(cultivoDeBacterias);
-
     }
 }
