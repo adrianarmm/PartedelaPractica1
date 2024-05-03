@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.*;
-import java.util.Random;
 
 public class GestorExperimentosGUI {
     private JFrame marco;
@@ -48,7 +47,7 @@ public class GestorExperimentosGUI {
         panelSuperior.add(botonAgregar);
         panelSuperior.add(botonEliminar);
 
-        botonAgregar.addActionListener(this::agregarCultivo);
+        botonAgregar.addActionListener(actionEvent -> agregarCultivo(actionEvent, cantidad));
         botonEliminar.addActionListener(this::eliminarCultivo);
         botonSimularCrecimiento.addActionListener(this::simularCrecimiento);
 
@@ -73,6 +72,27 @@ public class GestorExperimentosGUI {
         marco.add(panelInferior, BorderLayout.SOUTH);
 
         marco.setVisible(true);
+    }
+
+    private void agregarCultivo(ActionEvent actionEvent, int cantidad) {
+        String nombre = campoNombre.getText();
+        int cantidadInicial = Integer.parseInt(campoCantidadInicial.getText());
+        CultivoDeBacterias cultivo = new CultivoDeBacterias(nombre, cantidadInicial);
+    }
+
+    private void cargarExperimento(ActionEvent actionEvent) {
+        JFileChooser fileChooser = new JFileChooser();
+        int seleccion = fileChooser.showOpenDialog(marco);
+        if (seleccion == JFileChooser.APPROVE_OPTION) {
+            File archivo = fileChooser.getSelectedFile();
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivo))) {
+                experimentoActual = (experimentos) ois.readObject();
+                modeloLista.clear();
+                experimentoActual.getCultivoDeBacteriasList().forEach(cultivo -> modeloLista.addElement(cultivo.getNombre() + " - " + cultivo.getCantidadInicial()));
+            } catch (IOException | ClassNotFoundException e) {
+                JOptionPane.showMessageDialog(marco, "Error al cargar el experimento: " + e.getMessage());
+            }
+        }
     }
 
     private void simularCrecimiento(ActionEvent e) {
