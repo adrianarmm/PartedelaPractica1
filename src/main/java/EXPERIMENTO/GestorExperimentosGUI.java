@@ -84,15 +84,8 @@ public class GestorExperimentosGUI {
             try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivo))) {
                 experimentoActual = (experimentos) ois.readObject();
                 modeloLista.clear();
-                // Verifica que el objeto y la lista no sean nulos.
-                if (experimentoActual != null && experimentoActual.getCultivoDeBacteriasList() != null) {
-                    // Añade cada cultivo al modelo de la lista para visualización.
-                    for (CultivoDeBacterias cultivo : experimentoActual.getCultivoDeBacteriasList()) {
-                        modeloLista.addElement(cultivo.getNombre() + " - " + cultivo.getCantidad());
-                    }
-                }
+                experimentoActual.getCultivoDeBacteriasList().orElse(cultivo -> modeloLista.addElement(cultivo.getNombre() + " - " + cultivo.getPoblacion()));
             } catch (IOException | ClassNotFoundException e) {
-                JOptionPane.showMessageDialog(marco, "Error al cargar el experimento: " + e.getMessage(), "Error de Carga", JOptionPane.ERROR_MESSAGE);
                 e.printStackTrace();
             }
         }
