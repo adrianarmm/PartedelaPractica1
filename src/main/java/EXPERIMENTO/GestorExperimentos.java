@@ -24,10 +24,11 @@ public class GestorExperimentos extends JFrame implements ActionListener {
     private JButton btnAbrirArchivo, btnCrearExperimento, btnCrearPoblacion, btnVisualizarPoblaciones, btnBorrarPoblacion, btnVerInfo, btnGuardar, btnGuardarComo;
     private JComboBox<String> languageComboBox;
     private JButton changeLanguageButton;
-    private static final String CONTRASENA_ESPERADA = "filetedelomo"; // Cambiar por tu contraseña
+    private static final String CONTRASENA_ESPERADA = "filetedelomo";
     private HashMap<String, String> usuariosRegistrados;
     private Experimento experimentoActual;
     private ArrayList<PoblacionBacterias> poblaciones;
+    private JTextArea textAreaCentral;
 
     public GestorExperimentos() {
         setTitle("Gestor de Experimentos");
@@ -40,17 +41,10 @@ public class GestorExperimentos extends JFrame implements ActionListener {
     }
 
     private void inicializarComponentes() {
-        JPanel panelAcciones = crearPanelAcciones();
-        add(panelAcciones, BorderLayout.WEST);
-
-        JScrollPane scrollPaneCentral = crearPanelCentral();
-        add(scrollPaneCentral, BorderLayout.CENTER);
-
-        JPanel panelIdioma = crearPanelIdioma();
-        add(panelIdioma, BorderLayout.NORTH);
-
-        JPanel panelInicioSesion = crearPanelInicioSesion();
-        add(panelInicioSesion, BorderLayout.SOUTH);
+        add(crearPanelAcciones(), BorderLayout.WEST);
+        add(crearPanelCentral(), BorderLayout.CENTER);
+        add(crearPanelIdioma(), BorderLayout.NORTH);
+        add(crearPanelInicioSesion(), BorderLayout.SOUTH);
     }
 
     private JPanel crearPanelAcciones() {
@@ -58,25 +52,23 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.setBorder(BorderFactory.createTitledBorder("Acciones"));
 
-
         btnCrearExperimento = crearBoton("Crear experimento", this);
         btnCrearPoblacion = crearBoton("Crear población", this);
         btnVisualizarPoblaciones = crearBoton("Visualizar poblaciones", this);
         btnBorrarPoblacion = crearBoton("Borrar población", this);
-        btnVerGraficas = new JButton("Ver Gráficas");
-        btnVerGraficas.addActionListener(this);
+        btnVerGraficas = crearBoton("Ver Gráficas", this);
         btnVerInfo = crearBoton("Ver información detallada", this);
         btnAbrirArchivo = crearBoton("Abrir archivo", this);
         btnGuardar = crearBoton("Guardar", this);
         btnGuardarComo = crearBoton("Guardar como", this);
 
-        panel.add(btnVerGraficas);
-        panel.add(btnAbrirArchivo);
         panel.add(btnCrearExperimento);
         panel.add(btnCrearPoblacion);
         panel.add(btnVisualizarPoblaciones);
         panel.add(btnBorrarPoblacion);
+        panel.add(btnVerGraficas);
         panel.add(btnVerInfo);
+        panel.add(btnAbrirArchivo);
         panel.add(btnGuardar);
         panel.add(btnGuardarComo);
 
@@ -90,16 +82,14 @@ public class GestorExperimentos extends JFrame implements ActionListener {
     }
 
     private JScrollPane crearPanelCentral() {
-        JTextArea textAreaCentral = new JTextArea();
+        textAreaCentral = new JTextArea();
         textAreaCentral.setEditable(false);
-        JScrollPane scrollPane = new JScrollPane(textAreaCentral);
-        return scrollPane;
+        return new JScrollPane(textAreaCentral);
     }
 
     private JPanel crearPanelIdioma() {
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        String[] languages = {"Español", "English"};
-        languageComboBox = new JComboBox<>(languages);
+        languageComboBox = new JComboBox<>(new String[]{"Español", "English"});
         languageComboBox.addActionListener(this);
 
         changeLanguageButton = new JButton("Cambiar Idioma");
@@ -132,6 +122,7 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         panel.add(btnIniciarSesion);
         return panel;
     }
+
 
     private void habilitarFuncionalidades() {
         btnAbrirArchivo.setEnabled(true);
@@ -191,29 +182,10 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         }
     }
 
-    private JTextArea textAreaCentral; // Asegúrate de que esta variable es accesible en la clase
-    private JScrollPane crearPanelCentral() {
-        textAreaCentral = new JTextArea();
-        textAreaCentral.setEditable(false);
-        return new JScrollPane(textAreaCentral);
-    }
 
     private void calcularTasaCrecimiento() {
-        if (experimentoActual == null || experimentoActual.getPoblaciones().isEmpty()) {
-            textAreaCentral.setText("No hay datos suficientes para calcular la tasa de crecimiento.");
-            return;
-        }
 
-        try {
-            PoblacionBacterias poblacionInicial = experimentoActual.getPoblaciones().get(0);
-            PoblacionBacterias poblacionFinal = experimentoActual.getPoblaciones().get(experimentoActual.getPoblaciones().size() - 1);
-            int dias = (int)((poblacionFinal.getFechaFin().getTime() - poblacionInicial.getFechaInicio().getTime()) / (1000 * 60 * 60 * 24));
 
-            double tasaCrecimiento = Math.log(poblacionFinal.getNumBacterias() / (double) poblacionInicial.getNumBacterias()) / dias;
-            textAreaCentral.setText("Tasa de crecimiento: " + tasaCrecimiento + " por día");
-        } catch (Exception e) {
-            textAreaCentral.setText("Error al calcular la tasa de crecimiento: " + e.getMessage());
-        }
     }
 
     private void calcularEstadisticas() {
@@ -624,7 +596,4 @@ public class GestorExperimentos extends JFrame implements ActionListener {
             new GestorExperimentos();
         });
     }
-
 }
-
-
