@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="es hora de hacer magia, papa vitaliy junto a su intrepido compañero sebastian(ha estado en videollamda comiendo pipas)acabamos de romper con el main y las carpetas">
-      <change afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/GraficaPoblacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="uyy uy uy uy uy uy que ya van funcionan cositas, se vienen cositas">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,13 +125,13 @@
       <option name="project" value="LOCAL" />
       <updated>1714751381684</updated>
     </task>
-    <task id="LOCAL-00002" summary="es hora de hacer magia, papa vitaliy junto a su intrepido compañero sebastian(ha estado en videollamda comiendo pipas)acabamos de romper con el main y las carpetas">
+    <task id="LOCAL-00002" summary="uyy uy uy uy uy uy que ya van funcionan cositas, se vienen cositas">
       <option name="closed" value="true" />
-      <created>1714839431975</created>
+      <created>1714751901418</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1714839431975</updated>
+      <updated>1714751901418</updated>
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -171,7 +171,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mil fallos" />
     <MESSAGE value="sigue sin funcionar" />
-    <MESSAGE value="es hora de hacer magia, papa vitaliy junto a su intrepido compañero sebastian(ha estado en videollamda comiendo pipas)acabamos de romper con el main y las carpetas" />
-    <option name="LAST_COMMIT_MESSAGE" value="es hora de hacer magia, papa vitaliy junto a su intrepido compañero sebastian(ha estado en videollamda comiendo pipas)acabamos de romper con el main y las carpetas" />
+    <MESSAGE value="uyy uy uy uy uy uy que ya van funcionan cositas, se vienen cositas" />
+    <option name="LAST_COMMIT_MESSAGE" value="uyy uy uy uy uy uy que ya van funcionan cositas, se vienen cositas" />
   </component>
 </project>
