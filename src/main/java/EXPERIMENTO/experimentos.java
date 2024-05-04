@@ -1,73 +1,69 @@
 package EXPERIMENTO;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
-public class experimentos implements Serializable {
-    private ArrayList<CultivoDeBacterias> cultivoDeBacteriasList;
+public class experimentos {
 
-    public experimentos() {
-        cultivoDeBacteriasList = new ArrayList<>();
+    private List<CultivoDeBacterias> cultivos = new ArrayList<> ();
+
+    public void agregarCultivoDeBacterias(CultivoDeBacterias cultivo) {
+        cultivos.add(cultivo);
     }
 
-    public void mostrarCultivosDeBacterias() {
-        for (CultivoDeBacterias cultivo : cultivoDeBacteriasList) {
-            System.out.println(cultivo.getNombre());
-        }
+    public void eliminarCultivoDeBacterias(String nombre) {
+        cultivos.removeIf(c -> c.getNombre().equals(nombre));
     }
 
     public Optional<CultivoDeBacterias> obtenerDetallesCultivo( String nombre) {
-        return cultivoDeBacteriasList.stream()
-                .filter(cultivo -> cultivo.getNombre().equals(nombre))
+        return cultivos.stream()
+                .filter(c -> c.getNombre().equals(nombre))
                 .findFirst();
     }
 
-    public boolean eliminarCultivoDeBacterias(CultivoDeBacterias cultivoParaEliminar) {
-        return cultivoDeBacteriasList.remove(cultivoParaEliminar);
+    public void mostrarCultivosDeBacterias() {
+        if (cultivos.isEmpty()) {
+            System.out.println("No hay cultivos de bacterias registrados.");
+        } else {
+            System.out.println("Cultivos de bacterias registrados:");
+            for (CultivoDeBacterias cultivo : cultivos) {
+                System.out.println("- " + cultivo.getNombre());
+            }
+        }
     }
 
-    public void agregarCultivoDeBacterias(CultivoDeBacterias nuevoCultivo) {
-        cultivoDeBacteriasList.add(nuevoCultivo);
+    public static experimentos abrirExperimento(String ruta) throws IOException, ClassNotFoundException {
+        // Implementación de abrir experimento
+        return new experimentos();
     }
 
     public void guardarExperimento(String ruta) throws IOException {
-        // Implementación del método para guardar el experimento en la ruta proporcionada
+        // Implementación de guardar experimento
     }
 
-
-    public static experimentos abrirExperimento(String ruta) throws IOException, ClassNotFoundException {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ruta))) {
-            return (experimentos) ois.readObject();
-        }
-    }
-
-
-
-
-    public void verInformacionDetalladaDeCultivoDeBacterias(String nombreCultivo) {
-        Optional<CultivoDeBacterias> cultivoOptional = obtenerDetallesCultivo(nombreCultivo);
-        if (cultivoOptional.isPresent()) {
-            CultivoDeBacterias cultivo = cultivoOptional.get();
-            System.out.println("Información detallada de cultivo de bacterias:");
-            System.out.println("Nombre: " + cultivo.getNombre());
-            System.out.println("Cantidad: " + cultivo.getCantidad());
-            Bacterias bacterias = cultivo.getBacterias();
-            System.out.println("Características de bacterias:");
-            System.out.println("- Colonia: " + bacterias.getColonia());
-            System.out.println("- Genotipo: " + bacterias.getGenotipo());
-            System.out.println("- Plásmidos: " + bacterias.getPlasmidos());
+    public void verInformacionDetalladaDeCultivoDeBacterias(String nombre, StringWriter detallesArea) {
+        if (nombre != null && !nombre.isEmpty()) {
+            Optional<CultivoDeBacterias> cultivoOptional = obtenerDetallesCultivo(nombre);
+            if (cultivoOptional.isPresent()) {
+                CultivoDeBacterias cultivo = cultivoOptional.get();
+                detallesArea.append("Nombre: " + cultivo.getNombre() + "\n");
+                detallesArea.append("Fechas: " + cultivo.getFechaInicio() + " - " + cultivo.getFechaFin() + "\n");
+                detallesArea.append("Cantidad inicial: " + cultivo.getCantidad() + "\n");
+                detallesArea.append("Temperatura: " + cultivo.getTemperatura() + "\n");
+                detallesArea.append("Luminosidad: " + cultivo.getLuminosidad() + "\n");
+                detallesArea.append("Dosis de comida:\n");
+                detallesArea.append(" - Inicial: " + cultivo.getDosisComida().getComidaInicial() + "\n");
+                detallesArea.append(" - Incremento en día " + cultivo.getDosisComida().getDiaIncremento() + ": " +
+                        cultivo.getDosisComida().getComidaIncremento() + "\n");
+                detallesArea.append(" - Final: " + cultivo.getDosisComida().getComidaFinal() + "\n");
+            } else {
+                detallesArea.append("No se encontró el cultivo de bacterias: " + nombre + "\n");
+            }
         } else {
-            System.out.println("No se encontró el cultivo de bacterias: " + nombreCultivo);
+            detallesArea.append("Debe especificar un nombre de cultivo para ver detalles.\n");
         }
-    }
-
-    // Getters y setters para la lista de cultivos (opcional)
-    public ArrayList<CultivoDeBacterias> getCultivoDeBacteriasList() {
-        return cultivoDeBacteriasList;
-    }
-
-    public void setCultivoDeBacteriasList(ArrayList<CultivoDeBacterias> cultivoDeBacteriasList) {
-        this.cultivoDeBacteriasList = cultivoDeBacteriasList;
     }
 }

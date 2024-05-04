@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="uyy uy uy uy uy uy que ya van funcionan cositas, se vienen cositas">
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="no me deja poner nombre a lso cultvios">
+      <change afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/Bacterias.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/ExperimentoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/ExperimentoManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/experimentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/experimentos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,36 +71,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BacterialCultureExperimentManager.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CultivoDeBacterias.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DetallesPoblacionBacterias.executor&quot;: &quot;Run&quot;,
-    &quot;Application.EXMA.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Experimento.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ExperimentoManageer.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ExperimentoManager.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Experimentos.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GEGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GuardarArchivos.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HorarioAlimentacion.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MAIN.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PoblacionBacterias.executor&quot;: &quot;Run&quot;,
-    &quot;Application.exp.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BacterialCultureExperimentManager.executor": "Run",
+    "Application.CultivoDeBacterias.executor": "Run",
+    "Application.DetallesPoblacionBacterias.executor": "Run",
+    "Application.EXMA.executor": "Run",
+    "Application.Experimento.executor": "Run",
+    "Application.ExperimentoManageer.executor": "Run",
+    "Application.ExperimentoManager.executor": "Debug",
+    "Application.Experimentos.executor": "Run",
+    "Application.GEGUI.executor": "Run",
+    "Application.GuardarArchivos.executor": "Run",
+    "Application.HorarioAlimentacion.executor": "Run",
+    "Application.MAIN.executor": "Run",
+    "Application.PoblacionBacterias.executor": "Run",
+    "Application.exp.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="EXPERIMENTO" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="EXPERIMENTO" />
     </key>
@@ -133,7 +139,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714751901418</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="voy añadir cosas al main">
+      <option name="closed" value="true" />
+      <created>1714819187926</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714819187926</updated>
+    </task>
+    <task id="LOCAL-00004" summary="no me deja poner nombre a lso cultvios">
+      <option name="closed" value="true" />
+      <created>1714822748750</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714822748750</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -172,6 +194,8 @@
     <MESSAGE value="mil fallos" />
     <MESSAGE value="sigue sin funcionar" />
     <MESSAGE value="uyy uy uy uy uy uy que ya van funcionan cositas, se vienen cositas" />
-    <option name="LAST_COMMIT_MESSAGE" value="uyy uy uy uy uy uy que ya van funcionan cositas, se vienen cositas" />
+    <MESSAGE value="voy añadir cosas al main" />
+    <MESSAGE value="no me deja poner nombre a lso cultvios" />
+    <option name="LAST_COMMIT_MESSAGE" value="no me deja poner nombre a lso cultvios" />
   </component>
 </project>
