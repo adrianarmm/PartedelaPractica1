@@ -1,0 +1,367 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n    <component name=\"AutoImportSettings\">\n        <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n    </component>\n    <component name=\"ChangeListManager\">\n        <list default=\"true\" id=\"c976f18b-89ac-4b43-8fc8-42e3147c8413\" name=\"Changes\" comment=\"cambiando las clases a publico\">\n            <change beforePath=\"$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" afterDir=\"false\" />\n        </list>\n        <option name=\"SHOW_DIALOG\" value=\"false\" />\n        <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n        <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n        <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n    </component>\n    <component name=\"FileTemplateManagerImpl\">\n        <option name=\"RECENT_TEMPLATES\">\n            <list>\n                <option value=\"Class\" />\n            </list>\n        </option>\n    </component>\n    <component name=\"Git.Settings\">\n        <favorite-branches>\n            <branch-storage>\n                <map>\n                    <entry type=\"LOCAL\">\n                        <value>\n                            <list>\n                                <branch-info repo=\"$PROJECT_DIR$\" source=\"adriana\" />\n                            </list>\n                        </value>\n                    </entry>\n                </map>\n            </branch-storage>\n        </favorite-branches>\n        <option name=\"PREVIOUS_COMMIT_AUTHORS\">\n            <list>\n                <option value=\"Gmongtor &lt;146821781+gmongtor@users.noreply.github.com&gt;\" />\n                <option value=\"vitaliy-pg &lt;aljndrvt@myuax.com&gt;\" />\n            </list>\n        </option>\n        <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n            <map>\n                <entry key=\"$PROJECT_DIR$\" value=\"sebas\" />\n            </map>\n        </option>\n        <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    </component>\n    <component name=\"GitHubPullRequestSearchHistory\">{\n        \"lastFilter\": {\n        \"state\": \"OPEN\",\n        \"assignee\": \"Gmongtor\"\n        }\n        }</component>\n    <component name=\"GithubPullRequestsUISettings\">{\n        \"selectedUrlAndAccountId\": {\n        \"url\": \"https://github.com/adrianarmm/PartedelaPractica1.git\",\n        \"accountId\": \"e5404a22-18ea-46f9-bf81-f500d9a41b5e\"\n        }\n        }</component>\n    <component name=\"ProjectColorInfo\">{\n        \"associatedIndex\": 1\n        }</component>\n    <component name=\"ProjectId\" id=\"2fVXNMh3YWyvBceWxrYSRJGQSr4\" />\n    <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n    <component name=\"ProjectViewState\">\n        <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n        <option name=\"showLibraryContents\" value=\"true\" />\n    </component>\n    <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Application.BacterialCultureExperimentManager.executor\": \"Run\",\n    \"Application.CultivoDeBacterias.executor\": \"Run\",\n    \"Application.DetallesPoblacionBacterias.executor\": \"Run\",\n    \"Application.EXMA.executor\": \"Run\",\n    \"Application.Experimento.executor\": \"Run\",\n    \"Application.ExperimentoManageer.executor\": \"Run\",\n    \"Application.ExperimentoManager.executor\": \"Run\",\n    \"Application.Experimentos.executor\": \"Run\",\n    \"Application.GEGUI.executor\": \"Run\",\n    \"Application.GuardarArchivos.executor\": \"Run\",\n    \"Application.HorarioAlimentacion.executor\": \"Run\",\n    \"Application.MAIN.executor\": \"Run\",\n    \"Application.PoblacionBacterias.executor\": \"Run\",\n    \"Application.exp.executor\": \"Run\",\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"settings.editor.selected.configurable\": \"reference.settings.project.maven.repository.indices\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n    <component name=\"RecentsManager\">\n        <key name=\"ExtractSuperBase.RECENT_KEYS\">\n            <recent name=\"EXPERIMENTO\" />\n        </key>\n    </component>\n    <component name=\"SharedIndexes\">\n        <attachedChunks>\n            <set>\n                <option value=\"bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240\" />\n                <option value=\"bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240\" />\n            </set   >\n        </attachedChunks>\n    </component>\n    <component name=\"TaskManager\">\n        <task active=\"true\" id=\"TaskManager\" summary=\"Task Manager\" />\n    </component>\n    <component name=\"ToolWindowManager\">\n        <frame x=\"0\" y=\"0\" width=\"1920\" height=\"1080\" extended-state=\"6\" />\n        <editor active=\"true\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" />\n        <layout>\n            <window_info id=\"Project\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$\" side-tool=\"false\" order=\"0\" />\n            <window_info id=\"Run\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"1\" />\n            <window_info id=\"Debug\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"2\" />\n            <window_info id=\"Terminal\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"3\" />\n            <window_info id=\"Version Control\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"4\" />\n            <window_info id=\"Maven\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"5\" />\n            <window_info id=\"Gradle\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"6\" />\n            <window_info id=\"Ant\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"7\" />\n            <window_info id=\"Maven Projects\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"8\" />\n            <window_info id=\"Database\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/\nsrc/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"9\" />\n            <window_info id=\"Services\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"10\" />\n            <window_info id=\"Event Log\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"11\" />\n            <window_info id=\"Structure\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"12\" />\n            <window_info id=\"Project\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$\" side-tool=\"false\" order=\"13\" />\n            <window_info id=\"Run\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"14\" />\n            <window_info id=\"Debug\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"15\" />\n            <window_info id=\"Terminal\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"16\" />\n            <window_info id=\"Version Control\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"17\" />\n            <window_info id=\"Maven\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"18\" />\n            <window_info id=\"Gradle\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"19\" />\n            <window_info id=\"Ant\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"20\" />\n            <window_info id=\"Maven Projects\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"21\" />\n            <window_info id=\"Database\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"22\" />\n            <window_info id=\"Services\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"23\" />\n            <window_info id=\"Event Log\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"24\" />\n            <window_info id=\"Structure\" active=\"true\" anchor=\"bottom\" file=\"file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java\" side-tool=\"false\" order=\"25\" />\n        </layout>\n    </component>\n    <component name=\"VcsManagerConfiguration\">\n        <option name=\"ADD_LABEL_ON_CHECKIN\" value=\"true\" />\n        <option name=\"ADD_LABEL_ON_REVERT\" value=\"true\" />\n        <option name=\"ADD_LABEL_ON_SWITCH\" value=\"true\" />\n        <option name=\"ADD_LABEL_ON_UPDATE\" value=\"true\" />\n        <option name=\"LABEL_BEFORE_CHANGE\" value=\"true\" />\n        <option name=\"LABEL_FORMAT\" value=\"yyyy-MM-dd HH:mm:ss\" />\n        <option name=\"LABEL_NAME\" value=\"before_change\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME\" value=\"true\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_FORMAT\" value=\"yyyy-MM-dd HH:mm:ss\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_NAME\" value=\"project_renamed\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE\" value=\"true\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_FORMAT\" value=\"yyyy-MM-dd HH:mm:ss\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_NAME\" value=\"project_renamed_value\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE\" value=\"true\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_FORMAT\" value=\"yyyy-MM-dd HH:mm:ss\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_NAME\" value=\"project_renamed_value_value\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE\" value=\"true\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_FORMAT\" value=\"yyyy-MM-dd HH:mm:ss\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_NAME\" value=\"project_renamed_value_value_value\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE\" value=\"true\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_FORMAT\" value=\"yyyy-MM-dd HH:mm:ss\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_NAME\" value=\"project_renamed_value_value_value_value\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE\" value=\"true\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT\" value=\"yyyy-MM-dd HH:mm:ss\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE\" value=\"true\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT\" value=\"yyyy-MM-dd HH:mm:ss\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME\" value=\"project_renamed_value_value_value_value_value\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE\" value=\"true\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT\" value=\"yyyy-MM-dd HH:mm:ss\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME\" value=\"project_renamed_value_value_value_value_value_value\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE\" value=\"true\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT\" value=\"yyyy-MM-dd HH:mm:ss\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME\" value=\"project_renamed_value_value_value_value_value_value\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE\" value=\"true\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT\" value=\"yyyy-MM-dd HH:mm:ss\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME\" value=\"project_renamed_value_value_value_value_value_value\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME\n_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE\" value=\"true\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT\" value=\"yyyy-MM-dd HH:mm:ss\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME\" value=\"project_renamed_value_value_value_value_value_value\" />\n        <option name=\"LABEL_ON_PROJECT_RENAME   _VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE\" value=\"true\" />\n        >>>>>>>>> Temporary merge branch 2\n    </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision dc928449f5f1e4fbf00fdfe7863544defa6bc664)
++++ b/.idea/workspace.xml	(date 1714750825399)
+@@ -1,192 +1,172 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-    <component name="AutoImportSettings">
+-        <option name="autoReloadType" value="SELECTIVE" />
+-    </component>
+-    <component name="ChangeListManager">
+-        <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="cambiando las clases a publico">
+-            <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" afterDir="false" />
+-        </list>
+-        <option name="SHOW_DIALOG" value="false" />
+-        <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-        <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-        <option name="LAST_RESOLUTION" value="IGNORE" />
+-    </component>
+-    <component name="FileTemplateManagerImpl">
+-        <option name="RECENT_TEMPLATES">
+-            <list>
+-                <option value="Class" />
+-            </list>
+-        </option>
+-    </component>
+-    <component name="Git.Settings">
+-        <favorite-branches>
+-            <branch-storage>
+-                <map>
+-                    <entry type="LOCAL">
+-                        <value>
+-                            <list>
+-                                <branch-info repo="$PROJECT_DIR$" source="adriana" />
+-                            </list>
+-                        </value>
+-                    </entry>
+-                </map>
+-            </branch-storage>
+-        </favorite-branches>
+-        <option name="PREVIOUS_COMMIT_AUTHORS">
+-            <list>
+-                <option value="Gmongtor &lt;146821781+gmongtor@users.noreply.github.com&gt;" />
+-                <option value="vitaliy-pg &lt;aljndrvt@myuax.com&gt;" />
+-            </list>
+-        </option>
+-        <option name="RECENT_BRANCH_BY_REPOSITORY">
+-            <map>
+-                <entry key="$PROJECT_DIR$" value="sebas" />
+-            </map>
+-        </option>
+-        <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-    </component>
+-    <component name="GitHubPullRequestSearchHistory">{
+-        "lastFilter": {
+-        "state": "OPEN",
+-        "assignee": "Gmongtor"
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="133">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <favorite-branches>
++      <branch-storage>
++        <map>
++          <entry type="LOCAL">
++            <value>
++              <list>
++                <branch-info repo="$PROJECT_DIR$" source="adriana" />
++              </list>
++            </value>
++          </entry>
++        </map>
++      </branch-storage>
++    </favorite-branches>
++    <option name="PREVIOUS_COMMIT_AUTHORS">
++      <list>
++        <option value="Gmongtor &lt;146821781+gmongtor@users.noreply.github.com&gt;" />
++        <option value="vitaliy-pg &lt;aljndrvt@myuax.com&gt;" />
++      </list>
++    </option>
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="sebas" />
++      </map>
++    </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GitHubPullRequestSearchHistory">{
++        &quot;lastFilter&quot;: {
++        &quot;state&quot;: &quot;OPEN&quot;,
++        &quot;assignee&quot;: &quot;Gmongtor&quot;
+         }
+         }</component>
+-    <component name="GithubPullRequestsUISettings">{
+-        "selectedUrlAndAccountId": {
+-        "url": "https://github.com/adrianarmm/PartedelaPractica1.git",
+-        "accountId": "e5404a22-18ea-46f9-bf81-f500d9a41b5e"
++  <component name="GithubPullRequestsUISettings">{
++        &quot;selectedUrlAndAccountId&quot;: {
++        &quot;url&quot;: &quot;https://github.com/adrianarmm/PartedelaPractica1.git&quot;,
++        &quot;accountId&quot;: &quot;e5404a22-18ea-46f9-bf81-f500d9a41b5e&quot;
+         }
+         }</component>
+-    <component name="ProjectColorInfo">{
+-        "associatedIndex": 1
++  <component name="ProjectColorInfo">{
++        &quot;associatedIndex&quot;: 1
+         }</component>
+-    <component name="ProjectId" id="2fVXNMh3YWyvBceWxrYSRJGQSr4" />
+-    <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+-    <component name="ProjectViewState">
+-        <option name="hideEmptyMiddlePackages" value="true" />
+-        <option name="showLibraryContents" value="true" />
+-    </component>
+-    <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Application.BacterialCultureExperimentManager.executor": "Run",
+-    "Application.CultivoDeBacterias.executor": "Run",
+-    "Application.DetallesPoblacionBacterias.executor": "Run",
+-    "Application.EXMA.executor": "Run",
+-    "Application.Experimento.executor": "Run",
+-    "Application.ExperimentoManageer.executor": "Run",
+-    "Application.ExperimentoManager.executor": "Run",
+-    "Application.Experimentos.executor": "Run",
+-    "Application.GEGUI.executor": "Run",
+-    "Application.GuardarArchivos.executor": "Run",
+-    "Application.HorarioAlimentacion.executor": "Run",
+-    "Application.MAIN.executor": "Run",
+-    "Application.PoblacionBacterias.executor": "Run",
+-    "Application.exp.executor": "Run",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "main",
+-    "kotlin-language-version-configured": "true",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="ProjectId" id="2fVXNMh3YWyvBceWxrYSRJGQSr4" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.BacterialCultureExperimentManager.executor&quot;: &quot;Run&quot;,
++    &quot;Application.CultivoDeBacterias.executor&quot;: &quot;Run&quot;,
++    &quot;Application.DetallesPoblacionBacterias.executor&quot;: &quot;Run&quot;,
++    &quot;Application.EXMA.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Experimento.executor&quot;: &quot;Run&quot;,
++    &quot;Application.ExperimentoManageer.executor&quot;: &quot;Run&quot;,
++    &quot;Application.ExperimentoManager.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Experimentos.executor&quot;: &quot;Run&quot;,
++    &quot;Application.GEGUI.executor&quot;: &quot;Run&quot;,
++    &quot;Application.GuardarArchivos.executor&quot;: &quot;Run&quot;,
++    &quot;Application.HorarioAlimentacion.executor&quot;: &quot;Run&quot;,
++    &quot;Application.MAIN.executor&quot;: &quot;Run&quot;,
++    &quot;Application.PoblacionBacterias.executor&quot;: &quot;Run&quot;,
++    &quot;Application.exp.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
+-    <component name="RecentsManager">
+-        <key name="ExtractSuperBase.RECENT_KEYS">
+-            <recent name="EXPERIMENTO" />
+-        </key>
+-    </component>
+-    <component name="SharedIndexes">
+-        <attachedChunks>
+-            <set>
+-                <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+-                <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+-            </set   >
+-        </attachedChunks>
+-    </component>
+-    <component name="TaskManager">
+-        <task active="true" id="TaskManager" summary="Task Manager" />
+-    </component>
+-    <component name="ToolWindowManager">
+-        <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+-        <editor active="true" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" />
+-        <layout>
+-            <window_info id="Project" active="true" anchor="bottom" file="file://$PROJECT_DIR$" side-tool="false" order="0" />
+-            <window_info id="Run" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="1" />
+-            <window_info id="Debug" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="2" />
+-            <window_info id="Terminal" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="3" />
+-            <window_info id="Version Control" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="4" />
+-            <window_info id="Maven" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="5" />
+-            <window_info id="Gradle" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="6" />
+-            <window_info id="Ant" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="7" />
+-            <window_info id="Maven Projects" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="8" />
+-            <window_info id="Database" active="true" anchor="bottom" file="file://$PROJECT_DIR$/
+-src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="9" />
+-            <window_info id="Services" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="10" />
+-            <window_info id="Event Log" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="11" />
+-            <window_info id="Structure" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="12" />
+-            <window_info id="Project" active="true" anchor="bottom" file="file://$PROJECT_DIR$" side-tool="false" order="13" />
+-            <window_info id="Run" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="14" />
+-            <window_info id="Debug" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="15" />
+-            <window_info id="Terminal" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="16" />
+-            <window_info id="Version Control" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="17" />
+-            <window_info id="Maven" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="18" />
+-            <window_info id="Gradle" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="19" />
+-            <window_info id="Ant" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="20" />
+-            <window_info id="Maven Projects" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="21" />
+-            <window_info id="Database" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="22" />
+-            <window_info id="Services" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="23" />
+-            <window_info id="Event Log" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="24" />
+-            <window_info id="Structure" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="25" />
+-        </layout>
+-    </component>
+-    <component name="VcsManagerConfiguration">
+-        <option name="ADD_LABEL_ON_CHECKIN" value="true" />
+-        <option name="ADD_LABEL_ON_REVERT" value="true" />
+-        <option name="ADD_LABEL_ON_SWITCH" value="true" />
+-        <option name="ADD_LABEL_ON_UPDATE" value="true" />
+-        <option name="LABEL_BEFORE_CHANGE" value="true" />
+-        <option name="LABEL_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+-        <option name="LABEL_NAME" value="before_change" />
+-        <option name="LABEL_ON_PROJECT_RENAME" value="true" />
+-        <option name="LABEL_ON_PROJECT_RENAME_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+-        <option name="LABEL_ON_PROJECT_RENAME_NAME" value="project_renamed" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE" value="true" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_NAME" value="project_renamed_value" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE" value="true" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_NAME" value="project_renamed_value_value" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE" value="true" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE" value="true" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value_value" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value_value" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value_value" />
+-        <option name="LABEL_ON_PROJECT_RENAME
+-_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_FORMAT" value="yyyy-MM-dd HH:mm:ss" />
+-        <option name="LABEL_ON_PROJECT_RENAME_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_NAME" value="project_renamed_value_value_value_value_value_value" />
+-        <option name="LABEL_ON_PROJECT_RENAME   _VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE_VALUE" value="true" />
+-        >>>>>>>>> Temporary merge branch 2
+-    </component>
++}</component>
++  <component name="RecentsManager">
++    <key name="ExtractSuperBase.RECENT_KEYS">
++      <recent name="EXPERIMENTO" />
++    </key>
++  </component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
++        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
++      </set>
++    </attachedChunks>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="TaskManager" summary="Task Manager">
++      <created>1714750083168</created>
++      <option name="number" value="TaskManager" />
++      <option name="presentableId" value="TaskManager" />
++      <updated>1714750083168</updated>
++    </task>
++    <task id="LOCAL-00001" summary="133">
++      <option name="closed" value="true" />
++      <created>1714750083168</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1714750083168</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
++    <servers />
++  </component>
++  <component name="ToolWindowManager">
++    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
++    <editor active="true" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" />
++    <layout>
++      <window_info id="Project" active="true" anchor="bottom" file="file://$PROJECT_DIR$" side-tool="false" order="0" />
++      <window_info id="Run" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="1" />
++      <window_info id="Debug" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="2" />
++      <window_info id="Terminal" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="3" />
++      <window_info id="Version Control" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="4" />
++      <window_info id="Maven" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="5" />
++      <window_info id="Gradle" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="6" />
++      <window_info id="Ant" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="7" />
++      <window_info id="Maven Projects" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="8" />
++      <window_info id="Database" active="true" anchor="bottom" file="file://$PROJECT_DIR$/ src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="9" />
++      <window_info id="Services" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="10" />
++      <window_info id="Event Log" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="11" />
++      <window_info id="Structure" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="12" />
++      <window_info id="Project" active="true" anchor="bottom" file="file://$PROJECT_DIR$" side-tool="false" order="13" />
++      <window_info id="Run" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="14" />
++      <window_info id="Debug" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="15" />
++      <window_info id="Terminal" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="16" />
++      <window_info id="Version Control" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="17" />
++      <window_info id="Maven" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="18" />
++      <window_info id="Gradle" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="19" />
++      <window_info id="Ant" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="20" />
++      <window_info id="Maven Projects" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="21" />
++      <window_info id="Database" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="22" />
++      <window_info id="Services" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="23" />
++      <window_info id="Event Log" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="24" />
++      <window_info id="Structure" active="true" anchor="bottom" file="file://$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" side-tool="false" order="25" />
++    </layout>
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="cambiando las clases a publico" />
++    <MESSAGE value="LISTO!" />
++    <MESSAGE value="133" />
++    <option name="LAST_COMMIT_MESSAGE" value="133" />
++  </component>
+ </project>
+\ No newline at end of file
