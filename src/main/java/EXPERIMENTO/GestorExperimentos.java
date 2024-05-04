@@ -61,7 +61,6 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         btnBorrarPoblacion = crearBoton("Borrar población", this);
         btnVerGraficas = crearBoton("Ver Gráficas", this);
         btnVerInfo = crearBoton("Ver información detallada", this);
-        btnBlocDeNotas = crearBoton("Bloc de Notas", this);
         btnCalcularTasaCrecimiento = crearBoton("Calcular Tasas de Crecimiento", this);
         btnCalcularEstadisticas = crearBoton("Calcular Estadísticas", this);
 
@@ -78,7 +77,6 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         panel.add(btnAbrirArchivo);
         panel.add(btnGuardar);
         panel.add(btnGuardarComo);
-        panel.add(btnBlocDeNotas);
         panel.add(btnCalcularTasaCrecimiento);
         panel.add(btnCalcularEstadisticas);
 
@@ -172,8 +170,7 @@ public class GestorExperimentos extends JFrame implements ActionListener {
             guardarExperimentoComo();
         } else if (e.getSource() == languageComboBox) {
             cambiarIdioma();
-        } else if (e.getSource() == btnBlocDeNotas) {
-            abrirBlocDeNotas();
+
         } else if (e.getSource() == btnCalcularTasaCrecimiento) {
             calcularTasasDeCrecimiento();
         } else if (e.getSource() == btnCalcularEstadisticas) {
@@ -199,13 +196,6 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         }
     }
 
-    private void abrirBlocDeNotas() {
-        try {
-            Runtime.getRuntime().exec("notepad.exe");
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(this, "Error al abrir el Bloc de Notas: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }
 
     private void calcularTasasDeCrecimiento() {
         if (experimentoActual == null || experimentoActual.getPoblaciones().isEmpty()) {
@@ -253,10 +243,6 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         textAreaCentral.setText("Media de bacterias: " + media + "\nDesviación estándar: " + sd);
     }
 
-
-
-
-
     private XYSeriesCollection crearDataset() {
         if (poblaciones == null || poblaciones.isEmpty()) {
             return new XYSeriesCollection(); // Devolver una colección vacía si no hay datos
@@ -283,6 +269,7 @@ public class GestorExperimentos extends JFrame implements ActionListener {
 
     private void cambiarIdioma(String idioma) {
         // Lógica para cambiar el idioma de la interfaz
+
     }
 
     private void abrirArchivo() {
