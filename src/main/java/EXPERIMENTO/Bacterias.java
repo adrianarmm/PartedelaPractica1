@@ -1,14 +1,14 @@
 package EXPERIMENTO;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.List;
 
 public class Bacterias implements Serializable {
     private String colonia;
     private String genotipo;
-    private ArrayList<String> plasmidos;
+    private List<String> plasmidos;
 
-    public Bacterias(String colonia, String genotipo, ArrayList<String> plasmidos) {
+    public Bacterias(String colonia, String genotipo, List<String> plasmidos) {
         this.colonia = colonia;
         this.genotipo = genotipo;
         this.plasmidos = plasmidos;
@@ -31,11 +31,11 @@ public class Bacterias implements Serializable {
         this.genotipo = genotipo;
     }
 
-    public ArrayList<String> getPlasmidos() {
+    public List<String> getPlasmidos() {
         return plasmidos;
     }
 
-    public void setPlasmidos(ArrayList<String> plasmidos) {
+    public void setPlasmidos(List<String> plasmidos) {
         this.plasmidos = plasmidos;
     }
 }
