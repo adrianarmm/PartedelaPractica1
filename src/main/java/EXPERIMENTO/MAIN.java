@@ -5,13 +5,22 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Optional;
 
 public class MAIN extends JFrame implements ActionListener {
 
     public JTextField nombreField;
+    public JTextField inicioField;
+    public JTextField finField;
     public JTextField cantidadField;
+    public JTextField temperaturaField;
+    public JComboBox<String> luminosidadCombo;
+    public JTextField comidaInicialField;
+    public JTextField diaIncrementoField;
+    public JTextField comidaIncrementoField;
+    public JTextField comidaFinalField;
     public JTextArea detallesArea;
     public JButton agregarCultivoButton;
     public JButton eliminarCultivoButton;
@@ -21,22 +30,47 @@ public class MAIN extends JFrame implements ActionListener {
     public JButton guardarComoButton;
     public JButton abrirButton;
     public JLabel nombreLabel;
+    public JLabel inicioLabel;
+    public JLabel finLabel;
     public JLabel cantidadLabel;
+    public JLabel temperaturaLabel;
+    public JLabel luminosidadLabel;
+    public JLabel comidaInicialLabel;
+    public JLabel diaIncrementoLabel;
+    public JLabel comidaIncrementoLabel;
+    public JLabel comidaFinalLabel;
     public experimentos experimento;
 
     public MAIN() {
         setTitle("Experimento con bacterias");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600, 400);
+        setSize(800, 600);
         setLayout(new BorderLayout());
 
         // Panel de información
         JPanel informacionPanel = new JPanel();
-        informacionPanel.setLayout(new GridLayout(4, 2));
+        informacionPanel.setLayout(new GridLayout(10, 2));
         nombreLabel = new JLabel("Nombre: ");
-        cantidadLabel = new JLabel("Cantidad: ");
+        inicioLabel = new JLabel("Fecha de inicio (YYYY-MM-DD): ");
+        finLabel = new JLabel("Fecha de fin (YYYY-MM-DD): ");
+        cantidadLabel = new JLabel("Cantidad inicial de bacterias: ");
+        temperaturaLabel = new JLabel("Temperatura: ");
+        luminosidadLabel = new JLabel("Luminosidad: ");
+        comidaInicialLabel = new JLabel("Comida inicial (día 1): ");
+        diaIncrementoLabel = new JLabel("Día de incremento de comida: ");
+        comidaIncrementoLabel = new JLabel("Comida en día de incremento: ");
+        comidaFinalLabel = new JLabel("Comida final (día 30): ");
         nombreField = new JTextField();
+        inicioField = new JTextField();
+        finField = new JTextField();
         cantidadField = new JTextField();
+        temperaturaField = new JTextField();
+        String[] luminosidades = {"Alta", "Media", "Baja"};
+        luminosidadCombo = new JComboBox<>(luminosidades);
+        comidaInicialField = new JTextField();
+        diaIncrementoField = new JTextField();
+        comidaIncrementoField = new JTextField();
+        comidaFinalField = new JTextField();
         agregarCultivoButton = new JButton("Agregar cultivo");
         agregarCultivoButton.addActionListener(this);
         eliminarCultivoButton = new JButton("Eliminar cultivo");
@@ -47,8 +81,24 @@ public class MAIN extends JFrame implements ActionListener {
         verDetallesButton.addActionListener(this);
         informacionPanel.add(nombreLabel);
         informacionPanel.add(nombreField);
+        informacionPanel.add(inicioLabel);
+        informacionPanel.add(inicioField);
+        informacionPanel.add(finLabel);
+        informacionPanel.add(finField);
         informacionPanel.add(cantidadLabel);
         informacionPanel.add(cantidadField);
+        informacionPanel.add(temperaturaLabel);
+        informacionPanel.add(temperaturaField);
+        informacionPanel.add(luminosidadLabel);
+        informacionPanel.add(luminosidadCombo);
+        informacionPanel.add(comidaInicialLabel);
+        informacionPanel.add(comidaInicialField);
+        informacionPanel.add(diaIncrementoLabel);
+        informacionPanel.add(diaIncrementoField);
+        informacionPanel.add(comidaIncrementoLabel);
+        informacionPanel.add(comidaIncrementoField);
+        informacionPanel.add(comidaFinalLabel);
+        informacionPanel.add(comidaFinalField);
         informacionPanel.add(agregarCultivoButton);
         informacionPanel.add(eliminarCultivoButton);
         informacionPanel.add(verNombresButton);
@@ -82,7 +132,16 @@ public class MAIN extends JFrame implements ActionListener {
         try {
             if (e.getSource() == agregarCultivoButton) {
                 if (!cantidadField.getText().isEmpty()) {
-                    agregarCultivoDeBacterias(nombreField.getText(), Integer.parseInt(cantidadField.getText()));
+                    agregarCultivoDeBacterias(nombreField.getText(),
+                            LocalDate.parse(inicioField.getText()),
+                            LocalDate.parse(finField.getText()),
+                            Integer.parseInt(cantidadField.getText()),
+                            Double.parseDouble(temperaturaField.getText()),
+                            luminosidadCombo.getSelectedItem().toString(),
+                            Integer.parseInt(comidaInicialField.getText()),
+                            Integer.parseInt(diaIncrementoField.getText()),
+                            Integer.parseInt(comidaIncrementoField.getText()),
+                            Integer.parseInt(comidaFinalField.getText()));
                 } else {
                     detallesArea.append("Debe especificar una cantidad para agregar un cultivo de bacterias.\n");
                 }
@@ -100,7 +159,6 @@ public class MAIN extends JFrame implements ActionListener {
                 abrirExperimento();
             }
         } catch (IOException | ClassNotFoundException ex) {
-            // Handle the exception appropriately
             ex.printStackTrace();
         }
     }
@@ -116,13 +174,13 @@ public class MAIN extends JFrame implements ActionListener {
     }
 
     public void guardarExperimento() throws IOException {
-        String ruta = "experimento.ser"; // Ruta predeterminada o lógica interna para determinar la ruta de guardado
+        String ruta = "experimento.ser";
         guardarExperimento(ruta);
     }
+
     public void guardarExperimento(String ruta) throws IOException {
         // Implementación del método para guardar el experimento en la ruta proporcionada
     }
-
 
     public void guardarExperimentoComo() throws IOException {
         if (getExperimento() != null) {
@@ -133,7 +191,7 @@ public class MAIN extends JFrame implements ActionListener {
                 if (!file.getAbsolutePath().endsWith(".ser")) {
                     file = new File(file.getAbsolutePath() + ".ser");
                 }
-                getExperimento().guardarExperimento(    file.getAbsolutePath());
+                getExperimento().guardarExperimento(file.getAbsolutePath());
                 detallesArea.append("Experimento guardado en: " + file.getAbsolutePath() + "\n");
             }
         } else {
@@ -146,11 +204,15 @@ public class MAIN extends JFrame implements ActionListener {
         if (cultivoOptional.isPresent()) {
             CultivoDeBacterias cultivo = cultivoOptional.get();
             detallesArea.append("Nombre: " + cultivo.getNombre() + "\n");
-            detallesArea.append("Cantidad: " + cultivo.getCantidad() + "\n");
-            detallesArea.append("Características de bacterias:\n");
-            detallesArea.append(" - Colonia: " + cultivo.getBacterias().getColonia() + "\n");
-            detallesArea.append(" - Genotipo: " + cultivo.getBacterias().getGenotipo() + "\n");
-            detallesArea.append(" - Plásmidos: " + cultivo.getBacterias().getPlasmidos() + "\n");
+            detallesArea.append("Fechas: " + cultivo.getFechaInicio() + " - " + cultivo.getFechaFin() + "\n");
+            detallesArea.append("Cantidad inicial: " + cultivo.getCantidad() + "\n");
+            detallesArea.append("Temperatura: " + cultivo.getTemperatura() + "\n");
+            detallesArea.append("Luminosidad: " + cultivo.getLuminosidad() + "\n");
+            detallesArea.append("Dosis de comida:\n");
+            detallesArea.append(" - Inicial: " + cultivo.getComidaInicial() + "\n");
+            detallesArea.append(" - Incremento en día " + cultivo.getDiaIncremento() + ": " +
+                    cultivo.getComidaIncremento() + "\n");
+            detallesArea.append(" - Final: " + cultivo.getComidaFinal() + "\n");
         } else {
             detallesArea.append("No se encontró el cultivo de bacterias: " + nombre + "\n");
         }
@@ -170,9 +232,12 @@ public class MAIN extends JFrame implements ActionListener {
         }
     }
 
-    public void agregarCultivoDeBacterias(String nombre, int cantidad) {
-        Bacterias bacterias = new Bacterias("Colonia", "Genotipo", new ArrayList<>());
-        CultivoDeBacterias nuevoCultivo = new CultivoDeBacterias(nombre, cantidad, bacterias);
+    public void agregarCultivoDeBacterias(String nombre, LocalDate inicio, LocalDate fin, int cantidad,
+                                          double temperatura, String luminosidad, int comidaInicial,
+                                          int diaIncremento, int comidaIncremento, int comidaFinal) {
+        DosisComida dosisComida = new DosisComida(comidaInicial, diaIncremento, comidaIncremento, comidaFinal);
+        CultivoDeBacterias nuevoCultivo = new CultivoDeBacterias(nombre, inicio, fin, cantidad,
+                temperatura, luminosidad, dosisComida);
         getExperimento().agregarCultivoDeBacterias(nuevoCultivo);
         detallesArea.append("Cultivo de bacterias agregado: " + nombre + "\n");
     }
@@ -194,51 +259,70 @@ public class MAIN extends JFrame implements ActionListener {
     }
 }
 
-class Bacterias implements Serializable {
-    private String colonia;
-    private String genotipo;
-    private ArrayList<String> plasmidos;
+class DosisComida implements Serializable {
+    private int comidaInicial;
+    private int diaIncremento;
+    private int comidaIncremento;
+    private int comidaFinal;
 
-    public Bacterias(String colonia, String genotipo, ArrayList<String> plasmidos) {
-        this.colonia = colonia;
-        this.genotipo = genotipo;
-        this.plasmidos = plasmidos;
+    public DosisComida(int comidaInicial, int diaIncremento, int comidaIncremento, int comidaFinal) {
+        this.comidaInicial = comidaInicial;
+        this.diaIncremento = diaIncremento;
+        this.comidaIncremento = comidaIncremento;
+        this.comidaFinal = comidaFinal;
     }
 
-    public String getColonia() {
-        return colonia;
+    public int getComidaInicial() {
+        return comidaInicial;
     }
 
-    public void setColonia(String colonia) {
-        this.colonia = colonia;
+    public void setComidaInicial(int comidaInicial) {
+        this.comidaInicial = comidaInicial;
     }
 
-    public String getGenotipo() {
-        return genotipo;
+    public int getDiaIncremento() {
+        return diaIncremento;
     }
 
-    public void setGenotipo(String genotipo) {
-        this.genotipo = genotipo;
+    public void setDiaIncremento(int diaIncremento) {
+        this.diaIncremento = diaIncremento;
     }
 
-    public ArrayList<String> getPlasmidos() {
-        return plasmidos;
+    public int getComidaIncremento() {
+        return comidaIncremento;
     }
 
-    public void setPlasmidos(ArrayList<String> plasmidos) {
-        this.plasmidos = plasmidos;
+    public void setComidaIncremento(int comidaIncremento) {
+        this.comidaIncremento = comidaIncremento;
+    }
+
+    public int getComidaFinal() {
+        return comidaFinal;
+    }
+
+    public void setComidaFinal(int comidaFinal) {
+        this.comidaFinal = comidaFinal;
     }
 }
 
 class CultivoDeBacterias implements Serializable {
     private String nombre;
+    private LocalDate fechaInicio;
+    private LocalDate fechaFin;
     private int cantidad;
-    private Bacterias bacterias;
+    private double temperatura;
+    private String luminosidad;
+    private DosisComida dosisComida;
 
-    public CultivoDeBacterias(String nombre, int cantidad, Bacterias bacterias) {
+    public CultivoDeBacterias(String nombre, LocalDate fechaInicio, LocalDate fechaFin, int cantidad,
+                              double temperatura, String luminosidad, DosisComida dosisComida) {
         this.nombre = nombre;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
         this.cantidad = cantidad;
-        this.bacterias = bacterias;
+        this.temperatura = temperatura;
+        this.luminosidad = luminosidad;
+        this.dosisComida = dosisComida;
     }
 
     public String getNombre() {
@@ -249,6 +333,22 @@ class CultivoDeBacterias implements Serializable {
         this.nombre = nombre;
     }
 
+    public LocalDate getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public void setFechaInicio(LocalDate fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public LocalDate getFechaFin() {
+        return fechaFin;
+    }
+
+    public void setFechaFin(LocalDate fechaFin) {
+        this.fechaFin = fechaFin;
+    }
+
     public int getCantidad() {
         return cantidad;
     }
@@ -257,17 +357,55 @@ class CultivoDeBacterias implements Serializable {
         this.cantidad = cantidad;
     }
 
-    public Bacterias getBacterias() {
-        return bacterias;
+    public double getTemperatura() {
+        return temperatura;
     }
 
-    public void setBacterias(Bacterias bacterias) {
-        this.bacterias = bacterias;
+    public void setTemperatura(double temperatura) {
+        this.temperatura = temperatura;
     }
 
-    public void isEmpty () {
+    public String getLuminosidad() {
+        return luminosidad;
+    }
+
+    public void setLuminosidad(String luminosidad) {
+        this.luminosidad = luminosidad;
+    }
+
+    public DosisComida getDosisComida() {
+        return dosisComida;
+    }
+
+    public void setDosisComida(DosisComida dosisComida) {
+        this.dosisComida = dosisComida;
     }
 }
 
+class experimentos {
+    public void agregarCultivoDeBacterias(CultivoDeBacterias cultivo) {
+        // Implementación de agregar cultivo
+    }
 
+    public void eliminarCultivoDeBacterias(CultivoDeBacterias cultivo) {
+        // Implementación de eliminar cultivo
+    }
 
+    public Optional<CultivoDeBacterias> obtenerDetallesCultivo(String nombre) {
+        // Implementación de obtener detalles del cultivo
+        return Optional.empty();
+    }
+
+    public void mostrarCultivosDeBacterias() {
+        // Implementación de mostrar cultivos
+    }
+
+    public static experimentos abrirExperimento(String ruta) throws IOException, ClassNotFoundException {
+        // Implementación de abrir experimento
+        return new experimentos();
+    }
+
+    public void guardarExperimento(String ruta) throws IOException {
+        // Implementación de guardar experimento
+    }
+}

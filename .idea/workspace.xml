@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="sigue sin funcionar">
-      <change afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/experimentos.java" afterDir="false" />
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="uyy uy uy uy uy uy que ya van funcionan cositas, se vienen cositas">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/MAIN.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714751381684</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="uyy uy uy uy uy uy que ya van funcionan cositas, se vienen cositas">
+      <option name="closed" value="true" />
+      <created>1714751901418</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714751901418</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -163,6 +171,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mil fallos" />
     <MESSAGE value="sigue sin funcionar" />
-    <option name="LAST_COMMIT_MESSAGE" value="sigue sin funcionar" />
+    <MESSAGE value="uyy uy uy uy uy uy que ya van funcionan cositas, se vienen cositas" />
+    <option name="LAST_COMMIT_MESSAGE" value="uyy uy uy uy uy uy que ya van funcionan cositas, se vienen cositas" />
   </component>
 </project>
