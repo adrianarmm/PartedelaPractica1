@@ -1,28 +1,33 @@
-****Gestor de Experimentos****
+##Gestor de Experimentos##
 
-Este es un proyecto Java Swing que crea una interfaz gráfica para gestionar experimentos relacionados con poblaciones bacterianas. El usuario puede crear experimentos, poblaciones, ver gráficas, calcular tasas de crecimiento y estadísticas, entre otras acciones.
+#Descripción#
 
-**Componentes**
+Este proyecto, desarrollado en Java Swing, ofrece una interfaz gráfica para la gestión de experimentos relacionados con poblaciones bacterianas. Permite a los usuarios realizar múltiples tareas, como crear y gestionar experimentos y poblaciones, visualizar gráficas de crecimiento, y calcular estadísticas vitales, facilitando así el estudio detallado y la gestión de datos experimentales.
 
-JFrame principal con un título, tamaño y diseño específicos.
-Botones para realizar acciones como crear experimentos, poblaciones, ver gráficas, etc.
-Áreas de texto para mostrar información y resultados.
-Cuadros de combinación y botones para manejar idiomas y autenticación.
+Componentes Principales
 
-**Funcionalidades**
+JFrame Principal: Ventana principal con un título específico, tamaño predeterminado y un diseño organizado para una fácil navegación.
+Botones de Acción: Botones interactivos que permiten realizar acciones como crear experimentos y poblaciones, visualizar gráficas, y más.
+Áreas de Texto: Para mostrar información relevante y resultados de los cálculos realizados.
+Cuadros de Combinación y Botones: Manejo de selección de idioma y autenticación de usuario.
+Funcionalidades
 
-Crear Experimento: Permite al usuario crear un nuevo experimento con un nombre específico.
-Crear Población: Permite al usuario crear una nueva población con los parámetros deseados (nombre, fechas, número de bacterias, temperatura, luminosidad, dosis de comida inicial, día de incremento de comida, comida en el día de incremento y comida en el último día).
-Ver Gráficas: Genera gráficas de las poblaciones en el experimento seleccionado.
-Calcular Tasas de Crecimiento: Calcula y muestra la tasa de crecimiento de las poblaciones en el experimento seleccionado.
-Calcular Estadísticas Generales: Calcula y muestra estadísticas generales de las poblaciones en el experimento seleccionado (media y desviación estándar del número de bacterias).
-Cambiar Idioma: Permite al usuario cambiar el idioma de la interfaz entre español e inglés.
-Abrir Archivo: Permite al usuario abrir un archivo de texto para cargar datos de experimentos.
-Guardar Experimento: Permite al usuario guardar el experimento actual en un archivo de texto.
-Guardar Experimento Como: Permite al usuario guardar el experimento actual en un archivo de texto con un nombre específico.
+Experimentos y Poblaciones
+Crear Experimento: Inicia un nuevo experimento solicitando un nombre único y registrando detalles adicionales.
+Crear Población: Añade poblaciones al experimento activo con detalles específicos como fechas, número de bacterias, condiciones ambientales y más.
+Análisis y Visualización
+Ver Gráficas: Genera y muestra gráficas basadas en los datos de las poblaciones del experimento seleccionado.
+Calcular Tasas de Crecimiento: Computa la tasa de crecimiento basada en los datos de población a lo largo del tiempo.
+Calcular Estadísticas Generales: Provee estadísticas como la media y desviación estándar del número de bacterias.
+Gestión y Configuración
+Cambiar Idioma: Permite alternar entre español e inglés para la interfaz de usuario.
+Abrir Archivo: Carga datos de experimentos desde un archivo de texto.
+Guardar Experimento/Guardar Como: Funciones para guardar el estado actual del experimento en un archivo de texto, con opción de nombrar el archivo.
+Extras
 
-**Extras**
+Nimbus LookAndFeel: Implementación del tema visual Nimbus para una interfaz atractiva y consistente.
+Colores en Botones: Codificación por colores para mejorar la experiencia de usuario, facilitando la identificación rápida de grupos de acciones relacionadas.
+Autenticación de Usuario: Sistema básico de inicio de sesión que protege el acceso a las funcionalidades avanzadas del sistema.
+Instalación y Uso
 
-Nimbus LookAndFeel: Se ha implementado el uso de Nimbus como tema visual de la interfaz gráfica.
-Colores en Botones: Se han asignado colores específicos a los botones para una mejor experiencia de usuario.
-Usuario y Contraseña: Se ha implementado un sistema de inicio de sesión básico con usuario y contraseña para proteger el acceso a las funcionalidades del gestor de experimentos.
+Descarga o clona el repositorio, compila el código utilizando un entorno de desarrollo que soporte Java y Java Swing. Ejecuta el archivo principal para iniciar la aplicación. Asegúrate de tener la última versión de Java instalada en tu sistema para evitar problemas de compatibilidad.
