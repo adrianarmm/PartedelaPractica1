@@ -1,4 +1,5 @@
 package EXPERIMENTO;
+
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
@@ -7,239 +8,332 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
-import java.util.HashMap;
+
+import static javax.swing.UIManager.setLookAndFeel;
 
 public class GestorExperimentos extends JFrame implements ActionListener {
 
-    private JButton btnVerGraficas;
-    private JComboBox<String> languageComboBox;
-    private String[] languages = {"Español", "English"};
-    private JButton changeLanguageButton; // Botón para cambiar el idioma
-    private JButton btnBlocDeNotas;
-    private JButton btnCalcularTasaCrecimiento;
-    private static String contraseñaEsperada = "filetedelomo"; // Cambiar por tu contraseña
-
-    private HashMap<String, String> usuariosRegistrados;
+    private JButton btnVerGraficas, btnBlocDeNotas, btnCalcularTasaCrecimiento, btnCalcularEstadisticas;
     private JButton btnAbrirArchivo, btnCrearExperimento, btnCrearPoblacion, btnVisualizarPoblaciones, btnBorrarPoblacion, btnVerInfo, btnGuardar, btnGuardarComo;
+    private JComboBox<String> languageComboBox;
+    private JButton changeLanguageButton;
+    private static final String CONTRASENA_ESPERADA = "filetedelomo"; // Cambiar por tu contraseña
+    private HashMap<String, String> usuariosRegistrados;
     private Experimento experimentoActual;
     private ArrayList<PoblacionBacterias> poblaciones;
-    private JButton btnCalcularEstadisticas;
+
     public GestorExperimentos() {
-
+        setTitle("Gestor de Experimentos");
+        setSize(800, 600);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
         inicializarComponentes();
-        mostrarPantallaInicio();
+        poblaciones = new ArrayList<>();
+        setVisible(true);
+    }
 
+    private void inicializarComponentes() {
+        JPanel panelAcciones = crearPanelAcciones();
+        add(panelAcciones, BorderLayout.WEST);
+
+        JScrollPane scrollPaneCentral = crearPanelCentral();
+        add(scrollPaneCentral, BorderLayout.CENTER);
+
+        JPanel panelIdioma = crearPanelIdioma();
+        add(panelIdioma, BorderLayout.NORTH);
+
+        JPanel panelInicioSesion = crearPanelInicioSesion();
+        add(panelInicioSesion, BorderLayout.SOUTH);
+    }
+
+    private JPanel crearPanelAcciones() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        panel.setBorder(BorderFactory.createTitledBorder("Acciones"));
+
+
+        btnCrearExperimento = crearBoton("Crear experimento", this);
+        btnCrearPoblacion = crearBoton("Crear población", this);
+        btnVisualizarPoblaciones = crearBoton("Visualizar poblaciones", this);
+        btnBorrarPoblacion = crearBoton("Borrar población", this);
+        btnVerGraficas = new JButton("Ver Gráficas");
+        btnVerGraficas.addActionListener(this);
+        btnVerInfo = crearBoton("Ver información detallada", this);
+        btnAbrirArchivo = crearBoton("Abrir archivo", this);
+        btnGuardar = crearBoton("Guardar", this);
+        btnGuardarComo = crearBoton("Guardar como", this);
+
+        panel.add(btnVerGraficas);
+        panel.add(btnAbrirArchivo);
+        panel.add(btnCrearExperimento);
+        panel.add(btnCrearPoblacion);
+        panel.add(btnVisualizarPoblaciones);
+        panel.add(btnBorrarPoblacion);
+        panel.add(btnVerInfo);
+        panel.add(btnGuardar);
+        panel.add(btnGuardarComo);
+
+        return panel;
+    }
+
+    private JButton crearBoton(String texto, ActionListener listener) {
+        JButton boton = new JButton(texto);
+        boton.addActionListener(listener);
+        return boton;
+    }
+
+    private JScrollPane crearPanelCentral() {
+        JTextArea textAreaCentral = new JTextArea();
+        textAreaCentral.setEditable(false);
+        JScrollPane scrollPane = new JScrollPane(textAreaCentral);
+        return scrollPane;
+    }
+
+    private JPanel crearPanelIdioma() {
+        JPanel panel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        String[] languages = {"Español", "English"};
         languageComboBox = new JComboBox<>(languages);
         languageComboBox.addActionListener(this);
 
         changeLanguageButton = new JButton("Cambiar Idioma");
         changeLanguageButton.addActionListener(this);
 
-        add(languageComboBox);
-        add(changeLanguageButton);
+        panel.add(languageComboBox);
+        panel.add(changeLanguageButton);
+        return panel;
+    }
 
-
-
-        btnBlocDeNotas = new JButton("Bloc de Notas");
-        btnBlocDeNotas.addActionListener(this);
-        // Color de fondo del botón
-        btnBlocDeNotas.setBackground(new Color( 100, 200, 162 ));
-        // Color del texto del botón
-        btnBlocDeNotas.setForeground(Color.WHITE);
-        // Agregar el botón al panel
-        add(btnBlocDeNotas);
-
-
-        btnCalcularTasaCrecimiento = new JButton("Calcular Tasa de Crecimiento");
-        btnCalcularTasaCrecimiento.addActionListener(this);
-        add(btnCalcularTasaCrecimiento);
-
-
-        btnCalcularEstadisticas = new JButton("Calcular estadísticas");
-        btnCalcularEstadisticas.addActionListener(this);
-        add(btnCalcularEstadisticas); // Agregar el botón al panel
-
+    private JPanel crearPanelInicioSesion() {
+        JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         JLabel lblContraseña = new JLabel("Contraseña:");
         JPasswordField txtContraseña = new JPasswordField(15);
         JButton btnIniciarSesion = new JButton("Iniciar Sesión");
-        JPanel panelInicioSesion = new JPanel();
-        panelInicioSesion.add(lblContraseña);
-        panelInicioSesion.add(txtContraseña);
-        panelInicioSesion.add(btnIniciarSesion);
-
-
-        setTitle("Gestor de Experimentos");
-        setSize(400, 300);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
-
-        btnVerGraficas = new JButton("Ver Gráficas");
-        btnVerGraficas.addActionListener(this);
-        add(btnVerGraficas);
-
-        btnAbrirArchivo = new JButton("Abrir archivo");
-        btnCrearExperimento = new JButton("Crear experimento");
-        btnCrearPoblacion = new JButton("Crear población");
-        btnVisualizarPoblaciones = new JButton("Visualizar poblaciones");
-        btnBorrarPoblacion = new JButton("Borrar población");
-        btnVerInfo = new JButton("Ver información detallada");
-        btnGuardar = new JButton("Guardar");
-        btnGuardarComo = new JButton("Guardar como");
-
-        btnAbrirArchivo.setBackground(new Color ( 100, 123, 200 ));
-        btnCrearExperimento.setBackground(new Color( 100, 123, 200 ));
-        btnCrearPoblacion.setBackground(new Color( 100, 123, 200 ));
-        btnVisualizarPoblaciones.setBackground(new Color( 100, 123, 200 ));
-        btnBorrarPoblacion.setBackground(new Color( 100, 123, 200 ));
-        btnVerInfo.setBackground(new Color( 100, 123, 200 ));
-        btnGuardar.setBackground(new Color( 100, 123, 200 ));
-        btnGuardarComo.setBackground(new Color(100, 123, 200 ));
-        btnCalcularEstadisticas.setBackground(new Color( 100, 123, 200 ));
-        btnCalcularTasaCrecimiento.setBackground(new Color( 100, 123, 200 ));
-        btnBlocDeNotas.setBackground(new Color( 100, 123, 200 ));
-        changeLanguageButton.setBackground(new Color( 100, 123, 200 ));
-        btnVerGraficas.setBackground(new Color( 100, 123, 200 ));
-
-
-        btnIniciarSesion.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-
-
-                char[] input = txtContraseña.getPassword();
-                String contraseñaIngresada = new String(input);
-                if (contraseñaIngresada.equals(contraseñaEsperada)) {
-                    habilitarFuncionalidades();
-                    JOptionPane.showMessageDialog(GestorExperimentos.this, "Inicio de sesión exitoso.");
-                } else {
-                    JOptionPane.showMessageDialog(GestorExperimentos.this, "Contraseña incorrecta. Inténtelo de nuevo.");
-                }
-                // Limpiar campo de contraseña
-                txtContraseña.setText("");
+        btnIniciarSesion.addActionListener(e -> {
+            char[] input = txtContraseña.getPassword();
+            String contraseñaIngresada = new String(input);
+            if (contraseñaIngresada.equals(CONTRASENA_ESPERADA)) {
+                habilitarFuncionalidades();
+                JOptionPane.showMessageDialog(this, "Inicio de sesión exitoso.");
+            } else {
+                JOptionPane.showMessageDialog(this, "Contraseña incorrecta. Inténtelo de nuevo.");
             }
+            txtContraseña.setText("");
         });
 
-        btnAbrirArchivo.addActionListener(this);
-        btnCrearExperimento.addActionListener(this);
-        btnCrearPoblacion.addActionListener(this);
-        btnVisualizarPoblaciones.addActionListener(this);
-        btnBorrarPoblacion.addActionListener(this);
-        btnVerInfo.addActionListener(this);
-        btnGuardar.addActionListener(this);
-        btnGuardarComo.addActionListener(this);
-
-        usuariosRegistrados = new HashMap<>();
-        add(lblContraseña);
-        add(txtContraseña);
-        add(btnIniciarSesion);
-
-
-        add(btnAbrirArchivo);
-        add(btnCrearExperimento);
-        add(btnCrearPoblacion);
-        add(btnVisualizarPoblaciones);
-        add(btnBorrarPoblacion);
-        add(btnVerInfo);
-        add(btnGuardar);
-        add(btnGuardarComo);
-
-        poblaciones = new ArrayList<>();
-
-        setVisible(true);
+        panel.add(lblContraseña);
+        panel.add(txtContraseña);
+        panel.add(btnIniciarSesion);
+        return panel;
     }
 
-    public void actionPerformed(ActionEvent e) {
+    private void habilitarFuncionalidades() {
+        btnAbrirArchivo.setEnabled(true);
+        btnCrearExperimento.setEnabled(true);
+        btnCrearPoblacion.setEnabled(true);
+        btnVisualizarPoblaciones.setEnabled(true);
+        btnBorrarPoblacion.setEnabled(true);
+        btnVerInfo.setEnabled(true);
+        btnGuardar.setEnabled(true);
+        btnGuardarComo.setEnabled(true);
+    }
 
+    // Otros métodos como actionPerformed y métodos específicos de funcionalidades
+    // (verGraficas, cambiarIdioma, abrirArchivo, etc.) siguen aquí...
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnVerGraficas) {
             verGraficas();
-
-        }
-
-        if (e.getSource() == languageComboBox || e.getSource() == changeLanguageButton) {
-            cambiarIdioma();    // Método para cambiar el idioma
-
-        } else
-
-        if (e.getSource() == btnBlocDeNotas) {
-            abrirBlocDeNotas();
-        } else if (e.getSource() == btnCalcularTasaCrecimiento) {
-        }
-
-        if (experimentoActual != null && !poblaciones.isEmpty()) {
-            calcularTasaCrecimiento(    poblaciones.get(0).getNumBacterias(),
-                    poblaciones.get(poblaciones.size() - 1).getNumBacterias(),
-                    poblaciones.size() - 1);
-        } else {
-            JOptionPane.showMessageDialog(this, "No hay experimento o poblaciones para calcular la tasa de crecimiento.");
-        }
-
-
-        if (e.getSource() == btnCalcularEstadisticas) {
-            calcularEstadisticas();
-        } else
-
-
-        if (e.getSource() == btnAbrirArchivo) {
+        } else if (e.getSource() == changeLanguageButton) {
+            cambiarIdioma();
+        } else if (e.getSource() == btnAbrirArchivo) {
             abrirArchivo();
         } else if (e.getSource() == btnCrearExperimento) {
-            experimentoActual = new Experimento();
-            JOptionPane.showMessageDialog(this, "Se ha creado un nuevo experimento.");
+            crearExperimento();
         } else if (e.getSource() == btnCrearPoblacion) {
-            if (experimentoActual != null) {
-                crearPoblacion();
-            } else {
-                JOptionPane.showMessageDialog(this, "Por favor, primero crea un experimento.");
-            }
+            crearPoblacion();
         } else if (e.getSource() == btnVisualizarPoblaciones) {
             visualizarPoblaciones();
         } else if (e.getSource() == btnBorrarPoblacion) {
             borrarPoblacion();
         } else if (e.getSource() == btnVerInfo) {
-            verInformacion();
+            verInformacionDetallada();
         } else if (e.getSource() == btnGuardar) {
-            guardar();
+            guardarExperimento();
         } else if (e.getSource() == btnGuardarComo) {
-            guardarComo();
+            guardarExperimentoComo();
+        } else if (e.getSource() == languageComboBox) {
+            cambiarIdioma();
         }
+    }
+
+    private void verGraficas() {
+        if (experimentoActual != null) {
+            JFreeChart chart = ChartFactory.createXYLineChart(
+                    "Tasa de Crecimiento de Bacterias",
+                    "Día",
+                    "Número de Bacterias",
+                    crearDataset(),
+                    org.jfree.chart.plot.PlotOrientation.VERTICAL,
+                    true, true, false);
+            ChartPanel chartPanel = new ChartPanel(chart);
+            chartPanel.setPreferredSize(new Dimension(500, 270));
+            JOptionPane.showMessageDialog(this, chartPanel, "Gráfica de Tasa de Crecimiento", JOptionPane.PLAIN_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "No hay experimento cargado.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    private JTextArea textAreaCentral; // Asegúrate de que esta variable es accesible en la clase
+    private JScrollPane crearPanelCentral() {
+        textAreaCentral = new JTextArea();
+        textAreaCentral.setEditable(false);
+        return new JScrollPane(textAreaCentral);
+    }
+
+    private void calcularTasaCrecimiento() {
+        if (experimentoActual == null || experimentoActual.getPoblaciones().isEmpty()) {
+            textAreaCentral.setText("No hay datos suficientes para calcular la tasa de crecimiento.");
+            return;
+        }
+
+        try {
+            PoblacionBacterias poblacionInicial = experimentoActual.getPoblaciones().get(0);
+            PoblacionBacterias poblacionFinal = experimentoActual.getPoblaciones().get(experimentoActual.getPoblaciones().size() - 1);
+            int dias = (int)((poblacionFinal.getFechaFin().getTime() - poblacionInicial.getFechaInicio().getTime()) / (1000 * 60 * 60 * 24));
+
+            double tasaCrecimiento = Math.log(poblacionFinal.getNumBacterias() / (double) poblacionInicial.getNumBacterias()) / dias;
+            textAreaCentral.setText("Tasa de crecimiento: " + tasaCrecimiento + " por día");
+        } catch (Exception e) {
+            textAreaCentral.setText("Error al calcular la tasa de crecimiento: " + e.getMessage());
+        }
+    }
+
+    private void calcularEstadisticas() {
+        if (experimentoActual == null || experimentoActual.getPoblaciones().isEmpty()) {
+            textAreaCentral.setText("No hay datos suficientes para calcular estadísticas.");
+            return;
+        }
+
+        ArrayList<Integer> numBacterias = new ArrayList<>();
+        for (PoblacionBacterias poblacion : experimentoActual.getPoblaciones()) {
+            numBacterias.add(poblacion.getNumBacterias());
+        }
+
+        double media = numBacterias.stream().mapToInt(val -> val).average().orElse(0.0);
+        double sd = Math.sqrt(numBacterias.stream().mapToDouble(num -> Math.pow(num - media, 2)).average().orElse(0.0));
+
+        textAreaCentral.setText("Media de bacterias: " + media + "\nDesviación estándar: " + sd);
+    }
+
+
+
+
+
+    private XYSeriesCollection crearDataset() {
+        if (poblaciones == null || poblaciones.isEmpty()) {
+            return new XYSeriesCollection(); // Devolver una colección vacía si no hay datos
+        }
+        XYSeriesCollection dataset = new XYSeriesCollection();
+        XYSeries series = new XYSeries("Tasa de Crecimiento");
+        for (PoblacionBacterias poblacion : poblaciones) {
+            series.add(poblacion.getDiaIncrementoComida(), poblacion.getComidaDiaIncremento());
+        }
+        dataset.addSeries(series);
+        return dataset;
+    }
+
+
+
+    private void cambiarIdioma() {
+        String idiomaSeleccionado = (String) languageComboBox.getSelectedItem();
+        if (idiomaSeleccionado.equals("Español")) {
+            cambiarIdioma("es");
+        } else if (idiomaSeleccionado.equals("English")) {
+            cambiarIdioma("en");
+        }
+    }
+
+    private void cambiarIdioma(String idioma) {
+        // Lógica para cambiar el idioma de la interfaz
     }
 
     private void abrirArchivo() {
         JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setDialogTitle("Seleccionar archivo");
-        fileChooser.setFileFilter(new FileNameExtensionFilter("Archivos de texto (*.txt)", "txt"));
+        fileChooser.setFileFilter(new FileNameExtensionFilter("Archivos de texto", "txt"));
         int seleccion = fileChooser.showOpenDialog(this);
         if (seleccion == JFileChooser.APPROVE_OPTION) {
-            File archivoSeleccionado = fileChooser.getSelectedFile();
-            // Aquí implementar la lógica para abrir el archivo y cargar los datos
-            experimentoActual = new Experimento(archivoSeleccionado.getAbsolutePath());
-            poblaciones = experimentoActual.getPoblaciones();
-            JOptionPane.showMessageDialog(this, "Se ha cargado el experimento del archivo " + archivoSeleccionado.getAbsolutePath());
+            File archivo = fileChooser.getSelectedFile();
+            // Lógica para leer el archivo y cargar los datos
         }
     }
 
+    private void crearExperimento() {
+        // Crear un diálogo para que el usuario ingrese el nombre del experimento
+        String nombreExperimento = JOptionPane.showInputDialog(this, "Ingrese el nombre del experimento:");
+
+        // Validar que el nombre no sea nulo o vacío
+        if (nombreExperimento != null && !nombreExperimento.trim().isEmpty()) {
+            // Inicializar el experimento actual con el nombre proporcionado
+            experimentoActual = new Experimento(nombreExperimento);
+
+            // Configurar detalles adicionales del experimento si es necesario
+            // Por ejemplo, definir una fecha de inicio, notas asociadas, etc.
+            String detallesExperimento = "Experimento creado el: " + new Date().toString();
+            experimentoActual.equals (detallesExperimento);
+
+            // Agregar el experimento a alguna estructura de datos si estás manejando múltiples experimentos
+            // experimentosList.add(experimentoActual);
+
+            // Mostrar mensaje de éxito
+            JOptionPane.showMessageDialog(this, "Nuevo experimento creado con éxito: " + nombreExperimento, "Experimento Creado", JOptionPane.INFORMATION_MESSAGE);
+
+            // Actualizar la interfaz si es necesario, por ejemplo, actualizar listados o habilitar botones
+            actualizarInterfazPostCreacion();
+        } else {
+            // Informar al usuario que el nombre del experimento es necesario
+            JOptionPane.showMessageDialog(this, "El nombre del experimento no puede estar vacío.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    private void actualizarInterfazPostCreacion() {
+        // Habilitar botones o realizar acciones específicas una vez creado el experimento
+        btnCrearPoblacion.setEnabled(true);
+        btnGuardar.setEnabled(true);
+        btnGuardarComo.setEnabled(true);
+        // Otras actualizaciones según la lógica de la aplicación
+    }
 
 
     private void crearPoblacion() {
-        JTextField txtNombre = new JTextField();
-        JTextField txtFechaInicio = new JTextField();
-        JTextField txtFechaFin = new JTextField();
-        JTextField txtNumBacterias = new JTextField();
-        JTextField txtTemperatura = new JTextField();
-        String[] luminosidadOptions = {"Alta", "Media", "Baja"};
-        JComboBox<String> cmbLuminosidad = new JComboBox<>(luminosidadOptions);
-        JTextField txtDosisComidaInicial = new JTextField();
-        JTextField txtDiaIncrementoComida = new JTextField();
-        JTextField txtComidaDiaIncremento = new JTextField();
-        JTextField txtComidaDiaFinal = new JTextField();
+        if (experimentoActual == null) {
+            JOptionPane.showMessageDialog(this, "Primero debe crear un experimento.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
 
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        panel.add(new JLabel("Nombre de la población:"));
+
+        JTextField txtNombre = new JTextField(10);
+        JTextField txtFechaInicio = new JTextField(10);
+        JTextField txtFechaFin = new JTextField(10);
+        JTextField txtNumBacterias = new JTextField(10);
+        JTextField txtTemperatura = new JTextField(10);
+        String[] luminosidadOptions = {"Alta", "Media", "Baja"};
+        JComboBox<String> cmbLuminosidad = new JComboBox<>(luminosidadOptions);
+        JTextField txtDosisComidaInicial = new JTextField(10);
+        JTextField txtDiaIncrementoComida = new JTextField(10);
+        JTextField txtComidaDiaIncremento = new JTextField(10);
+        JTextField txtComidaDiaFinal = new JTextField(10);
+
+        panel.add(new JLabel("Nombre:"));
         panel.add(txtNombre);
         panel.add(new JLabel("Fecha de inicio (dd/mm/aaaa):"));
         panel.add(txtFechaInicio);
@@ -260,9 +354,9 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         panel.add(new JLabel("Comida en el último día:"));
         panel.add(txtComidaDiaFinal);
 
-        int resultado = JOptionPane.showConfirmDialog(this, panel, "Crear población de bacterias",
-                JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
-        if (resultado == JOptionPane.OK_OPTION) {
+        int result = JOptionPane.showConfirmDialog(this, panel, "Crear Población de Bacterias", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+
+        if (result == JOptionPane.OK_OPTION) {
             try {
                 String nombre = txtNombre.getText();
                 String fechaInicio = txtFechaInicio.getText();
@@ -275,309 +369,262 @@ public class GestorExperimentos extends JFrame implements ActionListener {
                 int comidaDiaIncremento = Integer.parseInt(txtComidaDiaIncremento.getText());
                 int comidaDiaFinal = Integer.parseInt(txtComidaDiaFinal.getText());
 
-                PoblacionBacterias poblacion = new PoblacionBacterias(nombre, fechaInicio, fechaFin, numBacterias, temperatura, luminosidad,
-                        dosisComidaInicial, diaIncrementoComida, comidaDiaIncremento, comidaDiaFinal);
-                experimentoActual.agregarPoblacion(poblacion);
-                poblaciones.add(poblacion);
-                JOptionPane.showMessageDialog(this, "Se ha creado una nueva población de bacterias.");
+                PoblacionBacterias nuevaPoblacion = new PoblacionBacterias(nombre, fechaInicio, fechaFin, numBacterias, temperatura, luminosidad, dosisComidaInicial, diaIncrementoComida, comidaDiaIncremento, comidaDiaFinal);
+                experimentoActual.agregarPoblacion(nuevaPoblacion);
+                JOptionPane.showMessageDialog(this, "Población creada con éxito.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(this, "Por favor, ingresa valores válidos para los campos numéricos.");
+                JOptionPane.showMessageDialog(this, "Error en los datos numéricos, por favor revisa la información ingresada.", "Error de Formato", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
+
 
     private void visualizarPoblaciones() {
-        StringBuilder poblacionesTexto = new StringBuilder();
-        for (PoblacionBacterias poblacion : poblaciones) {
-            poblacionesTexto.append(poblacion.getNombre()).append("\n");
+        // Verificar si hay un experimento activo y si contiene poblaciones
+        if (experimentoActual == null || experimentoActual.getPoblaciones().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No hay poblaciones para mostrar. Por favor, crea un experimento y añade poblaciones primero.", "Sin Poblaciones", JOptionPane.INFORMATION_MESSAGE);
+            return;
         }
-        JOptionPane.showMessageDialog(this, poblacionesTexto.toString(), "Poblaciones de bacterias", JOptionPane.INFORMATION_MESSAGE);
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("Poblaciones en el experimento '").append(experimentoActual.getNombreArchivo()).append("':\n\n");
+
+        // Listar cada población con su información básica
+        for (PoblacionBacterias poblacion : experimentoActual.getPoblaciones()) {
+            sb.append("Nombre: ").append(poblacion.getNombre()).append("\n");
+            sb.append("Fecha de inicio: ").append(poblacion.getFechaInicio()).append("\n");
+            sb.append("Fecha de fin: ").append(poblacion.getFechaFin()).append("\n");
+            sb.append("Número de bacterias iniciales: ").append(poblacion.getNumBacterias()).append("\n");
+            sb.append("Temperatura: ").append(poblacion.getTemperatura()).append("°C\n");
+            sb.append("Luminosidad: ").append(poblacion.getLuminosidad()).append("\n");
+            sb.append("Dosis de comida inicial: ").append(poblacion.getDosisComida()).append("\n");
+            sb.append("\n"); // Espacio entre entradas
+        }
+
+        // Mostrar un diálogo con la información de todas las poblaciones
+        JOptionPane.showMessageDialog(this, sb.toString(), "Vista de Poblaciones", JOptionPane.INFORMATION_MESSAGE);
     }
+
 
     private void borrarPoblacion() {
-        if (poblaciones.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No hay poblaciones para borrar.");
+        // Verificar si hay un experimento y si tiene poblaciones
+        if (experimentoActual == null || experimentoActual.getPoblaciones().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No hay poblaciones para borrar.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
+        // Crear un array con los nombres de las poblaciones para mostrar en un diálogo de selección
+        ArrayList<PoblacionBacterias> poblaciones = experimentoActual.getPoblaciones();
         String[] nombresPoblaciones = new String[poblaciones.size()];
         for (int i = 0; i < poblaciones.size(); i++) {
             nombresPoblaciones[i] = poblaciones.get(i).getNombre();
         }
 
-        String poblacionSeleccionada = (String) JOptionPane.showInputDialog(this, "Selecciona una población para borrar:",
-                "Borrar población", JOptionPane.QUESTION_MESSAGE, null, nombresPoblaciones, nombresPoblaciones[0]);
+        // Mostrar un diálogo para que el usuario seleccione la población a borrar
+        String poblacionSeleccionada = (String) JOptionPane.showInputDialog(
+                this,
+                "Selecciona una población para borrar:",
+                "Borrar Población",
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                nombresPoblaciones,
+                nombresPoblaciones[0]);
 
+        // Procesar la eliminación si se seleccionó una población
         if (poblacionSeleccionada != null) {
-            for (PoblacionBacterias poblacion : poblaciones) {
-                if (poblacion.getNombre().equals(poblacionSeleccionada)) {
-                    poblaciones.remove(poblacion);
-                    JOptionPane.showMessageDialog(this, "Se ha borrado la población seleccionada.");
-                    return;
+            boolean removed = false;
+            for (int i = 0; i < poblaciones.size(); i++) {
+                if (poblaciones.get(i).getNombre().equals(poblacionSeleccionada)) {
+                    poblaciones.remove(i);
+                    removed = true;
+                    break;
                 }
             }
-        }
-    }
 
-    private void verInformacion() {
-        if (experimentoActual == null || poblaciones.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No hay experimento o poblaciones para mostrar información.");
-            return;
-        }
-
-        String[] nombresPoblaciones = new String[poblaciones.size()];
-        for (int i = 0; i < poblaciones.size(); i++) {
-            nombresPoblaciones[i] = poblaciones.get(i).getNombre();
-        }
-
-        String poblacionSeleccionada = (String) JOptionPane.showInputDialog(this, "Selecciona una población para ver información detallada:",
-                "Información detallada", JOptionPane.QUESTION_MESSAGE, null, nombresPoblaciones, nombresPoblaciones[0]);
-
-        if (poblacionSeleccionada != null) {
-            for (PoblacionBacterias poblacion : poblaciones) {
-                if (poblacion.getNombre().equals(poblacionSeleccionada)) {
-                    JOptionPane.showMessageDialog(this, "Nombre: " + poblacion.getNombre() + "\n" +
-                            "Fecha de inicio: " + poblacion.getFechaInicio() + "\n" +
-                            "Fecha de fin: " + poblacion.getFechaFin() + "\n" +
-                            "Número de bacterias iniciales: " + poblacion.getNumBacterias() + "\n" +
-                            "Temperatura: " + poblacion.getTemperatura() + "\n" +
-                            "Luminosidad: " + poblacion.getLuminosidad() + "\n" +
-                            "Dosis de comida: " + poblacion.getDosisComida());
-                    return;
-                }
+            // Mostrar un mensaje dependiendo del resultado de la operación
+            if (removed) {
+                JOptionPane.showMessageDialog(this, "Se ha borrado la población seleccionada.", "Población Borrada", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "No se encontró la población seleccionada.", "Error", JOptionPane.ERROR_MESSAGE);
             }
-        }
-    }
-
-    private void guardar() {
-        if (experimentoActual == null) {
-            JOptionPane.showMessageDialog(this, "No hay experimento para guardar.");
-            return;
-        }
-
-        if (experimentoActual.getPoblaciones().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "El experimento no contiene poblaciones para guardar.");
-            return;
-        }
-
-        if (experimentoActual.getNombreArchivo() == null) {
-            guardarComo();
         } else {
-            try {
-                FileWriter writer = new FileWriter(experimentoActual.getNombreArchivo());
-                for (PoblacionBacterias poblacion : experimentoActual.getPoblaciones()) {
-                    writer.write(poblacion.toString() + "\n");
-                }
-                writer.close();
-                JOptionPane.showMessageDialog(this, "Se ha guardado el experimento en el archivo " + experimentoActual.getNombreArchivo());
-            } catch (IOException e) {
-                JOptionPane.showMessageDialog(this, "Error al guardar el experimento.");
-            }
+            // El usuario canceló la operación
+            JOptionPane.showMessageDialog(this, "Borrado cancelado.", "Cancelado", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
-    private void guardarComo() {
+
+    private void verInformacionDetallada() {
+        // Verificar si hay un experimento y si tiene poblaciones
+        if (experimentoActual == null || experimentoActual.getPoblaciones().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No hay poblaciones para mostrar información.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Crear un array con los nombres de las poblaciones para mostrar en un diálogo de selección
+        ArrayList<PoblacionBacterias> poblaciones = experimentoActual.getPoblaciones();
+        String[] nombresPoblaciones = new String[poblaciones.size()];
+        for (int i = 0; i < poblaciones.size(); i++) {
+            nombresPoblaciones[i] = poblaciones.get(i).getNombre();
+        }
+
+        // Mostrar un diálogo para que el usuario seleccione la población de la cual desea ver la información
+        String poblacionSeleccionada = (String) JOptionPane.showInputDialog(
+                this,
+                "Selecciona una población para ver información detallada:",
+                "Información Detallada",
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                nombresPoblaciones,
+                nombresPoblaciones[0]);
+
+        // Procesar la visualización de la información si se seleccionó una población
+        if (poblacionSeleccionada != null) {
+            PoblacionBacterias poblacion = poblaciones.stream()
+                    .filter(p -> p.getNombre().equals(poblacionSeleccionada))
+                    .findFirst()
+                    .orElse(null);
+
+            if (poblacion != null) {
+                String info = String.format(
+                        "Nombre: %s\nFecha de inicio: %s\nFecha de fin: %s\nNúmero de bacterias iniciales: %d\n" +
+                                "Temperatura: %d°C\nLuminosidad: %s\nDosis de comida inicial: %d\nDía de incremento de comida: %d\n" +
+                                "Comida en el día de incremento: %d\nComida en el último día: %d",
+                        poblacion.getNombre(),
+                        poblacion.getFechaInicio(),
+                        poblacion.getFechaFin(),
+                        poblacion.getNumBacterias(),
+                        poblacion.getTemperatura(),
+                        poblacion.getLuminosidad(),
+                        poblacion.getDosisComidaInicial(),
+                        poblacion.getDiaIncrementoComida(),
+                        poblacion.getComidaDiaIncremento(),
+                        poblacion.getComidaDiaFinal());
+
+                JOptionPane.showMessageDialog(this, info, "Información de Población", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "No se encontró la población seleccionada.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            // El usuario canceló la operación
+            JOptionPane.showMessageDialog(this, "Visualización cancelada.", "Cancelado", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
+
+
+    private void guardarExperimento() {
         if (experimentoActual == null) {
-            JOptionPane.showMessageDialog(this, "No hay experimento para guardar.");
+            JOptionPane.showMessageDialog(this, "No hay experimento para guardar.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
         if (experimentoActual.getPoblaciones().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "El experimento no contiene poblaciones para guardar.");
+            JOptionPane.showMessageDialog(this, "El experimento no contiene poblaciones para guardar.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
         JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setDialogTitle("Guardar como...");
+        fileChooser.setDialogTitle("Guardar Experimento Como...");
+        fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
         fileChooser.setFileFilter(new FileNameExtensionFilter("Archivos de texto (*.txt)", "txt"));
-        int seleccion = fileChooser.showSaveDialog(this);
-        if (seleccion == JFileChooser.APPROVE_OPTION) {
-            File archivoGuardar = fileChooser.getSelectedFile();
-            try {
-                FileWriter writer = new FileWriter(archivoGuardar);
-                for (PoblacionBacterias poblacion : experimentoActual.getPoblaciones()) {
-                    writer.write(poblacion.toString() + "\n");
-                }
-                writer.close();
-                experimentoActual.setNombreArchivo(archivoGuardar.getAbsolutePath());
-                JOptionPane.showMessageDialog(this, "Se ha guardado el experimento en el archivo " + archivoGuardar.getAbsolutePath());
-            } catch (IOException e) {
-                JOptionPane.showMessageDialog(this, "Error al guardar el experimento.");
+
+        // Si el experimento ya tiene un archivo asociado, sugerimos el mismo nombre de archivo
+        if (experimentoActual.getNombreArchivo() != null) {
+            fileChooser.setSelectedFile(new File(String.valueOf(experimentoActual.getNombreArchivo())));
+        }
+
+        int userSelection = fileChooser.showSaveDialog(this);
+        if (userSelection == JFileChooser.APPROVE_OPTION) {
+            File fileToSave = fileChooser.getSelectedFile();
+
+            // Asegurarse de que el archivo tenga la extensión correcta
+            if (!fileToSave.getAbsolutePath().endsWith(".txt")) {
+                fileToSave = new File(fileToSave + ".txt");
             }
+
+            try (FileWriter fileWriter = new FileWriter(fileToSave)) {
+                fileWriter.write("Experimento: " + experimentoActual.getNombreArchivo() + "\n");
+                for (PoblacionBacterias poblacion : experimentoActual.getPoblaciones()) {
+                    fileWriter.write("Población: " + poblacion.getNombre() + "\n");
+                    fileWriter.write("Inicio: " + poblacion.getFechaInicio() + ", Fin: " + poblacion.getFechaFin() + "\n");
+                    fileWriter.write("Bacterias Iniciales: " + poblacion.getNumBacterias() + ", Temperatura: " + poblacion.getTemperatura() + "\n");
+                    fileWriter.write("Luminosidad: " + poblacion.getLuminosidad() + ", Comida Inicial: " + poblacion.getDosisComidaInicial() + "\n\n");
+                }
+                experimentoActual.setNombreArchivo(fileToSave.getAbsolutePath());  // Actualizar el nombre de archivo en el objeto experimento
+                JOptionPane.showMessageDialog(this, "Experimento guardado en " + fileToSave.getAbsolutePath(), "Guardado Exitoso", JOptionPane.INFORMATION_MESSAGE);
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(this, "Error al guardar el archivo: " + e.getMessage(), "Error de Escritura", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Guardado cancelado por el usuario.", "Guardado Cancelado", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
 
-    private void calcularEstadisticas() {
-        if (poblaciones.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No hay poblaciones para calcular estadísticas.");
+    private void guardarExperimentoComo() {
+        if (experimentoActual == null) {
+            JOptionPane.showMessageDialog(this, "No hay experimento para guardar.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-        // Calcular estadísticas sobre el número de bacterias
-        ArrayList<Integer> numBacteriasList = new ArrayList<>();
-        for (PoblacionBacterias poblacion : poblaciones) {
-            numBacteriasList.add(poblacion.getNumBacterias());
+        if (experimentoActual.getPoblaciones().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El experimento no contiene poblaciones para guardar.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
         }
 
-        double media = calcularMedia(numBacteriasList);
-        double desviacionEstandar = calcularDesviacionEstandar(numBacteriasList);
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Guardar Como...");
+        fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        fileChooser.setFileFilter(new FileNameExtensionFilter("Archivos de texto (*.txt)", "txt"));
 
-        // Mostrar las estadísticas
-        JOptionPane.showMessageDialog(this,
-                "Estadísticas sobre el número de bacterias:\n" +
-                        "Media: " + media + "\n" +
-                        "Desviación estándar: " + desviacionEstandar,
-                "Estadísticas",
-                JOptionPane.INFORMATION_MESSAGE);
-    }
+        int userSelection = fileChooser.showSaveDialog(this);
+        if (userSelection == JFileChooser.APPROVE_OPTION) {
+            File fileToSave = fileChooser.getSelectedFile();
 
-    private double calcularMedia(ArrayList<Integer> valores) {
-        double suma = 0;
-        for (int valor : valores) {
-            suma += valor;
-        }
-        return suma / valores.size();
-    }
-
-    private double calcularDesviacionEstandar(ArrayList<Integer> valores) {
-        double media = calcularMedia(valores);
-        double sumaDiferenciasCuadrado = 0;
-        for (int valor : valores) {
-            sumaDiferenciasCuadrado += Math.pow(valor - media, 2);
-        }
-        return Math.sqrt(sumaDiferenciasCuadrado / valores.size());
-    }
-
-
-    private double calcularTasaCrecimiento(int numBacteriasInicial, int numBacteriasFinal, int tiempoTranscurrido) {
-        double tasaCrecimiento;
-        double lnNumBacteriasInicial = Math.log(numBacteriasInicial);
-        double lnNumBacteriasFinal = Math.log(numBacteriasFinal);
-
-        tasaCrecimiento = (lnNumBacteriasFinal - lnNumBacteriasInicial) / tiempoTranscurrido;
-
-        return tasaCrecimiento;
-    }
-
-
-    private void abrirBlocDeNotas() {
-        try {
-            // Se ejecuta el comando para abrir el bloc de notas
-            Runtime.getRuntime().exec("notepad.exe");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            JOptionPane.showMessageDialog(this, "Error al abrir el Bloc de Notas.", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }
-
-    private void cambiarIdioma() {
-        int selectedIndex = languageComboBox.getSelectedIndex();
-
-        switch (selectedIndex) {
-            case 0:
-                cambiarIdiomaEspañol();
-                break;
-            case 1:
-                cambiarIdiomaIngles();
-                break;
-        }
-    }
-
-    private void cambiarIdiomaEspañol() {
-        setTitle("Gestor de Experimentos");
-        changeLanguageButton.setText("Cambiar Idioma");
-    }
-
-    private void cambiarIdiomaIngles() {
-        setTitle("Experiment Manager");
-        changeLanguageButton.setText("Change Language");
-    }
-    private void habilitarFuncionalidades() {
-        btnAbrirArchivo.setEnabled(true);
-        btnCrearExperimento.setEnabled(true);
-        btnCrearPoblacion.setEnabled(true);
-        btnVisualizarPoblaciones.setEnabled(true);
-        btnBorrarPoblacion.setEnabled(true);
-        btnVerInfo.setEnabled(true);
-        btnGuardar.setEnabled(true);
-        btnGuardarComo.setEnabled(true);
-    }
-
-    private void verGraficas() {
-
-        if (experimentoActual != null && !experimentoActual.getPoblaciones().isEmpty()) {
-            JFrame frame = new JFrame("Gráficas de Poblaciones");
-            frame.setSize(800, 600);
-            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            frame.setLayout(new BorderLayout());
-
-            // Crear un conjunto de datos para las gráficas
-            XYSeriesCollection dataset = new XYSeriesCollection();
-            for (PoblacionBacterias poblacion : experimentoActual.getPoblaciones()) {
-                XYSeries series = new XYSeries(poblacion.getNombre());
-                for (int i = 0; i < poblacion.getDatosPoblacion().size(); i++) {
-                    series.add( (double) i, (Number) poblacion.getDatosPoblacion().get(i) );
-                }
-                dataset.addSeries(series);
+            // Asegurarse de que el archivo tenga la extensión correcta
+            if (!fileToSave.getAbsolutePath().endsWith(".txt")) {
+                fileToSave = new File(fileToSave + ".txt");
             }
 
-            // Crear el gráfico
-            JFreeChart chart = ChartFactory.createXYLineChart(
-                    "Gráficas de Poblaciones", // Título del gráfico
-                    "Días", // Etiqueta del eje X
-                    "Número de Bacterias", // Etiqueta del eje Y
-                    dataset // Conjunto de datos
-            );
-
-            // Crear el panel de gráfico y agregarlo al marco
-            ChartPanel chartPanel = new ChartPanel(chart);
-            frame.add(chartPanel, BorderLayout.CENTER);
-
-            // Mostrar la ventana
-            frame.setVisible(true);
+            try (FileWriter fileWriter = new FileWriter(fileToSave)) {
+                fileWriter.write("Nombre del Experimento: " + experimentoActual.getNombreArchivo() + "\n");
+                for (PoblacionBacterias poblacion : experimentoActual.getPoblaciones()) {
+                    fileWriter.write("Población: " + poblacion.getNombre() + "\n");
+                    fileWriter.write("Fecha de inicio: " + poblacion.getFechaInicio() + ", Fecha de fin: " + poblacion.getFechaFin() + "\n");
+                    fileWriter.write("Número de bacterias iniciales: " + poblacion.getNumBacterias() + ", Temperatura: " + poblacion.getTemperatura() + "°C\n");
+                    fileWriter.write("Luminosidad: " + poblacion.getLuminosidad() + ", Dosis de comida inicial: " + poblacion.getDosisComidaInicial() + "\n\n");
+                }
+                experimentoActual.setNombreArchivo(fileToSave.getAbsolutePath());  // Actualizar el nombre de archivo en el objeto experimento
+                JOptionPane.showMessageDialog(this, "Experimento guardado como '" + fileToSave.getAbsolutePath() + "'.", "Guardado Exitoso", JOptionPane.INFORMATION_MESSAGE);
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(this, "Error al guardar el archivo: " + e.getMessage(), "Error de Escritura", JOptionPane.ERROR_MESSAGE);
+            }
         } else {
-            JOptionPane.showMessageDialog(this, "No hay experimento o poblaciones para mostrar gráficas.");
+            JOptionPane.showMessageDialog(this, "Guardado cancelado por el usuario.", "Guardado Cancelado", JOptionPane.INFORMATION_MESSAGE);
         }
     }
-
-    private void inicializarComponentes() {
-        JPanel panelLateral = new JPanel();
-        panelLateral.setLayout(new BoxLayout(panelLateral, BoxLayout.Y_AXIS));
-        panelLateral.setBorder(BorderFactory.createTitledBorder("Acciones"));
-        add(panelLateral, BorderLayout.WEST);
-
-        // Initialize and add components as previously described
-        // (For brevity, actual button initialization and adding are omitted here. Please refer to the previous example for details)
-
-        JTextArea textAreaCentral = new JTextArea();
-        textAreaCentral.setEditable(false);
-        JScrollPane scrollPane = new JScrollPane(textAreaCentral);
-        add(scrollPane, BorderLayout.CENTER);
+    private static void setLookAndFeel() {
+        try {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
+            System.out.println("Nimbus L&F not available");
+            // Si Nimbus no está disponible, puedes establecer otro o dejar el predeterminado
+        }
     }
-
-    private void mostrarPantallaInicio() {
-        JDialog welcomeDialog = new JDialog(this, "Bienvenido", true);
-        welcomeDialog.setLayout(new BorderLayout());
-        welcomeDialog.setSize(400, 200);
-        welcomeDialog.setLocationRelativeTo(this);
-        welcomeDialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-
-        JLabel welcomeLabel = new JLabel("Bienvenido al Simulacro de Población", JLabel.CENTER);
-        welcomeLabel.setFont(new Font("Serif", Font.BOLD, 16));
-        welcomeDialog.add(welcomeLabel, BorderLayout.CENTER);
-
-        JButton startButton = new JButton("Comenzar");
-        startButton.addActionListener(e -> welcomeDialog.dispose());
-        welcomeDialog.add(startButton, BorderLayout.SOUTH);
-
-        welcomeDialog.setVisible(true);
-    }
-
-
 
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(GestorExperimentos::new);
+        SwingUtilities.invokeLater(() -> {
+            setLookAndFeel();
+            new GestorExperimentos();
+        });
     }
+
 }
+
+
