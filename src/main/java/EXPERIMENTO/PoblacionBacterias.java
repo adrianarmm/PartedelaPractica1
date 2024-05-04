@@ -1,27 +1,30 @@
 package EXPERIMENTO;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Arrays;
+import java.util.Map;
 
-class PoblacionBacterias {
+public class PoblacionBacterias {
     private String nombre;
     private String fechaInicio;
     private String fechaFin;
-    private int numBacteriasIniciales;
-    private String temperatura;
-
+    private int numBacterias;
+    private int temperatura;
     private String luminosidad;
-    private int[] dosisComida;
+    private int dosisComidaInicial;
+    private int diaIncrementoComida;
+    private int comidaDiaIncremento;
+    private int comidaDiaFinal;
 
-    public PoblacionBacterias(String nombre, String fechaInicio, String fechaFin, int numBacteriasIniciales, String temperatura, String luminosidad, int[] dosisComida) {
+    public PoblacionBacterias(String nombre, String fechaInicio, String fechaFin, int numBacterias, int temperatura, String luminosidad, int dosisComidaInicial, int diaIncrementoComida, int comidaDiaIncremento, int comidaDiaFinal) {
         this.nombre = nombre;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
-        this.numBacteriasIniciales = numBacteriasIniciales;
+        this.numBacterias = numBacterias;
         this.temperatura = temperatura;
         this.luminosidad = luminosidad;
-        this.dosisComida = dosisComida;
+        this.dosisComidaInicial = dosisComidaInicial;
+        this.diaIncrementoComida = diaIncrementoComida;
+        this.comidaDiaIncremento = comidaDiaIncremento;
+        this.comidaDiaFinal = comidaDiaFinal;
     }
 
     public String getNombre() {
@@ -36,11 +39,11 @@ class PoblacionBacterias {
         return fechaFin;
     }
 
-    public int getNumBacteriasIniciales() {
-        return numBacteriasIniciales;
+    public int getNumBacterias() {
+        return numBacterias;
     }
 
-    public String getTemperatura() {
+    public int getTemperatura() {
         return temperatura;
     }
 
@@ -48,57 +51,36 @@ class PoblacionBacterias {
         return luminosidad;
     }
 
-    public int[] getDosisComida() {
-        return dosisComida;
+    public int getDosisComidaInicial() {
+        return dosisComidaInicial;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public int getDiaIncrementoComida() {
+        return diaIncrementoComida;
     }
 
-    public void setFechaInicio(String fechaInicio) {
-        this.fechaInicio = fechaInicio;
+    public int getComidaDiaIncremento() {
+        return comidaDiaIncremento;
     }
 
-    public void setFechaFin(String fechaFin) {
-        this.fechaFin = fechaFin;
+    public int getComidaDiaFinal() {
+        return comidaDiaFinal;
     }
 
-    public void setNumBacteriasIniciales(int numBacteriasIniciales) {
-        this.numBacteriasIniciales = numBacteriasIniciales;
+    public String getDosisComida () {
+        return "Dosis de comida: " + dosisComidaInicial + " - " + diaIncrementoComida + " - " + comidaDiaIncremento + " - " + comidaDiaFinal;
     }
 
-    public void setTemperatura(String temperatura) {
-        this.temperatura = temperatura;
+    public Map<Object, Object> getDatosPoblacion () {
+        return Map.of(
+                "Nombre", nombre,
+                "Fecha de inicio", fechaInicio,
+                "Fecha de fin", fechaFin,
+                "Número de bacterias", numBacterias,
+                "Temperatura", temperatura,
+                "Luminosidad", luminosidad,
+                "Dosis de comida", getDosisComida()
+        );
     }
-
-    public void setLuminosidad(String luminosidad) {
-        this.luminosidad = luminosidad;
-    }
-
-    public void setDosisComida(int[] dosisComida) {
-        this.dosisComida = dosisComida;
-    }
-
-    public static void main(String[] args) {
-        int[] dosisComida = {10, 20, 30, 40, 50};
-        PoblacionBacterias poblacionBacterias = new PoblacionBacterias("Bacteria 1", "01/01/2021", "01/02/2021", 100, "25°C", "Alta", dosisComida);
-        System.out.println(poblacionBacterias);
-    }
-
-    @Override
-
-    public String toString() {
-        return "PoblacionBacterias{" +
-                "nombre='" + nombre + '\'' +
-                ", fechaInicio='" + fechaInicio + '\'' +
-                ", fechaFin='" + fechaFin + '\'' +
-                ", numBacteriasIniciales=" + numBacteriasIniciales +
-                ", temperatura='" + temperatura + '\'' +
-                ", luminosidad='" + luminosidad + '\'' +
-                ", dosisComida=" + Arrays.toString(dosisComida) +
-                '}';
-    }
-
 }
 
