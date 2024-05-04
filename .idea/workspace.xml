@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="CAMBIOS IMPORTANTES">
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="SEGUIMOS">
       <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/GestorExperimentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/GestorExperimentos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714844534226</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="SEGUIMOS">
+      <option name="closed" value="true" />
+      <created>1714845099495</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714845099495</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -203,6 +211,7 @@
     <MESSAGE value="NO PUEDO MAS" />
     <MESSAGE value="ningun cambio significativo" />
     <MESSAGE value="CAMBIOS IMPORTANTES" />
-    <option name="LAST_COMMIT_MESSAGE" value="CAMBIOS IMPORTANTES" />
+    <MESSAGE value="SEGUIMOS" />
+    <option name="LAST_COMMIT_MESSAGE" value="SEGUIMOS" />
   </component>
 </project>

@@ -7,6 +7,9 @@ import java.awt.event.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -58,6 +61,10 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         btnBorrarPoblacion = crearBoton("Borrar población", this);
         btnVerGraficas = crearBoton("Ver Gráficas", this);
         btnVerInfo = crearBoton("Ver información detallada", this);
+        btnBlocDeNotas = crearBoton("Bloc de Notas", this);
+        btnCalcularTasaCrecimiento = crearBoton("Calcular Tasas de Crecimiento", this);
+        btnCalcularEstadisticas = crearBoton("Calcular Estadísticas", this);
+
         btnAbrirArchivo = crearBoton("Abrir archivo", this);
         btnGuardar = crearBoton("Guardar", this);
         btnGuardarComo = crearBoton("Guardar como", this);
@@ -71,6 +78,9 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         panel.add(btnAbrirArchivo);
         panel.add(btnGuardar);
         panel.add(btnGuardarComo);
+        panel.add(btnBlocDeNotas);
+        panel.add(btnCalcularTasaCrecimiento);
+        panel.add(btnCalcularEstadisticas);
 
         return panel;
     }
@@ -162,8 +172,15 @@ public class GestorExperimentos extends JFrame implements ActionListener {
             guardarExperimentoComo();
         } else if (e.getSource() == languageComboBox) {
             cambiarIdioma();
+        } else if (e.getSource() == btnBlocDeNotas) {
+            abrirBlocDeNotas();
+        } else if (e.getSource() == btnCalcularTasaCrecimiento) {
+            calcularTasasDeCrecimiento();
+        } else if (e.getSource() == btnCalcularEstadisticas) {
+            calcularEstadisticasGenerales();
         }
     }
+
 
     private void verGraficas() {
         if (experimentoActual != null) {
@@ -182,13 +199,44 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         }
     }
 
-
-    private void calcularTasaCrecimiento() {
-
-
+    private void abrirBlocDeNotas() {
+        try {
+            Runtime.getRuntime().exec("notepad.exe");
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Error al abrir el Bloc de Notas: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
-    private void calcularEstadisticas() {
+    private void calcularTasasDeCrecimiento() {
+        if (experimentoActual == null || experimentoActual.getPoblaciones().isEmpty()) {
+            textAreaCentral.setText("No hay datos suficientes para calcular la tasa de crecimiento.");
+            return;
+        }
+
+        try {
+            // Assuming that getFechaInicio() and getFechaFin() return dates in "dd/MM/yyyy" format
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            PoblacionBacterias poblacionInicial = experimentoActual.getPoblaciones().get(0);
+            PoblacionBacterias poblacionFinal = experimentoActual.getPoblaciones().get(experimentoActual.getPoblaciones().size() - 1);
+
+            LocalDate startDate = LocalDate.parse(poblacionInicial.getFechaInicio().trim(), formatter);
+            LocalDate endDate = LocalDate.parse(poblacionFinal.getFechaFin().trim(), formatter);
+            long daysBetween = ChronoUnit.DAYS.between(startDate, endDate);
+
+            if (daysBetween == 0) {
+                textAreaCentral.setText("El período de tiempo para calcular la tasa de crecimiento es demasiado corto.");
+                return;
+            }
+
+            double tasaCrecimiento = Math.log((double)poblacionFinal.getNumBacterias() / poblacionInicial.getNumBacterias()) / daysBetween;
+            textAreaCentral.setText("Tasa de crecimiento: " + tasaCrecimiento + " por día");
+        } catch (Exception e) {
+            textAreaCentral.setText("Error al calcular la tasa de crecimiento: " + e.getMessage());
+        }
+    }
+
+
+    private void calcularEstadisticasGenerales() {
         if (experimentoActual == null || experimentoActual.getPoblaciones().isEmpty()) {
             textAreaCentral.setText("No hay datos suficientes para calcular estadísticas.");
             return;
