@@ -25,11 +25,11 @@ import java.awt.Color;
 
 public class GestorExperimentos extends JFrame implements ActionListener {
 
-    private JButton btnVerGraficas, btnBlocDeNotas, btnCalcularTasaCrecimiento, btnCalcularEstadisticas;
+    private JButton btnVerGraficas, btnCalcularTasaCrecimiento, btnCalcularEstadisticas;
     private JButton btnAbrirArchivo, btnCrearExperimento, btnCrearPoblacion, btnVisualizarPoblaciones, btnBorrarPoblacion, btnVerInfo, btnGuardar, btnGuardarComo;
     private JComboBox<String> languageComboBox;
     private JButton changeLanguageButton;
-    private static final String CONTRASENA_ESPERADA = "filetedelomo";
+    private static final String CONTRASENA_ESPERADA = "rubenmerecemoslamatricula";
     private HashMap<String, String> usuariosRegistrados;
     private Experimento experimentoActual;
     private ArrayList<PoblacionBacterias> poblaciones;
