@@ -1,4 +1,5 @@
 # Gestor de Experimentos
+# TRABAJO REALIZADO POR ADRIANA REYES, SEBASTIAN MONGELOS Y VITALIY GARCIA.
 
 ### Descripción
 
