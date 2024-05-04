@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="CREO QUE ESTA TERMINADO">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/GestorExperimentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/GestorExperimentos.java" afterDir="false" />
-    </list>
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="NO PUEDO MAS" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714847720765</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="NO PUEDO MAS">
+      <option name="closed" value="true" />
+      <created>1714849021024</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714849021024</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -217,11 +222,11 @@
     <MESSAGE value="sigue sin funcionar" />
     <MESSAGE value="uyy uy uy uy uy uy que ya van funcionan cositas, se vienen cositas" />
     <MESSAGE value="uaaaaaa brrr anuel" />
-    <MESSAGE value="NO PUEDO MAS" />
     <MESSAGE value="ningun cambio significativo" />
     <MESSAGE value="CAMBIOS IMPORTANTES" />
     <MESSAGE value="SEGUIMOS" />
     <MESSAGE value="CREO QUE ESTA TERMINADO" />
-    <option name="LAST_COMMIT_MESSAGE" value="CREO QUE ESTA TERMINADO" />
+    <MESSAGE value="NO PUEDO MAS" />
+    <option name="LAST_COMMIT_MESSAGE" value="NO PUEDO MAS" />
   </component>
 </project>

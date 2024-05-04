@@ -55,18 +55,21 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.setBorder(BorderFactory.createTitledBorder("Acciones"));
 
-        btnCrearExperimento = crearBoton("Crear experimento", this);
-        btnCrearPoblacion = crearBoton("Crear población", this);
-        btnVisualizarPoblaciones = crearBoton("Visualizar poblaciones", this);
-        btnBorrarPoblacion = crearBoton("Borrar población", this);
-        btnVerGraficas = crearBoton("Ver Gráficas", this);
-        btnVerInfo = crearBoton("Ver información detallada", this);
-        btnCalcularTasaCrecimiento = crearBoton("Calcular Tasas de Crecimiento", this);
-        btnCalcularEstadisticas = crearBoton("Calcular Estadísticas", this);
+        btnCrearExperimento = crearBoton("Crear experimento", this, new Color(0, 128, 0));  // Verde
+        btnCrearPoblacion = crearBoton("Crear población", this, new Color(0, 128, 0));     // Verde
+        btnVisualizarPoblaciones = crearBoton("Visualizar poblaciones", this, Color.BLUE); // Azul
+        btnBorrarPoblacion = crearBoton("Borrar población", this, Color.BLUE);             // Azul
+        btnVerGraficas = crearBoton("Ver Gráficas", this, Color.RED);                      // Rojo
+        btnVerInfo = crearBoton("Ver información detallada", this, Color.RED);             // Rojo
+        btnAbrirArchivo = crearBoton("Abrir archivo", this, new Color(128, 0, 128));       // Morado
+        btnGuardar = crearBoton("Guardar", this, new Color(128, 0, 128));                  // Morado
+        btnGuardarComo = crearBoton("Guardar como", this, new Color(128, 0, 128));         // Morado
+        btnCalcularTasaCrecimiento = crearBoton("Calcular Tasas de Crecimiento", this, new Color(255, 105, 180)); // Rosa
+        btnCalcularEstadisticas = crearBoton("Calcular Estadísticas", this, new Color(255, 105, 180)); // Rosa
 
-        btnAbrirArchivo = crearBoton("Abrir archivo", this);
-        btnGuardar = crearBoton("Guardar", this);
-        btnGuardarComo = crearBoton("Guardar como", this);
+        btnAbrirArchivo = crearBoton("Abrir archivo", this, new Color(128, 0, 128));
+        btnGuardar = crearBoton("Guardar", this, new Color(128, 0, 128));
+        btnGuardarComo = crearBoton("Guardar como", this, new Color(128, 0, 128));
 
         panel.add(btnCrearExperimento);
         panel.add(btnCrearPoblacion);
@@ -83,7 +86,7 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         return panel;
     }
 
-    private JButton crearBoton(String texto, ActionListener listener) {
+    private JButton crearBoton(String texto, ActionListener listener, Color color) {
         JButton boton = new JButton(texto);
         boton.addActionListener(listener);
         return boton;
