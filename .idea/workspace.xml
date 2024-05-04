@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="CAMBIO DE CONTRASEÑA, DEBERIAS OBSERVAR BIEN LA CONTRASEÑA.">
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="FIN">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/PartedelaPractica1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/PartedelaPractica1_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +59,9 @@
         &quot;accountId&quot;: &quot;e5404a22-18ea-46f9-bf81-f500d9a41b5e&quot;
         }
         }</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
         &quot;associatedIndex&quot;: 1
         }</component>
@@ -86,6 +90,7 @@
     "Application.exp.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -94,7 +99,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
@@ -119,7 +124,10 @@
       <option name="number" value="TaskManager" />
       <option name="presentableId" value="TaskManager" />
       <updated>1714750583890</updated>
-      <workItem from="1714851270064" duration="76000" />
+      <workItem from="1714851270064" duration="150000" />
+      <workItem from="1714851425922" duration="9000" />
+      <workItem from="1714851437350" duration="105000" />
+      <workItem from="1714851573299" duration="358000" />
     </task>
     <task id="LOCAL-00001" summary="sigue sin funcionar">
       <option name="closed" value="true" />
@@ -232,7 +240,15 @@
       <option name="presentableId" value="Default" />
       <updated>1714851267464</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="FIN">
+      <option name="closed" value="true" />
+      <created>1714851355539</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714851355539</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -286,6 +302,7 @@
     <MESSAGE value="COLORES ARREGLADISIMO" />
     <MESSAGE value="LISTO LISTISIMO" />
     <MESSAGE value="CAMBIO DE CONTRASEÑA, DEBERIAS OBSERVAR BIEN LA CONTRASEÑA." />
-    <option name="LAST_COMMIT_MESSAGE" value="CAMBIO DE CONTRASEÑA, DEBERIAS OBSERVAR BIEN LA CONTRASEÑA." />
+    <MESSAGE value="FIN" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIN" />
   </component>
 </project>
