@@ -32,6 +32,9 @@ public class GestorExperimentos extends JFrame implements ActionListener {
     private JButton btnCalcularEstadisticas;
     public GestorExperimentos() {
 
+        inicializarComponentes();
+        mostrarPantallaInicio();
+
         languageComboBox = new JComboBox<>(languages);
         languageComboBox.addActionListener(this);
 
@@ -46,7 +49,7 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         btnBlocDeNotas = new JButton("Bloc de Notas");
         btnBlocDeNotas.addActionListener(this);
         // Color de fondo del botón
-        btnBlocDeNotas.setBackground(new Color(150, 150, 150));
+        btnBlocDeNotas.setBackground(new Color( 100, 200, 162 ));
         // Color del texto del botón
         btnBlocDeNotas.setForeground(Color.WHITE);
         // Agregar el botón al panel
@@ -89,19 +92,19 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         btnGuardar = new JButton("Guardar");
         btnGuardarComo = new JButton("Guardar como");
 
-        btnAbrirArchivo.setBackground(new Color ( 200, 100, 100 ));
-        btnCrearExperimento.setBackground(new Color( 200, 135, 100 ));
-        btnCrearPoblacion.setBackground(new Color( 200, 165, 100 ));
-        btnVisualizarPoblaciones.setBackground(new Color( 200, 198, 100 ));
-        btnBorrarPoblacion.setBackground(new Color( 178, 200, 100 ));
-        btnVerInfo.setBackground(new Color( 100, 200, 105 ));
+        btnAbrirArchivo.setBackground(new Color ( 100, 123, 200 ));
+        btnCrearExperimento.setBackground(new Color( 100, 123, 200 ));
+        btnCrearPoblacion.setBackground(new Color( 100, 123, 200 ));
+        btnVisualizarPoblaciones.setBackground(new Color( 100, 123, 200 ));
+        btnBorrarPoblacion.setBackground(new Color( 100, 123, 200 ));
+        btnVerInfo.setBackground(new Color( 100, 123, 200 ));
         btnGuardar.setBackground(new Color( 100, 123, 200 ));
-        btnGuardarComo.setBackground(new Color(100, 200, 173 ));
-        btnCalcularEstadisticas.setBackground(new Color( 200, 100, 130 ));
-        btnCalcularTasaCrecimiento.setBackground(new Color( 200, 100, 130 ));
-        btnBlocDeNotas.setBackground(new Color( 200, 100, 130 ));
-        changeLanguageButton.setBackground(new Color( 200, 100, 118 ));
-        btnVerGraficas.setBackground(new Color( 200, 100, 123 ));
+        btnGuardarComo.setBackground(new Color(100, 123, 200 ));
+        btnCalcularEstadisticas.setBackground(new Color( 100, 123, 200 ));
+        btnCalcularTasaCrecimiento.setBackground(new Color( 100, 123, 200 ));
+        btnBlocDeNotas.setBackground(new Color( 100, 123, 200 ));
+        changeLanguageButton.setBackground(new Color( 100, 123, 200 ));
+        btnVerGraficas.setBackground(new Color( 100, 123, 200 ));
 
 
         btnIniciarSesion.addActionListener(new ActionListener() {
@@ -537,6 +540,40 @@ public class GestorExperimentos extends JFrame implements ActionListener {
             JOptionPane.showMessageDialog(this, "No hay experimento o poblaciones para mostrar gráficas.");
         }
     }
+
+    private void inicializarComponentes() {
+        JPanel panelLateral = new JPanel();
+        panelLateral.setLayout(new BoxLayout(panelLateral, BoxLayout.Y_AXIS));
+        panelLateral.setBorder(BorderFactory.createTitledBorder("Acciones"));
+        add(panelLateral, BorderLayout.WEST);
+
+        // Initialize and add components as previously described
+        // (For brevity, actual button initialization and adding are omitted here. Please refer to the previous example for details)
+
+        JTextArea textAreaCentral = new JTextArea();
+        textAreaCentral.setEditable(false);
+        JScrollPane scrollPane = new JScrollPane(textAreaCentral);
+        add(scrollPane, BorderLayout.CENTER);
+    }
+
+    private void mostrarPantallaInicio() {
+        JDialog welcomeDialog = new JDialog(this, "Bienvenido", true);
+        welcomeDialog.setLayout(new BorderLayout());
+        welcomeDialog.setSize(400, 200);
+        welcomeDialog.setLocationRelativeTo(this);
+        welcomeDialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+
+        JLabel welcomeLabel = new JLabel("Bienvenido al Simulacro de Población", JLabel.CENTER);
+        welcomeLabel.setFont(new Font("Serif", Font.BOLD, 16));
+        welcomeDialog.add(welcomeLabel, BorderLayout.CENTER);
+
+        JButton startButton = new JButton("Comenzar");
+        startButton.addActionListener(e -> welcomeDialog.dispose());
+        welcomeDialog.add(startButton, BorderLayout.SOUTH);
+
+        welcomeDialog.setVisible(true);
+    }
+
 
 
 

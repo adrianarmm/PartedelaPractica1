@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="es hora de hacer magia, papa vitaliy junto a su intrepido compañero sebastian(ha estado en videollamda comiendo pipas)acabamos de romper con el main y las carpetas">
-      <change afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/GraficaPoblacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="c976f18b-89ac-4b43-8fc8-42e3147c8413" name="Changes" comment="llego la hora de presentar esta basura al mundo ¡¡¡¡¡¡ con todos ustedes¡¡¡¡¡¡ el MAIN¡¡">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/GestorExperimentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EXPERIMENTO/GestorExperimentos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,35 +68,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BacterialCultureExperimentManager.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CultivoDeBacterias.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DetallesPoblacionBacterias.executor&quot;: &quot;Run&quot;,
-    &quot;Application.EXMA.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Experimento.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ExperimentoManageer.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ExperimentoManager.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Experimentos.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GEGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GuardarArchivos.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HorarioAlimentacion.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MAIN.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PoblacionBacterias.executor&quot;: &quot;Run&quot;,
-    &quot;Application.exp.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BacterialCultureExperimentManager.executor": "Run",
+    "Application.CultivoDeBacterias.executor": "Run",
+    "Application.DetallesPoblacionBacterias.executor": "Run",
+    "Application.EXMA.executor": "Run",
+    "Application.Experimento.executor": "Run",
+    "Application.ExperimentoManageer.executor": "Run",
+    "Application.ExperimentoManager.executor": "Run",
+    "Application.Experimentos.executor": "Run",
+    "Application.GEGUI.executor": "Run",
+    "Application.GestorExperimentos.executor": "Run",
+    "Application.GuardarArchivos.executor": "Run",
+    "Application.HorarioAlimentacion.executor": "Run",
+    "Application.MAIN.executor": "Run",
+    "Application.PoblacionBacterias.executor": "Run",
+    "Application.exp.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="EXPERIMENTO" />
@@ -133,7 +134,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714839431975</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="solo llevo 6 horas aqui(ayuda)">
+      <option name="closed" value="true" />
+      <created>1714839624848</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714839624848</updated>
+    </task>
+    <task id="LOCAL-00004" summary="llego la hora de presentar esta basura al mundo ¡¡¡¡¡¡ con todos ustedes¡¡¡¡¡¡ el MAIN¡¡">
+      <option name="closed" value="true" />
+      <created>1714839738909</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714839738909</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -172,6 +189,8 @@
     <MESSAGE value="mil fallos" />
     <MESSAGE value="sigue sin funcionar" />
     <MESSAGE value="es hora de hacer magia, papa vitaliy junto a su intrepido compañero sebastian(ha estado en videollamda comiendo pipas)acabamos de romper con el main y las carpetas" />
-    <option name="LAST_COMMIT_MESSAGE" value="es hora de hacer magia, papa vitaliy junto a su intrepido compañero sebastian(ha estado en videollamda comiendo pipas)acabamos de romper con el main y las carpetas" />
+    <MESSAGE value="solo llevo 6 horas aqui(ayuda)" />
+    <MESSAGE value="llego la hora de presentar esta basura al mundo ¡¡¡¡¡¡ con todos ustedes¡¡¡¡¡¡ el MAIN¡¡" />
+    <option name="LAST_COMMIT_MESSAGE" value="llego la hora de presentar esta basura al mundo ¡¡¡¡¡¡ con todos ustedes¡¡¡¡¡¡ el MAIN¡¡" />
   </component>
 </project>
