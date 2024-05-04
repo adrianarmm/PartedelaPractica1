@@ -21,6 +21,7 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
 import static javax.swing.UIManager.setLookAndFeel;
+import java.awt.Color;
 
 public class GestorExperimentos extends JFrame implements ActionListener {
 
@@ -50,6 +51,7 @@ public class GestorExperimentos extends JFrame implements ActionListener {
         add(crearPanelIdioma(), BorderLayout.NORTH);
         add(crearPanelInicioSesion(), BorderLayout.SOUTH);
     }
+
 
     private JPanel crearPanelAcciones() {
         JPanel panel = new JPanel();
@@ -83,12 +85,15 @@ public class GestorExperimentos extends JFrame implements ActionListener {
 
         return panel;
     }
-
     private JButton crearBoton(String texto, ActionListener listener, Color color) {
         JButton boton = new JButton(texto);
         boton.addActionListener(listener);
+        boton.setBackground(color);
+        boton.setOpaque(true);  // Asegúrate de que el color de fondo sea opaco
+        boton.setBorderPainted(false); // Pinta el borde si es necesario, pero puede ser útil para ver el color correctamente
         return boton;
     }
+
 
     private JScrollPane crearPanelCentral() {
         textAreaCentral = new JTextArea();
