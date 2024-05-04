@@ -1,4 +1,5 @@
 package EXPERIMENTO;
+
 import javax.swing.*;
 import java.io.*;
 
@@ -11,6 +12,7 @@ public class GuardarArchivos extends JFrame {
         initializeComponents();
         setUpFrame();
     }
+
     private void initializeComponents() {
         textArea = new JTextArea();
         fileChooser = new JFileChooser();
@@ -29,12 +31,14 @@ public class GuardarArchivos extends JFrame {
         setJMenuBar(menuBar);
         add(scrollPane);
     }
+
     private void setUpFrame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(600, 400);
         setLocationRelativeTo(null);
         setVisible(true);
     }
+
     private void saveFile() {
         if (currentFile != null) {
             writeFile(currentFile);
@@ -42,6 +46,7 @@ public class GuardarArchivos extends JFrame {
             saveFileAs();
         }
     }
+
     private void saveFileAs() {
         int returnValue = fileChooser.showSaveDialog(this);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
@@ -49,6 +54,7 @@ public class GuardarArchivos extends JFrame {
             writeFile(currentFile);
         }
     }
+
     private void writeFile(File file) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
             writer.write(textArea.getText());
@@ -56,8 +62,9 @@ public class GuardarArchivos extends JFrame {
             JOptionPane.showMessageDialog(this, "Error al guardar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(GuardarArchivos::new);
+        SwingUtilities.invokeLater(() -> new GuardarArchivos());
     }
 }
 
